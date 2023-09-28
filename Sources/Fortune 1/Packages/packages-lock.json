@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.misteeps.simplex": {
+      "version": "file:Simplex",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.modules.imageconversion": "1.0.0"
+      }
+    },
     "com.unity.2d.animation": {
       "version": "10.0.3",
       "depth": 1,
@@ -239,6 +247,12 @@
     "com.unity.modules.audio": {
       "version": "1.0.0",
       "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.imageconversion": {
+      "version": "1.0.0",
+      "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },

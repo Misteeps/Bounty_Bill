@@ -1,0 +1,18 @@
+{
+	"name": "com.misteeps.simplex",
+	"displayName": "Simplex",
+	"description": "A simple library for personal packages, tools, and UI.",
+	"author":
+	{
+		"name": "Misteeps"
+	},
+	"version": "1.0.0",
+	"unity": "2023.1",
+	"documentationUrl": "https://example.com/",
+	"changelogUrl": "https://example.com/changelog",
+	"licensesUrl": "https://example.com/licensing",
+	"dependencies":
+	{
+		"com.unity.modules.imageconversion": "1.0.0"
+	}
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Simplex.Editor",
+    "rootNamespace": "Simplex.Editor",
+    "references": [
+        "GUID:f17e6efe9ed4aa949bcc892710ec32ad",
+        "GUID:458f5205dc1213a41bbb15923892d421",
+        "GUID:a2590a02bce8fe343b55028f239ce9de",
+        "GUID:918493974386d5b4c822fe71c2f2259f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
