@@ -24,9 +24,9 @@ namespace Game.UI
 		protected override bool DefaultFocusable => true;
 		protected override bool DefaultPickable => true;
 
-		protected virtual int ShowMilliseconds => 320;
+		protected virtual float ShowDuration => 0.32f;
 		public event Action Shown;
-		protected virtual int HideMilliseconds => 240;
+		protected virtual float HideDuration => 0.24f;
 		public event Action Hidden;
 
 
@@ -39,25 +39,19 @@ namespace Game.UI
 			Hidden += () => this.Display(false);
 		}
 
-		public void Show() => Show(ShowMilliseconds);
-		public void Hide() => Hide(HideMilliseconds);
-		public virtual void Show(int milliseconds)
+		public void Show() => Show(ShowDuration);
+		public void Hide() => Hide(HideDuration);
+		public virtual void Show(float duration)
 		{
 			this.Enable(true, pickingMode).Display(true).Refresh().Focus();
-			this.TransitionOpacity().Modify(0, 1, milliseconds, EaseFunction.Circular, EaseDirection.Out, realTime: true).Run();
-
-			if (focusable)
-				Root.Layer = this;
+			this.TransitionOpacity().Modify(0, 1, duration, EaseFunction.Circular, EaseDirection.Out, realTime: true).Run();
 
 			Shown?.Invoke();
 		}
-		public virtual void Hide(int milliseconds)
+		public virtual void Hide(float duration)
 		{
 			this.Enable(false);
-			this.TransitionOpacity().Modify(1, 0, milliseconds, EaseFunction.Circular, EaseDirection.Out, realTime: true, onEnd: Hidden).Run();
-
-			if (Root.Layer == this)
-				Root.Layer = null;
+			this.TransitionOpacity().Modify(1, 0, duration, EaseFunction.Circular, EaseDirection.Out, realTime: true, onEnd: Hidden).Run();
 		}
 	}
 }
