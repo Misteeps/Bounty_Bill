@@ -55,6 +55,8 @@ namespace Game.UI
 			keybinds.AttachField(Game.Settings.moveLeft, new KeyBind());
 			keybinds.AttachField(Game.Settings.moveRight, new KeyBind());
 			keybinds.AttachField(Game.Settings.escape, new KeyBind());
+
+			Hidden += () => Monolith.Paused = false;
 		}
 	}
 }
