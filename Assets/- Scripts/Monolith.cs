@@ -73,5 +73,12 @@ namespace Game
 			Camera = CameraObject.GetComponent<UnityEngine.Camera>();
 			DontDestroyOnLoad(CameraObject);
 		}
+		private void Start()
+		{
+			UI.Overlay.Show();
+			UI.Menu.Show();
+			UI.Settings.Hide();
+			UI.Hud.Hide();
+		}
 	}
 }

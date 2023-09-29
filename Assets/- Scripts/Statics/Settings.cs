@@ -27,6 +27,7 @@ namespace Game
 				this.onSet = onSet;
 
 				Changed += _ => onSet?.Invoke(Value);
+				Default();
 			}
 
 			public void Default() => Set(defaultValue);
