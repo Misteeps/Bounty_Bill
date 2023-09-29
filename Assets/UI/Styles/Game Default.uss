@@ -1,0 +1,31 @@
+@import url('project://database/Assets/UI/Styles/Simplex Game Dark.uss?fileID=7433441132597879392&guid=28b8761d6bd32864ab96afd9402ee342&type=3#Simplex Game Dark');
+
+.root {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.layer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* Overlay */
+
+.layer#Overlay > .label#fps {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+/* Hud */
+
+/* Menu */
+
+/* Settings */
