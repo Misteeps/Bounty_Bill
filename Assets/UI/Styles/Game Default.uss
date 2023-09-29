@@ -24,8 +24,65 @@
     left: 8px;
 }
 
-/* Hud */
-
 /* Menu */
 
+.layer#Menu > #title {
+	margin: 80px auto auto auto;
+	width: 800px;
+	height: 280px;
+}
+
+.layer#Menu > #main {
+	margin: auto auto 40px auto;
+	padding: 0 200px;
+}
+
+.layer#Menu > #main > .button {
+	margin: 12px 0;
+	width: 200px;
+	height: 48px;
+	-unity-font-style: bold;
+}
+
+.layer#Menu > #main > .button#play {
+
+}
+
+.layer#Menu > #main > .button#settings {
+
+}
+
+.layer#Menu > #main > .button#quit {
+
+}
+
+.layer#Menu > #main > .button#play:hover {
+	rotate: -2deg;
+}
+
+.layer#Menu > #main > .button#settings:hover {
+	rotate: 2.5deg;
+}
+
+.layer#Menu > #main > .button#quit:hover {
+	rotate: -1.5deg;
+}
+
+.layer#Menu > #main > .button#play:focus {
+	rotate: 4deg;
+	scale: 1.2;
+}
+
+.layer#Menu > #main > .button#settings:focus {
+	rotate: -4.5deg;
+	scale: 1.2;
+}
+
+.layer#Menu > #main > .button#quit:focus {
+	rotate: 3.5deg;
+	scale: 1.2;
+}
+
 /* Settings */
+
+/* Hud */

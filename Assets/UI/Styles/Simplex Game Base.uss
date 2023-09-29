@@ -188,11 +188,11 @@ Background
 }
 
 .text.large {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .text.huge {
-	font-size: 18px;
+	font-size: 24px;
 }
 
 /* icon */
