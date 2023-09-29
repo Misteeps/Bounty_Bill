@@ -82,10 +82,10 @@ namespace Simplex
 			Name = name;
 		}
 
-		public virtual void Set(T value) => this.value = value;
+		public virtual void Set(T value) => Set(value, null);
 		public virtual void Set(T value, object source)
 		{
-			Set(value);
+			this.value = value;
 			Changed?.Invoke(source);
 		}
 	}

@@ -10,15 +10,13 @@ namespace Game
 {
 	public static class Inputs
 	{
-		public static Settings.Keybind Click => Settings.click;
-		public static Settings.Keybind Escape => Settings.escape;
-
 		public static Settings.Keybind Shoot => Settings.shoot;
 		public static Settings.Keybind Dodge => Settings.dodge;
 		public static Settings.Keybind MoveUp => Settings.moveUp;
 		public static Settings.Keybind MoveDown => Settings.moveDown;
 		public static Settings.Keybind MoveLeft => Settings.moveLeft;
 		public static Settings.Keybind MoveRight => Settings.moveRight;
+		public static Settings.Keybind Escape => Settings.escape;
 
 
 		public static Vector3 worldCursor;

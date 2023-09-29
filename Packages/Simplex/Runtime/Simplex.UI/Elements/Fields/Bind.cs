@@ -81,16 +81,16 @@ namespace Simplex.UI
 
 	#region Key Bind
 #if ENABLE_LEGACY_INPUT_MANAGER
-	public class KeyBind : Bind<KeyCode>
+	public class KeyBind : Bind<(KeyCode, KeyCode)>
 	{
 		protected override string Type => "keycode";
 
-		public override KeyCode CurrentValue
+		public override (KeyCode, KeyCode) CurrentValue
 		{
 			set
 			{
 				base.CurrentValue = value;
-				Text = ConvertKeycode(value);
+				Text = $"{ConvertKeycode(value.Item1)} / {ConvertKeycode(value.Item2)}";
 			}
 		}
 

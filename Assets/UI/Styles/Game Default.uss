@@ -19,13 +19,110 @@
 /* Overlay */
 
 .layer#Overlay > .label#fps {
-    position: absolute;
-    top: 8px;
-    left: 8px;
+	position: absolute;
+	top: 8px;
+	left: 8px;
 }
-
-/* Hud */
 
 /* Menu */
 
+.layer#Menu > #title {
+	margin: 80px auto auto auto;
+	width: 800px;
+	height: 280px;
+}
+
+.layer#Menu > #main {
+	margin: auto auto 40px auto;
+	padding: 0 200px;
+}
+
+.layer#Menu > #main > .button {
+	margin: 12px 0;
+	width: 200px;
+	height: 48px;
+	-unity-font-style: bold;
+}
+
+.layer#Menu > #main > .button#play {
+
+}
+
+.layer#Menu > #main > .button#settings {
+
+}
+
+.layer#Menu > #main > .button#quit {
+
+}
+
+.layer#Menu > #main > .button#play:hover {
+	rotate: -2deg;
+}
+
+.layer#Menu > #main > .button#settings:hover {
+	rotate: 2.5deg;
+}
+
+.layer#Menu > #main > .button#quit:hover {
+	rotate: -1.5deg;
+}
+
+.layer#Menu > #main > .button#play:focus {
+	rotate: 4deg;
+	scale: 1.2;
+}
+
+.layer#Menu > #main > .button#settings:focus {
+	rotate: -4.5deg;
+	scale: 1.2;
+}
+
+.layer#Menu > #main > .button#quit:focus {
+	rotate: 3.5deg;
+	scale: 1.2;
+}
+
 /* Settings */
+
+.layer#Settings {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.layer#Settings > #panel {
+	margin: auto;
+	padding: 12px 20px;
+	width: 920px;
+	height: 540px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.layer#Settings > #panel > .row {
+	height: 40px;
+	flex-direction: row;
+}
+
+.layer#Settings > #panel > .row#header > .button#close {
+	position: absolute;
+	top: 8px;
+	bottom: 0;
+	right: 0;
+	width: 24px;
+	height: 24px;
+}
+
+.layer#Settings > #panel > .row > .section {
+	width: 40px;
+}
+
+.layer#Settings > #panel > .row > .section > .labeled > .field {
+	margin: 2px 8px;
+}
+
+.layer#Settings > #panel > .row > .section > .labeled .field {
+	height: 20px;
+	min-height: 20px;
+	min-width: 20px;
+}
+
+/* Hud */

@@ -1,10 +1,8 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using System.Collections.Generic;
 
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 using Simplex;
 
@@ -14,7 +12,8 @@ namespace Game
 	public static class Settings
 	{
 		#region Setting <T>
-		public class Setting<T> : VariableValue<T>
+		public interface ISetting { public void Default(); }
+		public class Setting<T> : VariableValue<T>, ISetting
 		{
 			public readonly T defaultValue;
 			public readonly Action<T> onSet;
@@ -27,11 +26,9 @@ namespace Game
 				this.onSet = onSet;
 
 				Changed += _ => onSet?.Invoke(Value);
-				Default();
 			}
 
 			public void Default() => Set(defaultValue);
-			public override void Set(T value) => Set(value, null);
 
 			public override string ToString() => Value.ToString();
 			public static implicit operator T(Setting<T> setting) => setting.Value;
@@ -41,22 +38,22 @@ namespace Game
 		#region Choice
 		public class Choice<T> : Setting<T>
 		{
-			public readonly string[] choices;
 			public readonly T[] values;
+			public readonly string[] choices;
 
 
-			public Choice(string name, (string choice, T value)[] array, Action<T> onSet = null) : this(name, array[0].value, array, onSet) { }
-			public Choice(string name, T defaultValue, (string choice, T value)[] array, Action<T> onSet = null) : base(name, defaultValue, onSet)
+			public Choice(string name, (T value, string choice)[] array, Action<T> onSet = null) : this(name, array[0].value, array, onSet) { }
+			public Choice(string name, T defaultValue, (T value, string choice)[] array, Action<T> onSet = null) : base(name, defaultValue, onSet)
 			{
 				if (array.Empty()) throw new ArgumentException("Empty or null choice/value array").Overwrite($"Failed constructing choice setting {typeof(T):type}");
 
-				choices = new string[array.Length];
 				values = new T[array.Length];
+				choices = new string[array.Length];
 				for (int i = 0; i < array.Length; i++)
 				{
-					(string choice, T value) = array[i];
-					choices[i] = choice;
+					(T value, string choice) = array[i];
 					values[i] = value;
+					choices[i] = choice;
 				}
 			}
 
@@ -118,25 +115,25 @@ namespace Game
 		#endregion Keybind
 
 
-		private static (string, FullScreenMode)[] WindowModes
+		public static (FullScreenMode, string)[] WindowModes
 		{
 			get
 			{
-#if UNITY_WEBGL
-                return new (string, FullScreenMode)[] { ("Fullscreen", FullScreenMode.FullScreenWindow), ("Normal", FullScreenMode.Windowed), };
+#if !UNITY_WEBGL
+				return new (FullScreenMode, string)[] { (FullScreenMode.ExclusiveFullScreen, "Fullscreen"), (FullScreenMode.Windowed, "Normal") };
 #elif UNITY_STANDALONE_OSX
-                return new (string, FullScreenMode)[] { ("Fullscreen", FullScreenMode.ExclusiveFullScreen), ("Borderless Window", FullScreenMode.FullScreenWindow), ("Maximized Window", FullScreenMode.MaximizedWindow), ("Windowed", FullScreenMode.Windowed), };
+				return new (FullScreenMode, string)[] { (FullScreenMode.ExclusiveFullScreen, "Fullscreen"), (FullScreenMode.FullScreenWindow, "Borderless Window"), (FullScreenMode.MaximizedWindow, "Maximized Window"), (FullScreenMode.Windowed, "Windowed"), };
 #else
-				return new (string, FullScreenMode)[] { ("Fullscreen", FullScreenMode.ExclusiveFullScreen), ("Borderless Window", FullScreenMode.FullScreenWindow), ("Windowed", FullScreenMode.Windowed), };
+				return new (FullScreenMode, string)[] { (FullScreenMode.ExclusiveFullScreen, "Fullscreen"), (FullScreenMode.FullScreenWindow, "Borderless Window"), (FullScreenMode.Windowed, "Windowed"), };
 #endif
 			}
 		}
-		private static (string, (int, int))[] Resolutions
+		public static ((int, int), string)[] Resolutions
 		{
 			get
 			{
 #if UNITY_WEBGL
-                return new (string, (int, int))[] { ("WebGL", (0, 0)) };
+				return new ((int, int), string)[] { ((0, 0), "WebGL") };
 #else
 				List<Vector2Int> newResolutions = new List<Vector2Int>();
 				foreach (Resolution res in Screen.resolutions)
@@ -147,8 +144,8 @@ namespace Game
 				}
 
 				return newResolutions
-				.ConvertAll(res => ($"{res.x} x {res.y}", (res.x, res.y)))
-				.OrderByDescending(res => res.Item2.x).ThenByDescending(res => res.Item2.y)
+				.ConvertAll(res => ((res.x, res.y), $"{res.x} x {res.y}"))
+				.OrderByDescending(res => res.Item1.x).ThenByDescending(res => res.Item1.y)
 				.ToArray();
 #endif
 			}
@@ -161,22 +158,39 @@ namespace Game
 		[Header("Graphics")]
 		public static Choice<FullScreenMode> windowMode = new Choice<FullScreenMode>("Window Mode", FullScreenMode.FullScreenWindow, WindowModes, _ => ApplyResolution());
 		public static Choice<(int width, int height)> resolution = new Choice<(int width, int height)>("Resolution", Resolutions, _ => ApplyResolution());
+		public static Setting<int> fpsLimit = new Setting<int>("FPS Limit", 144, value => Application.targetFrameRate = (value == 301) ? 0 : value);
+		public static Setting<bool> fpsCounter = new Setting<bool>("FPS Counter", false, value => UI.Overlay.Instance.ShowFPS(value));
+		public static Setting<bool> vSync = new Setting<bool>("V-Sync", true, value => QualitySettings.vSyncCount = (value) ? 1 : 0);
+
+		[Header("Audio")]
+		public static Setting<int> masterVolume = new Setting<int>("Master Volume", 100, Audio.Master.SetVolume);
+		public static Setting<int> uiVolume = new Setting<int>("UI Volume", 50, Audio.UI.SetVolume);
+		public static Setting<int> sfxVolume = new Setting<int>("SFX Volume", 50, Audio.SFX.SetVolume);
+		public static Setting<int> voiceVolume = new Setting<int>("Voice Volume", 50, Audio.Voice.SetVolume);
+		public static Setting<int> ambianceVolume = new Setting<int>("Ambiance Volume", 50, Audio.Ambiance.SetVolume);
+		public static Setting<int> musicVolume = new Setting<int>("Music Volume", 50, Audio.Music.SetVolume);
 
 		[Header("Keybinds")]
-		public static Keybind click = new Keybind("Click", KeyCode.Mouse0, KeyCode.None, true);
-		public static Keybind escape = new Keybind("Escape", KeyCode.Escape, KeyCode.Mouse3, true);
-		public static Keybind shoot = new Keybind("Shoot", KeyCode.Mouse0);
+		public static Keybind shoot = new Keybind("Shoot", KeyCode.Mouse0, KeyCode.None, true);
 		public static Keybind dodge = new Keybind("Dodge", KeyCode.Space, KeyCode.LeftShift);
 		public static Keybind moveUp = new Keybind("Move Up", KeyCode.W, KeyCode.UpArrow);
 		public static Keybind moveDown = new Keybind("Move Down", KeyCode.S, KeyCode.DownArrow);
 		public static Keybind moveLeft = new Keybind("Move Left", KeyCode.A, KeyCode.LeftArrow);
 		public static Keybind moveRight = new Keybind("Move Right", KeyCode.D, KeyCode.RightArrow);
+		public static Keybind escape = new Keybind("Escape", KeyCode.Escape, KeyCode.Mouse3, true);
 
+
+		public static void Defaults()
+		{
+			foreach (FieldInfo field in typeof(Settings).GetFields())
+				if (field.GetValue(null) is ISetting iSetting)
+					iSetting.Default();
+		}
 
 		private static void ApplyResolution()
 		{
 #if UNITY_WEBGL
-            Screen.fullScreenMode = windowMode;
+			Screen.fullScreenMode = windowMode;
 #else
 			Screen.SetResolution(resolution.Value.width, resolution.Value.height, windowMode);
 #endif

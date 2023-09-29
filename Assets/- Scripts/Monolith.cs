@@ -67,18 +67,18 @@ namespace Game
 
 			InstanceObject = GameObject.FindWithTag("GameController");
 			Instance = InstanceObject.GetComponent<Monolith>();
-			DontDestroyOnLoad(InstanceObject);
 
 			CameraObject = GameObject.FindWithTag("MainCamera");
 			Camera = CameraObject.GetComponent<UnityEngine.Camera>();
-			DontDestroyOnLoad(CameraObject);
 		}
 		private void Start()
 		{
-			UI.Overlay.Show();
+			UI.Hud.Hide();
 			UI.Menu.Show();
 			UI.Settings.Hide();
-			UI.Hud.Hide();
+			UI.Overlay.Show();
+
+			Settings.Defaults();
 		}
 	}
 }

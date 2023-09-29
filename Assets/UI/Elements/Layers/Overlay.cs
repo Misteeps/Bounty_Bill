@@ -22,6 +22,7 @@ namespace Game.UI
 			fps.schedule.Execute(UpdateFPS).Every(1000);
 		}
 
+		public void ShowFPS(bool show) => fps.Display(show);
 		private void UpdateFPS()
 		{
 			int fpsCount = (int)(1f / Time.unscaledDeltaTime);
