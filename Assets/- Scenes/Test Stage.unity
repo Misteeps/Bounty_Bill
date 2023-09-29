@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 619394805}
   m_Layer: 0
   m_Name: Global
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
     volumeProfile: {fileID: 11400000, guid: 719f016e78c28b94bb22faeea58bf39c, type: 2}
     audioMixer: {fileID: 24100000, guid: 3a3a3520091135044b814b15ebcc7566, type: 2}
     uiDocument: {fileID: 619394805}
-    uiStyle: {fileID: 7433441132597879392, guid: 28b8761d6bd32864ab96afd9402ee342, type: 3}
+    uiStyle: {fileID: 7433441132597879392, guid: 7ea9cd2986892c746946064bb304f03f, type: 3}
 --- !u!114 &619394805
 MonoBehaviour:
   m_ObjectHideFlags: 0
