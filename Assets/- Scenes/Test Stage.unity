@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 619394802}
   - component: {fileID: 619394803}
   - component: {fileID: 619394801}
+  - component: {fileID: 619394804}
   m_Layer: 0
   m_Name: Global
   m_TagString: Untagged
@@ -435,6 +436,23 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 719f016e78c28b94bb22faeea58bf39c, type: 2}
+--- !u!114 &619394804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619394800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3afe6f945f28e0f438436192ffefde47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refs:
+    quality: {fileID: 11400000, guid: 681886c5eb7344803b6206f758bf0b1c, type: 2}
+    volumeProfile: {fileID: 11400000, guid: 719f016e78c28b94bb22faeea58bf39c, type: 2}
+    audioMixer: {fileID: 24100000, guid: 3a3a3520091135044b814b15ebcc7566, type: 2}
+    uiStyle: {fileID: 0}
 --- !u!1 &735815707
 GameObject:
   m_ObjectHideFlags: 3
