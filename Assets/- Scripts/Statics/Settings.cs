@@ -27,11 +27,14 @@ namespace Game
 				this.onSet = onSet;
 
 				Changed += _ => onSet?.Invoke(Value);
+
+				if (Name == "Window Mode" || Name == "Resolution")
+				{ }
+					else
 				Default();
 			}
 
 			public void Default() => Set(defaultValue);
-			public override void Set(T value) => Set(value, null);
 
 			public override string ToString() => Value.ToString();
 			public static implicit operator T(Setting<T> setting) => setting.Value;
@@ -123,9 +126,9 @@ namespace Game
 			get
 			{
 #if UNITY_WEBGL
-                return new (string, FullScreenMode)[] { ("Fullscreen", FullScreenMode.FullScreenWindow), ("Normal", FullScreenMode.Windowed), };
+				return new (string, FullScreenMode)[] { ("Fullscreen", FullScreenMode.FullScreenWindow), ("Normal", FullScreenMode.Windowed), };
 #elif UNITY_STANDALONE_OSX
-                return new (string, FullScreenMode)[] { ("Fullscreen", FullScreenMode.ExclusiveFullScreen), ("Borderless Window", FullScreenMode.FullScreenWindow), ("Maximized Window", FullScreenMode.MaximizedWindow), ("Windowed", FullScreenMode.Windowed), };
+				return new (string, FullScreenMode)[] { ("Fullscreen", FullScreenMode.ExclusiveFullScreen), ("Borderless Window", FullScreenMode.FullScreenWindow), ("Maximized Window", FullScreenMode.MaximizedWindow), ("Windowed", FullScreenMode.Windowed), };
 #else
 				return new (string, FullScreenMode)[] { ("Fullscreen", FullScreenMode.ExclusiveFullScreen), ("Borderless Window", FullScreenMode.FullScreenWindow), ("Windowed", FullScreenMode.Windowed), };
 #endif
@@ -136,7 +139,7 @@ namespace Game
 			get
 			{
 #if UNITY_WEBGL
-                return new (string, (int, int))[] { ("WebGL", (0, 0)) };
+				return new (string, (int, int))[] { ("WebGL", (0, 0)) };
 #else
 				List<Vector2Int> newResolutions = new List<Vector2Int>();
 				foreach (Resolution res in Screen.resolutions)
@@ -161,22 +164,32 @@ namespace Game
 		[Header("Graphics")]
 		public static Choice<FullScreenMode> windowMode = new Choice<FullScreenMode>("Window Mode", FullScreenMode.FullScreenWindow, WindowModes, _ => ApplyResolution());
 		public static Choice<(int width, int height)> resolution = new Choice<(int width, int height)>("Resolution", Resolutions, _ => ApplyResolution());
+		public static Setting<int> fpsLimit = new Setting<int>("FPS Limit", 144, value => Application.targetFrameRate = (value == 301) ? 0 : value);
+		public static Setting<bool> fpsCounter = new Setting<bool>("FPS Counter", false, value => UI.Overlay.Instance.ShowFPS(value));
+		public static Setting<bool> vSync = new Setting<bool>("V-Sync", true, value => QualitySettings.vSyncCount = (value) ? 1 : 0);
+
+		[Header("Audio")]
+		public static Setting<int> masterVolume = new Setting<int>("Master Volume", 100, Audio.Master.SetVolume);
+		public static Setting<int> uiVolume = new Setting<int>("UI Volume", 50, Audio.UI.SetVolume);
+		public static Setting<int> sfxVolume = new Setting<int>("SFX Volume", 50, Audio.SFX.SetVolume);
+		public static Setting<int> voiceVolume = new Setting<int>("Voice Volume", 50, Audio.Voice.SetVolume);
+		public static Setting<int> ambianceVolume = new Setting<int>("Ambiance Volume", 50, Audio.Ambiance.SetVolume);
+		public static Setting<int> musicVolume = new Setting<int>("Music Volume", 50, Audio.Music.SetVolume);
 
 		[Header("Keybinds")]
-		public static Keybind click = new Keybind("Click", KeyCode.Mouse0, KeyCode.None, true);
-		public static Keybind escape = new Keybind("Escape", KeyCode.Escape, KeyCode.Mouse3, true);
-		public static Keybind shoot = new Keybind("Shoot", KeyCode.Mouse0);
+		public static Keybind shoot = new Keybind("Shoot", KeyCode.Mouse0, KeyCode.None, true);
 		public static Keybind dodge = new Keybind("Dodge", KeyCode.Space, KeyCode.LeftShift);
 		public static Keybind moveUp = new Keybind("Move Up", KeyCode.W, KeyCode.UpArrow);
 		public static Keybind moveDown = new Keybind("Move Down", KeyCode.S, KeyCode.DownArrow);
 		public static Keybind moveLeft = new Keybind("Move Left", KeyCode.A, KeyCode.LeftArrow);
 		public static Keybind moveRight = new Keybind("Move Right", KeyCode.D, KeyCode.RightArrow);
+		public static Keybind escape = new Keybind("Escape", KeyCode.Escape, KeyCode.Mouse3, true);
 
 
 		private static void ApplyResolution()
 		{
 #if UNITY_WEBGL
-            Screen.fullScreenMode = windowMode;
+			Screen.fullScreenMode = windowMode;
 #else
 			Screen.SetResolution(resolution.Value.width, resolution.Value.height, windowMode);
 #endif

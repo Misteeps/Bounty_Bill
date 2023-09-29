@@ -43,7 +43,7 @@ namespace Game.UI
 		public void Hide() => Hide(HideDuration);
 		public virtual void Show(float duration)
 		{
-			this.Enable(true, pickingMode).Display(true).Refresh().Focus();
+			this.Enable(true, (DefaultPickable) ? UnityEngine.UIElements.PickingMode.Position : UnityEngine.UIElements.PickingMode.Ignore).Display(true).Refresh().Focus();
 			this.TransitionOpacity().Modify(0, 1, duration, EaseFunction.Circular, EaseDirection.Out, realTime: true).Run();
 
 			Shown?.Invoke();

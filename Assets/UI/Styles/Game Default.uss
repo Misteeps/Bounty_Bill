@@ -19,9 +19,9 @@
 /* Overlay */
 
 .layer#Overlay > .label#fps {
-    position: absolute;
-    top: 8px;
-    left: 8px;
+	position: absolute;
+	top: 8px;
+	left: 8px;
 }
 
 /* Menu */
@@ -84,5 +84,45 @@
 }
 
 /* Settings */
+
+.layer#Settings {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.layer#Settings > #panel {
+	margin: auto;
+	padding: 12px 20px;
+	width: 920px;
+	height: 540px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.layer#Settings > #panel > .row {
+	height: 40px;
+	flex-direction: row;
+}
+
+.layer#Settings > #panel > .row#header > .button#close {
+	position: absolute;
+	top: 8px;
+	bottom: 0;
+	right: 0;
+	width: 24px;
+	height: 24px;
+}
+
+.layer#Settings > #panel > .row > .section {
+	width: 40px;
+}
+
+.layer#Settings > #panel > .row > .section > .labeled > .field {
+	margin: 2px 8px;
+}
+
+.layer#Settings > #panel > .row > .section > .labeled .field {
+	height: 20px;
+	min-height: 20px;
+	min-width: 20px;
+}
 
 /* Hud */

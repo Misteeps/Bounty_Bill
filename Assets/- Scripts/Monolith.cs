@@ -73,10 +73,10 @@ namespace Game
 		}
 		private void Start()
 		{
-			UI.Overlay.Show();
+			UI.Hud.Hide();
 			UI.Menu.Show();
 			UI.Settings.Hide();
-			UI.Hud.Hide();
+			UI.Overlay.Show();
 		}
 	}
 }

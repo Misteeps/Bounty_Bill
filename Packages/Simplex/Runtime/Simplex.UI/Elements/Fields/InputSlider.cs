@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -20,6 +21,7 @@ namespace Simplex.UI
 		public T Max { get => input.Max; set => (input.Max, slider.Max) = (value, value); }
 		public T InputMin { get => input.Min; set => input.Min = value; }
 		public T InputMax { get => input.Max; set => input.Max = value; }
+		public Dictionary<T, string> InputOverrides { get => input.Overrides; set => input.Overrides = value; }
 		public T SliderMin { get => slider.Min; set => slider.Min = value; }
 		public T SliderMax { get => slider.Max; set => slider.Max = value; }
 		public float SliderIncrements { get => slider.Increments; set => slider.Increments = value; }
