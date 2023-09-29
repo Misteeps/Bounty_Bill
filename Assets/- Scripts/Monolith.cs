@@ -77,6 +77,8 @@ namespace Game
 			UI.Menu.Show();
 			UI.Settings.Hide();
 			UI.Overlay.Show();
+
+			Settings.Defaults();
 		}
 	}
 }

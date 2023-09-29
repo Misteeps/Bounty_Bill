@@ -1,10 +1,8 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using System.Collections.Generic;
 
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 using Simplex;
 
@@ -14,7 +12,8 @@ namespace Game
 	public static class Settings
 	{
 		#region Setting <T>
-		public class Setting<T> : VariableValue<T>
+		public interface ISetting { public void Default(); }
+		public class Setting<T> : VariableValue<T>, ISetting
 		{
 			public readonly T defaultValue;
 			public readonly Action<T> onSet;
@@ -27,11 +26,6 @@ namespace Game
 				this.onSet = onSet;
 
 				Changed += _ => onSet?.Invoke(Value);
-
-				if (Name == "Window Mode" || Name == "Resolution")
-				{ }
-				else
-					Default();
 			}
 
 			public void Default() => Set(defaultValue);
@@ -185,6 +179,13 @@ namespace Game
 		public static Keybind moveRight = new Keybind("Move Right", KeyCode.D, KeyCode.RightArrow);
 		public static Keybind escape = new Keybind("Escape", KeyCode.Escape, KeyCode.Mouse3, true);
 
+
+		public static void Defaults()
+		{
+			foreach (FieldInfo field in typeof(Settings).GetFields())
+				if (field.GetValue(null) is ISetting iSetting)
+					iSetting.Default();
+		}
 
 		private static void ApplyResolution()
 		{
