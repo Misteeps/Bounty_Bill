@@ -10,8 +10,8 @@ namespace Game
         [SerializeField] private float dodgeTimer = 0;
 		[SerializeField] private GameObject bulletPrefab;
 		[SerializeField] private Transform gunTip;
-		[SerializeField] private GameObject gunObject;
-		Rigidbody2D rb;
+        [SerializeField] private Transform gunObject;
+        Rigidbody2D rb;
 
         private void Awake()
         {
@@ -25,7 +25,9 @@ namespace Game
         }
 		public void LookAt(Vector2 target)
 		{
-
+            Vector3 direction = target - (Vector2)gunObject.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            gunObject.rotation = Quaternion.Euler(target);
 		}
 		public async void Shoot(float delay)
 		{
