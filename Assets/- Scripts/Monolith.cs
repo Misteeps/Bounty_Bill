@@ -24,6 +24,7 @@ namespace Game
 			public AudioMixer audioMixer;
 			public UIDocument uiDocument;
 			public StyleSheet uiStyle;
+			public Transform cowboyRoot;
 			public GameObject cowboyPrefab;
 			public Transform bulletActiveRoot;
 			public GameObject bulletActivePrefab;

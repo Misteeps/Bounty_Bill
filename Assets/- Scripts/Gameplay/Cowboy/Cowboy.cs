@@ -1,13 +1,15 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 
 namespace Game
 {
 	public class Cowboy : MonoBehaviour
 	{
-		[SerializeField] private new Rigidbody2D rigidbody;
-		[SerializeField] private Transform gun;
-		[SerializeField] private Transform gunTip;
+		[SerializeField] public new Rigidbody2D rigidbody;
+		[SerializeField] public NavMeshAgent agent;
+		[SerializeField] public Transform gun;
+		[SerializeField] public Transform gunTip;
 		[SerializeField] public bool bullet = true;
 		[SerializeField] public float speed = 20f;
 		[SerializeField] public float dodgeCooldown = 3f;
@@ -17,6 +19,8 @@ namespace Game
 		public void Move(Vector2 movement) => rigidbody.MovePosition(rigidbody.position + movement * (speed * Time.fixedDeltaTime));
 		public void LookAt(Vector2 target)
 		{
+			transform.localScale = new Vector3((target.x < transform.position.x) ? -1 : 1, 1, 1);
+
 			Vector3 direction = target - (Vector2)gun.position;
 			float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 			gun.rotation = Quaternion.Euler(new Vector3(0, 0, angle));

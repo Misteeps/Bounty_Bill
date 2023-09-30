@@ -6,7 +6,7 @@ namespace Game
 {
 	public class BulletInactive : MonoBehaviour
 	{
-		private static ObjectPool<GameObject> pool = new ObjectPool<GameObject>(() => Instantiate(Monolith.Refs.bulletInactivePrefab), actionOnGet: obj => obj.SetActive(true), actionOnRelease: obj => obj.SetActive(false));
+		private static readonly ObjectPool<GameObject> pool = new ObjectPool<GameObject>(() => Instantiate(Monolith.Refs.bulletInactivePrefab), actionOnGet: obj => obj.SetActive(true), actionOnRelease: obj => obj.SetActive(false));
 
 
 		public static BulletInactive Spawn(Vector2 position, Quaternion rotation)
