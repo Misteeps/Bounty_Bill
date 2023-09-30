@@ -159,6 +159,7 @@ namespace Game
 			Player.Initialize();
 			Player.transform.position = new Vector2(0, -6);
 			Player.gun.localScale = new Vector2(0, 0);
+			Player.Died += GameEnd;
 
 #if UNITY_EDITOR
 			void Walk(float position)
@@ -173,13 +174,13 @@ namespace Game
 
 			// Show Text "Everyone Only Gets ONE SHOT"
 			await Awaitable.WaitForSecondsAsync(2f);
+#endif
 
 			Game.Camera.VirtualCamera.enabled = true;
 			Game.Camera.VignetteTransition.Modify(1f, 0.2f, 1f, EaseFunction.Circular, EaseDirection.InOut).Run();
 			Player.gun.TransitionLocalScaleX().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
 			Player.gun.TransitionLocalScaleY().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
 			await Awaitable.WaitForSecondsAsync(0.6f);
-#endif
 
 			Instance.enabled = true;
 			Paused = false;
@@ -194,9 +195,11 @@ namespace Game
 			// Show Something
 			await Awaitable.WaitForSecondsAsync(2f);
 
-			// Fade Out
+			UI.Overlay.Faded = true;
+			await Awaitable.WaitForSecondsAsync(1.2f);
 
 			Game.Camera.VirtualCamera.enabled = false;
+			Game.Camera.VignetteTransition.Modify(0.2f, 0.2f, 0, EaseFunction.Linear, EaseDirection.InOut).Run();
 			Camera.transform.position = Vector3.zero;
 			Player.transform.position = new Vector2(0, -6);
 
@@ -204,9 +207,10 @@ namespace Game
 			BulletActive.CleanUp();
 			BulletInactive.CleanUp();
 
-			// Fade In
-			
-			// Show Menu
+			UI.Overlay.Faded = false;
+			await Awaitable.WaitForSecondsAsync(0.6f);
+
+			UI.Menu.Show();
 		}
 	}
 }
