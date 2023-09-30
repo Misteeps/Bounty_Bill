@@ -15,9 +15,8 @@ namespace Game
 		[SerializeField] public Transform gun;
 		[SerializeField] public Transform gunTip;
 		[SerializeField] public bool bullet = true;
+		[SerializeField] public bool shooting = false;
 		[SerializeField] public float speed = 1f;
-		[SerializeField] public float dodgeCooldown = 3f;
-		[SerializeField] public float dodgeTimer = 0;
 
 		public event Action Died;
 
@@ -26,7 +25,6 @@ namespace Game
 		public void LookAt(Vector2 target)
 		{
 			Vector2 direction;
-
 			if (target.x < transform.position.x)
 			{
 				transform.localScale = new Vector3(1, 1, 1);
@@ -45,10 +43,19 @@ namespace Game
 		{
 			if (bullet)
 			{
-				await Awaitable.WaitForSecondsAsync(delay);
+				shooting = true;
+
+				if (delay != 0)
+				{
+					// Draw laser
+					await Awaitable.WaitForSecondsAsync(delay);
+				}
+
 				Quaternion rotation = (transform.localScale.x < 0) ? gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, gun.transform.eulerAngles.z + 180));
 				BulletActive.Spawn(gunTip.position, rotation, gameObject);
-				//bullet = false;
+
+				bullet = false;
+				shooting = false;
 			}
 			else
 			{

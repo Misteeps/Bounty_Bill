@@ -251,9 +251,8 @@ MonoBehaviour:
   gun: {fileID: 4064959656157012561}
   gunTip: {fileID: 4127001627404367006}
   bullet: 1
+  shooting: 0
   speed: 1
-  dodgeCooldown: 3
-  dodgeTimer: 0
 --- !u!114 &3803244724076481782
 MonoBehaviour:
   m_ObjectHideFlags: 0

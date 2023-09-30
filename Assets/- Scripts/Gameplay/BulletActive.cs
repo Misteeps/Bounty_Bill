@@ -6,7 +6,7 @@ namespace Game
 {
 	public class BulletActive : MonoBehaviour
 	{
-		private static readonly ObjectPool<GameObject> pool = new ObjectPool<GameObject>(() => Instantiate(Monolith.Refs.bulletActivePrefab), actionOnGet: obj => obj.SetActive(true), actionOnRelease: obj => obj.SetActive(false));
+		private static readonly ObjectPool<GameObject> pool = new ObjectPool<GameObject>(() => Instantiate(Monolith.Refs.bulletActivePrefab), actionOnGet: OnGet, actionOnRelease: OnRelease);
 
 		[SerializeField] private new Rigidbody2D rigidbody;
 		[SerializeField] public Vector2 direction;
@@ -17,6 +17,8 @@ namespace Game
 		private GameObject origin;
 
 
+		public static void OnGet(GameObject obj) => obj.SetActive(true);
+		public static void OnRelease(GameObject obj) => obj.SetActive(false);
 		public static BulletActive Spawn(Vector2 position, Quaternion rotation, GameObject origin)
 		{
 			GameObject obj = pool.Get();
