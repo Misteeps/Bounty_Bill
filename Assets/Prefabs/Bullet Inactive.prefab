@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2687647628706468807}
   - component: {fileID: 7583805150931019357}
   - component: {fileID: 7799267557484374990}
+  - component: {fileID: 3432665498520701597}
   m_Layer: 7
   m_Name: Bullet Inactive
   m_TagString: Untagged
@@ -135,3 +136,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 7583805150931019357}
+--- !u!114 &3432665498520701597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8065134646563488689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65527616e92f97840a7e67ff59018a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 2687647628706468807}
+  frameTime: 0.1
+  loop: 1
+  sprites:
+  - {fileID: 1193197765, guid: c8c309df5463ab54c80f5ce586acfa8d, type: 3}
+  - {fileID: 120837328, guid: c8c309df5463ab54c80f5ce586acfa8d, type: 3}
+  - {fileID: -19849251, guid: c8c309df5463ab54c80f5ce586acfa8d, type: 3}
+  - {fileID: -2096590960, guid: c8c309df5463ab54c80f5ce586acfa8d, type: 3}
+  - {fileID: 69181994, guid: c8c309df5463ab54c80f5ce586acfa8d, type: 3}
+  - {fileID: 1182701587, guid: c8c309df5463ab54c80f5ce586acfa8d, type: 3}
+  - {fileID: -490774598, guid: c8c309df5463ab54c80f5ce586acfa8d, type: 3}
+  - {fileID: -1001466895, guid: c8c309df5463ab54c80f5ce586acfa8d, type: 3}
