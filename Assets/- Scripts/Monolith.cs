@@ -98,6 +98,8 @@ namespace Game
 
 			Settings.Defaults();
 
+			Game.Camera.VirtualCamera.enabled = false;
+
 			Player.SetSprites(Refs.cowboy1);
 		}
 
@@ -147,6 +149,15 @@ namespace Game
 		{
 			if (Inputs.Shoot.Down)
 				Player.Shoot(0);
+		}
+
+		public static async void GameStart()
+		{
+			Player.Initialize();
+		}
+		private static async void GameEnd()
+		{
+
 		}
 	}
 }

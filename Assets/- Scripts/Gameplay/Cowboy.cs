@@ -43,7 +43,7 @@ namespace Game
 			spriteRenderer.sprite = sprites.normal;
 			hitbox.enabled = true;
 			movebox.enabled = true;
-			agent.enabled = true;
+			if (agent != null) agent.enabled = true;
 			gun.gameObject.SetActive(true);
 			bullet = true;
 			shooting = false;
@@ -128,7 +128,7 @@ namespace Game
 
 			hitbox.enabled = false;
 			movebox.enabled = false;
-			agent.enabled = false;
+			if (agent != null) agent.enabled = false;
 			gun.gameObject.SetActive(false);
 
 			spriteRenderer.sprite = sprites.hit;
