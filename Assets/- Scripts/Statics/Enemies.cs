@@ -92,7 +92,10 @@ namespace Game
 
 					if (bullet != null)
 					{
-						MoveEnemy(cowboy, bullet.transform.position);
+						if (bullet.gameObject.activeSelf)
+							MoveEnemy(cowboy, bullet.transform.position);
+						else
+							Reloading[cowboy] = null;
 					}
 
 					else if (inactiveBullets.Count > 0)

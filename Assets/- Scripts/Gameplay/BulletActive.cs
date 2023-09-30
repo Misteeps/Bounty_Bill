@@ -38,7 +38,7 @@ namespace Game
 		public void Dispose()
 		{
 			pool.Release(gameObject);
-			// Instantiate Inactive Bullet
+			BulletInactive.Spawn(transform.position, rigidbody.velocity);
 		}
 
 		private void Update()

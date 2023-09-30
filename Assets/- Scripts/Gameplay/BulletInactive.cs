@@ -10,6 +10,8 @@ namespace Game
 	{
 		private static readonly ObjectPool<GameObject> pool = new ObjectPool<GameObject>(() => Instantiate(Monolith.Refs.bulletInactivePrefab), actionOnGet: OnGet, actionOnRelease: OnRelease);
 
+		[SerializeField] private CircleCollider2D hitbox;
+
 
 		public static void OnGet(GameObject obj)
 		{
@@ -21,14 +23,15 @@ namespace Game
 			obj.SetActive(false);
 			Enemies.inactiveBullets.Remove(obj.GetComponent<BulletInactive>());
 		}
-		public static BulletInactive Spawn(Vector2 position, Quaternion rotation)
+		public static BulletInactive Spawn(Vector2 position, Vector2 velocity)
 		{
 			GameObject obj = pool.Get();
 			obj.transform.parent = Monolith.Refs.bulletActiveRoot;
 			obj.transform.position = position;
-			obj.transform.rotation = rotation;
 
 			BulletInactive bullet = obj.GetComponent<BulletInactive>();
+			bullet.hitbox.enabled = false;
+
 			return bullet;
 		}
 		public void Dispose() => pool.Release(gameObject);
