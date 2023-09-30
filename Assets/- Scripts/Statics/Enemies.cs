@@ -71,6 +71,8 @@ namespace Game
 			if (Inputs.Dodge.Down)
 				Spawn(Vector2.zero);
 
+			// Spawn enemies in if amount is low or time has passed
+
 			foreach (Cowboy cowboy in Hunting.ToArray())
 				try
 				{

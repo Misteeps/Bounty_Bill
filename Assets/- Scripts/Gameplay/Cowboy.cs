@@ -77,6 +77,7 @@ namespace Game
 				{
 					// Draw laser
 					await Awaitable.WaitForSecondsAsync(delay);
+					// Erase laser
 
 					if (!gun.gameObject.activeSelf) return;
 				}
