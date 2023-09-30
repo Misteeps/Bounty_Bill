@@ -18,7 +18,7 @@ namespace Game
 		public static Bloom Bloom { get; } = Monolith.Refs.volumeProfile.components.Find(component => component is Bloom) as Bloom;
 		public static Vignette Vignette { get; } = Monolith.Refs.volumeProfile.components.Find(component => component is Vignette) as Vignette;
 		public static FilmGrain FilmGrain { get; } = Monolith.Refs.volumeProfile.components.Find(component => component is FilmGrain) as FilmGrain;
-		public static LensDistortion LensDistortion  { get; } = Monolith.Refs.volumeProfile.components.Find(component => component is LensDistortion) as LensDistortion;
+		public static LensDistortion LensDistortion { get; } = Monolith.Refs.volumeProfile.components.Find(component => component is LensDistortion) as LensDistortion;
 
 		public static Transition VignetteTransition { get; } = new Transition(new DelegateValue<float>(() => Vignette.intensity.value, value => { Vignette.intensity.value = value; Vignette.smoothness.value = value; }));
 
