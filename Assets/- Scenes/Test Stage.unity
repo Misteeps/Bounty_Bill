@@ -130,7 +130,6 @@ GameObject:
   m_Component:
   - component: {fileID: 200965380}
   - component: {fileID: 200965381}
-  - component: {fileID: 200965382}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -206,18 +205,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &200965382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200965379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691c16e7bc0ae824893a8f01061bc795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &229373688
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +931,7 @@ MonoBehaviour:
   dodgeTimer: 0
   bulletPrefab: {fileID: 8065134646563488689, guid: 2aefc9ca6a4acaf41bd7f464482f23bd, type: 3}
   gunTip: {fileID: 503656581}
-  gunObject: {fileID: 200965379}
+  gunObject: {fileID: 200965380}
 --- !u!114 &1946972631
 MonoBehaviour:
   m_ObjectHideFlags: 0
