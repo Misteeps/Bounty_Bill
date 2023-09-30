@@ -12,6 +12,8 @@ namespace Game
 		[SerializeField] public Vector2 direction;
 		[SerializeField] public float speed;
 		[SerializeField] public float timer;
+		[SerializeField] private LayerMask cowboyLayer;
+		[SerializeField] private LayerMask obsticleLayer;
 
 
 		public static BulletActive Spawn(Vector2 position, Quaternion rotation)
@@ -43,10 +45,16 @@ namespace Game
 			rigidbody.velocity = direction * speed;
 		}
 
-		private void OnCollisionEnter2D(Collision2D collision)
+		private void OnTriggerEnter2D(Collider2D collision)
 		{
-			Debug.Log(collision.gameObject);
-			Dispose();
+			if ((cowboyLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
+			{
+				collision.GetComponent<Cowboy>().Die();
+				Dispose();
+			}
+
+			if ((obsticleLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
+				Dispose();
 		}
 	}
 }
