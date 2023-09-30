@@ -14,9 +14,10 @@ namespace Game
 		[SerializeField] public float timer;
 		[SerializeField] private LayerMask cowboyLayer;
 		[SerializeField] private LayerMask obsticleLayer;
+		private GameObject origin;
 
 
-		public static BulletActive Spawn(Vector2 position, Quaternion rotation)
+		public static BulletActive Spawn(Vector2 position, Quaternion rotation, GameObject origin)
 		{
 			GameObject obj = pool.Get();
 			obj.transform.parent = Monolith.Refs.bulletActiveRoot;
@@ -26,6 +27,7 @@ namespace Game
 			BulletActive bullet = obj.GetComponent<BulletActive>();
 			bullet.direction = new Vector2(Mathf.Cos(obj.transform.eulerAngles.z * Mathf.Deg2Rad), Mathf.Sin(obj.transform.eulerAngles.z * Mathf.Deg2Rad));
 			bullet.timer = 0;
+			bullet.origin = origin;
 
 			return bullet;
 		}
@@ -47,6 +49,8 @@ namespace Game
 
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
+			if (collision.gameObject == origin) return;
+
 			if ((cowboyLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
 			{
 				collision.GetComponent<Cowboy>().Die();
