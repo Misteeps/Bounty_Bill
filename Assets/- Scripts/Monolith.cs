@@ -24,6 +24,11 @@ namespace Game
 			public AudioMixer audioMixer;
 			public UIDocument uiDocument;
 			public StyleSheet uiStyle;
+			public GameObject cowboyPrefab;
+			public Transform bulletActiveRoot;
+			public GameObject bulletActivePrefab;
+			public Transform bulletInactiveRoot;
+			public GameObject bulletInactivePrefab;
 		}
 		#endregion References
 
@@ -97,7 +102,6 @@ namespace Game
 				if (Paused) UI.Settings.Show();
 				else UI.Settings.Hide();
 			}
-
 
 			PlayerLook();
 			PlayerShoot();

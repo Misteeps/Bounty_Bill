@@ -1,39 +1,38 @@
 using UnityEngine;
 
+
 namespace Game
 {
 	public class Cowboy : MonoBehaviour
 	{
-		[SerializeField] private bool bullet;
-		[SerializeField] private float speed = 0;
-		[SerializeField] private float dodgeCooldown = 0;
-		[SerializeField] private float dodgeTimer = 0;
-		[SerializeField] private GameObject bulletPrefab;
+		[SerializeField] private new Rigidbody2D rigidbody;
+		[SerializeField] private Transform gun;
 		[SerializeField] private Transform gunTip;
-		[SerializeField] private Transform gunObject;
-		Rigidbody2D rb;
+		[SerializeField] public bool bullet = true;
+		[SerializeField] public float speed = 20f;
+		[SerializeField] public float dodgeCooldown = 3f;
+		[SerializeField] public float dodgeTimer = 0;
 
-		private void Awake()
-		{
-			rb = GetComponent<Rigidbody2D>();
-		}
 
-		public void Move(Vector2 movement)
-		{
-			//transform.position += new Vector3(movement.x, movement.y, 0);
-			rb.MovePosition(rb.position + movement * (20f * Time.fixedDeltaTime));
-		}
+		public void Move(Vector2 movement) => rigidbody.MovePosition(rigidbody.position + movement * (speed * Time.fixedDeltaTime));
 		public void LookAt(Vector2 target)
 		{
-			Vector3 direction = target - (Vector2)gunObject.position;
+			Vector3 direction = target - (Vector2)gun.position;
 			float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-			gunObject.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+			gun.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 		}
 		public async void Shoot(float delay)
 		{
-			await Awaitable.WaitForSecondsAsync(delay);
-			Instantiate(bulletPrefab, gunTip.position, Quaternion.Euler(gunObject.transform.rotation.eulerAngles));
-			//need to check for bullets here
+			if (bullet)
+			{
+				await Awaitable.WaitForSecondsAsync(delay);
+				BulletActive.Spawn(gunTip.position, gun.transform.rotation);
+				//bullet = false;
+			}
+			else
+			{
+				// No bitches?
+			}
 		}
 	}
 }
