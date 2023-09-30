@@ -27,12 +27,13 @@ namespace Game
 		{
             Vector3 direction = target - (Vector2)gunObject.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            gunObject.rotation = Quaternion.Euler(target);
-		}
+            gunObject.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        }
 		public async void Shoot(float delay)
 		{
 			await Awaitable.WaitForSecondsAsync(delay);
 			Instantiate(bulletPrefab, gunTip.position, Quaternion.Euler(gunObject.transform.rotation.eulerAngles));
+            //need to check for bullets here
 		}
 	}
 }
