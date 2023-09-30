@@ -15,6 +15,8 @@ namespace Game.UI
 
 		public readonly Label fps;
 
+		public static bool Faded { get => Instance.ClassListContains("fade"); set => Instance.EnableInClassList("fade", value); }
+
 
 		public Overlay()
 		{

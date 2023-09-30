@@ -21,11 +21,10 @@ namespace Game.UI
 			Div bottom = panel.Attach(new Div() { Name = "bottom", Classes = "row", Flexible = true });
 
 			header.Attach(new Label() { Name = "title", Text = "Settings", Size = Size.Huge, Flexible = true });
-			header.Attach(new Button() { Name = "close" }).Bind(_ => Hide());
+			header.Attach(new Button() { Name = "close", Text = "X" }).Bind(_ => Hide());
 
 			Div general = top.Attach(new Div() { Name = "general", Classes = "section", Flexible = true });
 			general.AttachField(Game.Settings.cameraEffects, new ToggleSlide());
-			top.Attach(new HorizontalSpace(Size.Huge));
 			top.Attach(new HorizontalSpace(Size.Huge));
 			top.Attach(new HorizontalSpace(Size.Huge));
 			Div graphics = top.Attach(new Div() { Name = "graphics", Classes = "section", Flexible = true });
@@ -44,7 +43,6 @@ namespace Game.UI
 			audio.AttachField(Game.Settings.voiceVolume, new IntInputSlider() { Min = 0, Max = 100 });
 			audio.AttachField(Game.Settings.ambianceVolume, new IntInputSlider() { Min = 0, Max = 100 });
 			audio.AttachField(Game.Settings.musicVolume, new IntInputSlider() { Min = 0, Max = 100 });
-			bottom.Attach(new HorizontalSpace(Size.Huge));
 			bottom.Attach(new HorizontalSpace(Size.Huge));
 			bottom.Attach(new HorizontalSpace(Size.Huge));
 			Div keybinds = bottom.Attach(new Div() { Name = "keybinds", Classes = "section", Flexible = true });
