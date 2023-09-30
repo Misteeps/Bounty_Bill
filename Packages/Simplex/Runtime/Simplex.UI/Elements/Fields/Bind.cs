@@ -21,7 +21,7 @@ namespace Simplex.UI
 		public readonly Button icon;
 		public readonly Button clear;
 
-		public virtual bool Locked { get => ClassListContains("locked"); set => EnableInClassList("locked", value); }
+		public virtual bool Locked { get; set; }
 
 
 		public Bind()
@@ -55,6 +55,7 @@ namespace Simplex.UI
 		public virtual void RebindStart()
 		{
 			panel.visualTree.SetEnabled(false);
+			panel.visualTree.style.opacity = 1;
 			Set(State.Active);
 		}
 		public virtual void RebindEnd()
@@ -81,31 +82,78 @@ namespace Simplex.UI
 
 	#region Key Bind
 #if ENABLE_LEGACY_INPUT_MANAGER
-	public class KeyBind : Bind<(KeyCode, KeyCode)>
+	public class KeyBindGroup : Field<(KeyCode, KeyCode)>
 	{
-		protected override string Type => "keycode";
+		protected override string[] DefaultClasses => new string[] { "field", "keycode-group" };
+
+		public readonly KeyBind primary;
+		public readonly KeyBind secondary;
+
+		public KeyCode Primary { get => BindedValue.Item1; set => BindedValue = (value, BindedValue.Item2); }
+		public KeyCode Secondary { get => BindedValue.Item2; set => BindedValue = (BindedValue.Item1, value); }
+
+		public bool LockPrimary { get => primary.Locked; set => primary.Locked = value; }
 
 		public override (KeyCode, KeyCode) CurrentValue
 		{
 			set
 			{
 				base.CurrentValue = value;
-				Text = $"{ConvertKeycode(value.Item1)} / {ConvertKeycode(value.Item2)}";
+				primary.CurrentValue = value.Item1;
+				secondary.CurrentValue = value.Item2;
 			}
 		}
 
 
-		public override void RebindStart()
+		public KeyBindGroup()
+		{
+			primary = this.Attach(new KeyBind() { Name = "primary", Flexible = true }.Bind(() => Primary, value => Primary = value));
+			this.Attach(new HorizontalSpace());
+			secondary = this.Attach(new KeyBind() { Name = "secondary", Flexible = true }.Bind(() => Secondary, value => Secondary = value));
+		}
+	}
+	public class KeyBind : Bind<KeyCode>
+	{
+		protected override string Type => "keycode";
+
+		public override KeyCode CurrentValue
+		{
+			set
+			{
+				base.CurrentValue = value;
+				Text = ConvertKeycode(value);
+			}
+		}
+
+
+		public override async void RebindStart()
 		{
 			base.RebindStart();
 
-			throw new NotImplementedException();
-		}
-		public override void RebindEnd()
-		{
-			base.RebindEnd();
+			while (true)
+			{
+				await Awaitable.NextFrameAsync();
 
-			throw new NotImplementedException();
+				if (Input.GetKeyDown(KeyCode.Escape))
+					return;
+
+				if (Input.GetKeyDown(CurrentValue))
+				{
+					CurrentValue = KeyCode.None;
+					Pulse(State.Cancel);
+					RebindEnd();
+					return;
+				}
+
+				foreach (KeyCode keycode in Enum.GetValues(typeof(KeyCode)))
+					if (Input.GetKeyDown(keycode))
+					{
+						BindedValue = keycode;
+						Pulse(State.Success);
+						RebindEnd();
+						return;
+					}
+			}
 		}
 
 		public static string ConvertKeycode(KeyCode keycode) => (keycode) switch

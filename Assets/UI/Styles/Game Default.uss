@@ -16,6 +16,14 @@
 	right: 0;
 }
 
+.field.keycode-group {
+	flex-direction: row;
+}
+
+.field.keycode {
+	width: 0;
+}
+
 /* Overlay */
 
 .layer#Overlay > .label#fps {

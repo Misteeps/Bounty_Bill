@@ -119,7 +119,7 @@ namespace Game
 		{
 			get
 			{
-#if !UNITY_WEBGL
+#if UNITY_WEBGL
 				return new (FullScreenMode, string)[] { (FullScreenMode.ExclusiveFullScreen, "Fullscreen"), (FullScreenMode.Windowed, "Normal") };
 #elif UNITY_STANDALONE_OSX
 				return new (FullScreenMode, string)[] { (FullScreenMode.ExclusiveFullScreen, "Fullscreen"), (FullScreenMode.FullScreenWindow, "Borderless Window"), (FullScreenMode.MaximizedWindow, "Maximized Window"), (FullScreenMode.Windowed, "Windowed"), };
