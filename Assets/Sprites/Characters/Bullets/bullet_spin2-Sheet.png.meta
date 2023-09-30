@@ -67,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,19 +134,19 @@ TextureImporter:
       name: bullet_spin2-Sheet_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1
-        width: 14
-        height: 13
+        x: 3
+        y: 2
+        width: 12
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2a56567d6e4ca2820800000000000000
-      internalID: 2894342206274233762
+      spriteID: 06e769c8b27a99248961de6fe27ef85d
+      internalID: 1193197765
       vertices: []
       indices: 
       edges: []
@@ -155,19 +155,19 @@ TextureImporter:
       name: bullet_spin2-Sheet_1
       rect:
         serializedVersion: 2
-        x: 25
-        y: 1
-        width: 12
-        height: 13
+        x: 26
+        y: 2
+        width: 10
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4f18e65a490a32070800000000000000
-      internalID: 8080478716723888628
+      spriteID: 37652867fc96e0c47ae533d13c27f562
+      internalID: 120837328
       vertices: []
       indices: 
       edges: []
@@ -176,19 +176,19 @@ TextureImporter:
       name: bullet_spin2-Sheet_2
       rect:
         serializedVersion: 2
-        x: 47
-        y: 1
-        width: 11
-        height: 13
+        x: 48
+        y: 2
+        width: 9
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f002b6b82fc5510f0800000000000000
-      internalID: -1146908333305028593
+      spriteID: 67d1469a81c644e4e90ae4b4da62d96f
+      internalID: -19849251
       vertices: []
       indices: 
       edges: []
@@ -197,19 +197,19 @@ TextureImporter:
       name: bullet_spin2-Sheet_3
       rect:
         serializedVersion: 2
-        x: 68
-        y: 1
-        width: 12
-        height: 13
+        x: 69
+        y: 2
+        width: 10
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d09055432a9189490800000000000000
-      internalID: -7739407775182812915
+      spriteID: 1ef1980416818ba45894a1f65d93fa88
+      internalID: -2096590960
       vertices: []
       indices: 
       edges: []
@@ -218,19 +218,19 @@ TextureImporter:
       name: bullet_spin2-Sheet_4
       rect:
         serializedVersion: 2
-        x: 89
-        y: 1
-        width: 13
-        height: 13
+        x: 90
+        y: 2
+        width: 11
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 80c3da78258a68ae0800000000000000
-      internalID: -1547364349538124792
+      spriteID: 540a109ee4138bb4b82e6bd624067418
+      internalID: 69181994
       vertices: []
       indices: 
       edges: []
@@ -239,19 +239,19 @@ TextureImporter:
       name: bullet_spin2-Sheet_5
       rect:
         serializedVersion: 2
-        x: 110
-        y: 1
-        width: 12
-        height: 13
+        x: 111
+        y: 2
+        width: 10
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e928aef5b080c0130800000000000000
-      internalID: 3534208652525863582
+      spriteID: b36bea54f299f9d4ca8cb221f9fdef75
+      internalID: 1182701587
       vertices: []
       indices: 
       edges: []
@@ -260,19 +260,19 @@ TextureImporter:
       name: bullet_spin2-Sheet_6
       rect:
         serializedVersion: 2
-        x: 131
-        y: 1
-        width: 11
-        height: 13
+        x: 132
+        y: 2
+        width: 9
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b2f4794832ecb19f0800000000000000
-      internalID: -496576681950621909
+      spriteID: cef03195e59b79a42afe51cb201a85f7
+      internalID: -490774598
       vertices: []
       indices: 
       edges: []
@@ -281,19 +281,19 @@ TextureImporter:
       name: bullet_spin2-Sheet_7
       rect:
         serializedVersion: 2
-        x: 151
-        y: 1
-        width: 12
-        height: 13
+        x: 152
+        y: 2
+        width: 10
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5bc42ea5ce2b34f20800000000000000
-      internalID: 3405762471429033141
+      spriteID: 41fa81e21a327fc4ba4abdf63390746a
+      internalID: -1001466895
       vertices: []
       indices: 
       edges: []
@@ -309,7 +309,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cowboy01_0: 6748216094295715067
+      bullet_spin2-Sheet_0: 1193197765
+      bullet_spin2-Sheet_1: 120837328
+      bullet_spin2-Sheet_2: -19849251
+      bullet_spin2-Sheet_3: -2096590960
+      bullet_spin2-Sheet_4: 69181994
+      bullet_spin2-Sheet_5: 1182701587
+      bullet_spin2-Sheet_6: -490774598
+      bullet_spin2-Sheet_7: -1001466895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
