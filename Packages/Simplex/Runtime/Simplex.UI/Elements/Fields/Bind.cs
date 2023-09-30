@@ -81,16 +81,43 @@ namespace Simplex.UI
 
 	#region Key Bind
 #if ENABLE_LEGACY_INPUT_MANAGER
-	public class KeyBind : Bind<(KeyCode, KeyCode)>
+	public class KeyBindGroup : Field<(KeyCode, KeyCode)>
 	{
-		protected override string Type => "keycode";
+		protected override string[] DefaultClasses => new string[] { "field", "keycode-group" };
+
+		public readonly KeyBind primary;
+		public readonly KeyBind secondary;
+
+		public KeyCode Primary { get => BindedValue.Item1; set => BindedValue = (value, BindedValue.Item2); }
+		public KeyCode Secondary { get => BindedValue.Item2; set => BindedValue = (BindedValue.Item1, value); }
 
 		public override (KeyCode, KeyCode) CurrentValue
 		{
 			set
 			{
 				base.CurrentValue = value;
-				Text = $"{ConvertKeycode(value.Item1)} / {ConvertKeycode(value.Item2)}";
+				primary.CurrentValue = value.Item1;
+				secondary.CurrentValue = value.Item2;
+			}
+		}
+
+
+		public KeyBindGroup()
+		{
+			primary = this.Attach(new KeyBind() { Name = "primary"}.Bind(() => Primary, value => Primary = value));
+			secondary = this.Attach(new KeyBind() { Name = "secondary"}.Bind(() => Secondary, value => Secondary = value));
+		}
+	}
+	public class KeyBind : Bind<KeyCode>
+	{
+		protected override string Type => "keycode";
+
+		public override KeyCode CurrentValue
+		{
+			set
+			{
+				base.CurrentValue = value;
+				Text = ConvertKeycode(value);
 			}
 		}
 
