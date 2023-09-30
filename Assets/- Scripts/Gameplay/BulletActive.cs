@@ -15,6 +15,7 @@ namespace Game
 		[SerializeField] private LayerMask cowboyLayer;
 		[SerializeField] private LayerMask obsticleLayer;
 		private GameObject origin;
+		private bool hit;
 
 
 		public static void OnGet(GameObject obj) => obj.SetActive(true);
@@ -30,6 +31,7 @@ namespace Game
 			bullet.direction = new Vector2(Mathf.Cos(obj.transform.eulerAngles.z * Mathf.Deg2Rad), Mathf.Sin(obj.transform.eulerAngles.z * Mathf.Deg2Rad));
 			bullet.timer = 0;
 			bullet.origin = origin;
+			bullet.hit = false;
 
 			return bullet;
 		}
@@ -51,16 +53,13 @@ namespace Game
 
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
-			if (collision.gameObject == origin) return;
+			if (collision.gameObject == origin || hit) return;
+			hit = true;
 
-			if ((cowboyLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
-			{
+			if ((cowboyLayer.value & (1 << collision.gameObject.layer)) > 0)
 				collision.GetComponent<Cowboy>().Die();
-				Dispose();
-			}
 
-			if ((obsticleLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
-				Dispose();
+			Dispose();
 		}
 	}
 }
