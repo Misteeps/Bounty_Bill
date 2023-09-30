@@ -98,14 +98,15 @@ namespace Game
 				else UI.Settings.Hide();
 			}
 
-			PlayerLook();
+            
+            PlayerLook();
 			PlayerShoot();
 			Enemies.Update();
 		}
 		private void FixedUpdate()
 		{
-			PlayerMove();
-			Enemies.FixedUpdate();
+            PlayerMove();
+            Enemies.FixedUpdate();
 		}
 
 		private void PlayerMove()
