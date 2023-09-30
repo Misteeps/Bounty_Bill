@@ -38,26 +38,32 @@ namespace Game
 			obj.transform.parent = Monolith.Refs.cowboyRoot;
 			obj.transform.position = position;
 
-			SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
-			spriteRenderer.color = Color.HSVToRGB(0, 0, RandomFloat(0.8f, 1f));
-			spriteRenderer.sprite = RandomInt(1, 4) switch
-			{
-				1 => Monolith.Refs.cowboy2,
-				2 => Monolith.Refs.cowboy3,
-				3 => Monolith.Refs.cowboy4,
-				_ => throw new Exception("Invalid cowboy sprite")
-			};
-
 			NavMeshAgent agent = obj.GetComponent<NavMeshAgent>();
 			agent.updateRotation = false;
 			agent.updateUpAxis = false;
 			agent.speed = RandomFloat(1f, 6f);
 
 			Cowboy cowboy = obj.GetComponent<Cowboy>();
-			cowboy.bullet = true;
+			cowboy.SetSprites(RandomInt(2, 5) switch
+			{
+				2 => Monolith.Refs.cowboy2,
+				3 => Monolith.Refs.cowboy3,
+				4 => Monolith.Refs.cowboy4,
+				_ => throw new Exception("Invalid cowboy sprite")
+			});
+			cowboy.Initialize();
 			cowboy.speed = agent.speed;
+			cowboy.spriteRenderer.color = Color.HSVToRGB(0, 0, RandomFloat(0.8f, 1f));
+
+			cowboy.Died += () => Remove(cowboy);
+			cowboy.Disposed += () => pool.Release(cowboy.gameObject);
 
 			return cowboy;
+		}
+		public static void Remove(Cowboy cowboy)
+		{
+			Hunting.Remove(cowboy);
+			Reloading.Remove(cowboy);
 		}
 
 		public static void Update()

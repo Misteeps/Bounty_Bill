@@ -30,9 +30,10 @@ namespace Game
 			public GameObject bulletActivePrefab;
 			public Transform bulletInactiveRoot;
 			public GameObject bulletInactivePrefab;
-			public Sprite cowboy2;
-			public Sprite cowboy3;
-			public Sprite cowboy4;
+			public Cowboy.Sprites cowboy1;
+			public Cowboy.Sprites cowboy2;
+			public Cowboy.Sprites cowboy3;
+			public Cowboy.Sprites cowboy4;
 		}
 		#endregion References
 
@@ -96,6 +97,8 @@ namespace Game
 			UI.Overlay.Show();
 
 			Settings.Defaults();
+
+			Player.SetSprites(Refs.cowboy1);
 		}
 
 		private void Update()

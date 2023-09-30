@@ -49,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -118,17 +118,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 55
+        width: 27
         height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b1c52d8cfbf8adda0800000000000000
-      internalID: -5919260706354340837
+      spriteID: d66126e876984c64f907f91c1aa57d13
+      internalID: -1047541932
       vertices: []
       indices: 
       edges: []
@@ -137,19 +137,40 @@ TextureImporter:
       name: cowboy01_dying-Sheet_1
       rect:
         serializedVersion: 2
-        x: 53
+        x: 27
         y: 0
         width: 27
-        height: 21
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60ea5deb1bdab2830800000000000000
-      internalID: 4047519669045014022
+      spriteID: 8c2a253ee68c4674580fbbbc3538f535
+      internalID: 1811101276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy01_dying-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6af968a0dc827348beecc75d7b01303
+      internalID: 1803826883
       vertices: []
       indices: 
       edges: []
@@ -165,7 +186,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cowboy01_0: 6748216094295715067
+      cowboy01_dying-Sheet_0: -1047541932
+      cowboy01_dying-Sheet_1: 1811101276
+      cowboy01_dying-Sheet_2: 1803826883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
