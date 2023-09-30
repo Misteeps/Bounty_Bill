@@ -47,13 +47,13 @@ namespace Game
 
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
-			if ((obsticleLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
+			if ((cowboyLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
 			{
 				collision.GetComponent<Cowboy>().Die();
 				Dispose();
 			}
 
-			if ((cowboyLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
+			if ((obsticleLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
 				Dispose();
 		}
 	}
