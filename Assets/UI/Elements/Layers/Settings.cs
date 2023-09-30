@@ -48,13 +48,13 @@ namespace Game.UI
 			bottom.Attach(new HorizontalSpace(Size.Huge));
 			bottom.Attach(new HorizontalSpace(Size.Huge));
 			Div keybinds = bottom.Attach(new Div() { Name = "keybinds", Classes = "section", Flexible = true });
-			keybinds.AttachField(Game.Settings.shoot, new KeyBindGroup());
+			keybinds.AttachField(Game.Settings.shoot, new KeyBindGroup() { LockPrimary = true });
 			keybinds.AttachField(Game.Settings.dodge, new KeyBindGroup());
 			keybinds.AttachField(Game.Settings.moveUp, new KeyBindGroup());
 			keybinds.AttachField(Game.Settings.moveDown, new KeyBindGroup());
 			keybinds.AttachField(Game.Settings.moveLeft, new KeyBindGroup());
 			keybinds.AttachField(Game.Settings.moveRight, new KeyBindGroup());
-			keybinds.AttachField(Game.Settings.escape, new KeyBindGroup());
+			keybinds.AttachField(Game.Settings.escape, new KeyBindGroup() { LockPrimary = true });
 
 			Hidden += () => Monolith.Paused = false;
 		}
