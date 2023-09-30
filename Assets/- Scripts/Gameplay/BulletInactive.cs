@@ -78,5 +78,14 @@ namespace Game
 
 			Dispose();
 		}
+
+		public static void CleanUp()
+		{
+			pool.Clear();
+
+			for (int i = Monolith.Refs.bulletInactiveRoot.childCount - 1; i >= 0; i--)
+				try { Destroy(Monolith.Refs.bulletInactiveRoot.GetChild(i).gameObject); }
+				catch (Exception exception) { exception.Error($"Failed cleaning inactive bullets"); }
+		}
 	}
 }

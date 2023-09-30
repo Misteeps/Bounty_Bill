@@ -143,5 +143,17 @@ namespace Game
 		private static int RandomInt(int min, int max) => UnityEngine.Random.Range(min, max);
 		private static float RandomFloat(float min, float max) => UnityEngine.Random.Range(min, max);
 		private static Vector2 RandomPosition(float radius) => PlayerPosition + (UnityEngine.Random.insideUnitCircle * radius);
+
+		public static void CleanUp()
+		{
+			pool.Clear();
+			Hunting.Clear();
+			Reloading.Clear();
+			inactiveBullets.Clear();
+
+			for (int i = Monolith.Refs.cowboyRoot.childCount - 1; i >= 0; i--)
+				try { GameObject.Destroy(Monolith.Refs.cowboyRoot.GetChild(i).gameObject); }
+				catch (Exception exception) { exception.Error($"Failed cleaning enemy cowboys"); }
+		}
 	}
 }
