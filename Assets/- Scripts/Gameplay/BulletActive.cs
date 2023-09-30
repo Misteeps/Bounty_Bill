@@ -6,7 +6,7 @@ namespace Game
 {
 	public class BulletActive : MonoBehaviour
 	{
-		private static ObjectPool<GameObject> pool = new ObjectPool<GameObject>(() => Instantiate(Monolith.Refs.bulletActivePrefab), actionOnGet: obj => obj.SetActive(true), actionOnRelease: obj => obj.SetActive(false));
+		private static readonly ObjectPool<GameObject> pool = new ObjectPool<GameObject>(() => Instantiate(Monolith.Refs.bulletActivePrefab), actionOnGet: obj => obj.SetActive(true), actionOnRelease: obj => obj.SetActive(false));
 
 		[SerializeField] private new Rigidbody2D rigidbody;
 		[SerializeField] public Vector2 direction;
@@ -43,6 +43,10 @@ namespace Game
 			rigidbody.velocity = direction * speed;
 		}
 
-		private void OnCollisionEnter2D(Collision2D collision) => Dispose();
+		private void OnCollisionEnter2D(Collision2D collision)
+		{
+			Debug.Log(collision.gameObject);
+			Dispose();
+		}
 	}
 }

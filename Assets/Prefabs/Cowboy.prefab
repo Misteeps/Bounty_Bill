@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6505303936121154313}
   - component: {fileID: 3446016833608802133}
   - component: {fileID: 3803244724076481782}
+  - component: {fileID: -365439399822014099}
   m_Layer: 8
   m_Name: Cowboy
   m_TagString: Untagged
@@ -183,7 +184,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &6505303936121154313
 MonoBehaviour:
@@ -198,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 592651887955893293}
+  agent: {fileID: -365439399822014099}
   gun: {fileID: 4064959656157012561}
   gunTip: {fileID: 4127001627404367006}
   bullet: 1
@@ -234,6 +236,28 @@ MonoBehaviour:
   inactiveBulletLayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!195 &-365439399822014099
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217814989333713969}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.4
+  m_Speed: 4
+  m_Acceleration: 20
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.00001
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 2
 --- !u!1 &3732342645485878919
 GameObject:
   m_ObjectHideFlags: 0
