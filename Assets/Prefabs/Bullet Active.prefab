@@ -167,3 +167,9 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   speed: 20
   timer: 0
+  cowboyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  obsticleLayer:
+    serializedVersion: 2
+    m_Bits: 1024
