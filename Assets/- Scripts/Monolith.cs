@@ -30,6 +30,9 @@ namespace Game
 			public GameObject bulletActivePrefab;
 			public Transform bulletInactiveRoot;
 			public GameObject bulletInactivePrefab;
+			public Sprite cowboy2;
+			public Sprite cowboy3;
+			public Sprite cowboy4;
 		}
 		#endregion References
 
@@ -111,7 +114,6 @@ namespace Game
 		private void FixedUpdate()
 		{
 			PlayerMove();
-			Enemies.FixedUpdate();
 		}
 
 		private void PlayerMove()
