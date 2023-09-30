@@ -51,7 +51,7 @@ namespace Game
 			NavMeshAgent agent = obj.GetComponent<NavMeshAgent>();
 			agent.updateRotation = false;
 			agent.updateUpAxis = false;
-			agent.speed = RandomFloat(4f, 8f);
+			agent.speed = RandomFloat(1f, 6f);
 
 			Cowboy cowboy = obj.GetComponent<Cowboy>();
 			cowboy.bullet = true;
@@ -70,15 +70,15 @@ namespace Game
 				{
 					if (cowboy.shooting) continue;
 
-					cowboy.LookAt(PlayerPosition);
-
 					if (Vector2.Distance(cowboy.agent.destination, PlayerPosition) > 6)
 					{
-						cowboy.agent.destination = RandomPosition(6);
+						MoveEnemy(cowboy, RandomPosition(6));
 					}
-					else if (cowboy.agent.isStopped)
+
+					else if (cowboy.agent.remainingDistance < 0.4f)
 					{
-						cowboy.Shoot(1.2f);
+						cowboy.LookAt(PlayerPosition);
+						cowboy.Shoot(RandomFloat(0.4f, 0.8f));
 						Hunting.Remove(cowboy);
 						Reloading.Add(cowboy, null);
 					}
@@ -90,24 +90,30 @@ namespace Game
 				{
 					if (cowboy.shooting) continue;
 
-					cowboy.gun.rotation = new Quaternion();
-
 					if (bullet != null)
 					{
-						cowboy.agent.destination = bullet.transform.position;
+						MoveEnemy(cowboy, bullet.transform.position);
 					}
+
 					else if (inactiveBullets.Count > 0)
 					{
 						int index = RandomInt(0, inactiveBullets.Count - 1);
 						Reloading[cowboy] = inactiveBullets[index];
 						inactiveBullets.RemoveAt(index);
 					}
-					else if (cowboy.agent.isStopped)
+
+					else if (cowboy.agent.remainingDistance < 0.05f)
 					{
-						cowboy.agent.destination = RandomPosition(16);
+						MoveEnemy(cowboy, RandomPosition(20));
 					}
 				}
 				catch (Exception exception) { exception.Error($"Failed updating reloading enemy {cowboy?.gameObject}"); }
+		}
+
+		private static void MoveEnemy(Cowboy cowboy, Vector2 position)
+		{
+			cowboy.agent.destination = position;
+			cowboy.LookAt(position);
 		}
 
 		private static int RandomInt(int min, int max) => UnityEngine.Random.Range(min, max);
