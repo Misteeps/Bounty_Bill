@@ -38,26 +38,32 @@ namespace Game
 			obj.transform.parent = Monolith.Refs.cowboyRoot;
 			obj.transform.position = position;
 
-			SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
-			spriteRenderer.color = Color.HSVToRGB(0, 0, RandomFloat(0.8f, 1f));
-			spriteRenderer.sprite = RandomInt(1, 4) switch
-			{
-				1 => Monolith.Refs.cowboy2,
-				2 => Monolith.Refs.cowboy3,
-				3 => Monolith.Refs.cowboy4,
-				_ => throw new Exception("Invalid cowboy sprite")
-			};
-
 			NavMeshAgent agent = obj.GetComponent<NavMeshAgent>();
 			agent.updateRotation = false;
 			agent.updateUpAxis = false;
 			agent.speed = RandomFloat(1f, 6f);
 
 			Cowboy cowboy = obj.GetComponent<Cowboy>();
-			cowboy.bullet = true;
+			cowboy.SetSprites(RandomInt(2, 5) switch
+			{
+				2 => Monolith.Refs.cowboy2,
+				3 => Monolith.Refs.cowboy3,
+				4 => Monolith.Refs.cowboy4,
+				_ => throw new Exception("Invalid cowboy sprite")
+			});
+			cowboy.Initialize();
 			cowboy.speed = agent.speed;
+			cowboy.spriteRenderer.color = Color.HSVToRGB(0, 0, RandomFloat(0.8f, 1f));
+
+			cowboy.Died += () => Remove(cowboy);
+			cowboy.Disposed += () => pool.Release(cowboy.gameObject);
 
 			return cowboy;
+		}
+		public static void Remove(Cowboy cowboy)
+		{
+			Hunting.Remove(cowboy);
+			Reloading.Remove(cowboy);
 		}
 
 		public static void Update()
@@ -69,6 +75,7 @@ namespace Game
 				try
 				{
 					if (cowboy.shooting) continue;
+					cowboy.Wiggle(cowboy.agent.velocity.magnitude * 2);
 
 					if (Vector2.Distance(cowboy.agent.destination, PlayerPosition) > 6)
 					{
@@ -89,6 +96,7 @@ namespace Game
 				try
 				{
 					if (cowboy.shooting) continue;
+					cowboy.Wiggle(cowboy.agent.velocity.magnitude * 2);
 
 					if (bullet != null)
 					{
@@ -135,5 +143,17 @@ namespace Game
 		private static int RandomInt(int min, int max) => UnityEngine.Random.Range(min, max);
 		private static float RandomFloat(float min, float max) => UnityEngine.Random.Range(min, max);
 		private static Vector2 RandomPosition(float radius) => PlayerPosition + (UnityEngine.Random.insideUnitCircle * radius);
+
+		public static void CleanUp()
+		{
+			pool.Clear();
+			Hunting.Clear();
+			Reloading.Clear();
+			inactiveBullets.Clear();
+
+			for (int i = Monolith.Refs.cowboyRoot.childCount - 1; i >= 0; i--)
+				try { GameObject.Destroy(Monolith.Refs.cowboyRoot.GetChild(i).gameObject); }
+				catch (Exception exception) { exception.Error($"Failed cleaning enemy cowboys"); }
+		}
 	}
 }

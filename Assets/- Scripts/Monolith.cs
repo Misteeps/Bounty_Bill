@@ -30,9 +30,10 @@ namespace Game
 			public GameObject bulletActivePrefab;
 			public Transform bulletInactiveRoot;
 			public GameObject bulletInactivePrefab;
-			public Sprite cowboy2;
-			public Sprite cowboy3;
-			public Sprite cowboy4;
+			public Cowboy.Sprites cowboy1;
+			public Cowboy.Sprites cowboy2;
+			public Cowboy.Sprites cowboy3;
+			public Cowboy.Sprites cowboy4;
 		}
 		#endregion References
 
@@ -96,6 +97,13 @@ namespace Game
 			UI.Overlay.Show();
 
 			Settings.Defaults();
+
+			Game.Camera.VirtualCamera.enabled = false;
+			Game.Camera.VignetteTransition.Modify(0.2f, 0.2f, 0, EaseFunction.Linear, EaseDirection.InOut).Run();
+
+			Player.SetSprites(Refs.cowboy1);
+
+			Instance.enabled = false;
 		}
 
 		private void Update()
@@ -106,6 +114,9 @@ namespace Game
 				if (Paused) UI.Settings.Show();
 				else UI.Settings.Hide();
 			}
+
+			if (Paused)
+				return;
 
 			PlayerLook();
 			PlayerShoot();
@@ -126,7 +137,11 @@ namespace Game
 			if (Inputs.MoveRight.Held) x += 1;
 			if (Inputs.MoveLeft.Held) x -= 1;
 
+			if (x == 0 && y == 0)
+				return;
+
 			Player.Move(Vector2.ClampMagnitude(new Vector2(x, y), 0.1f));
+			Player.Wiggle(10);
 		}
 		private void PlayerLook()
 		{
@@ -137,6 +152,61 @@ namespace Game
 		{
 			if (Inputs.Shoot.Down)
 				Player.Shoot(0);
+		}
+
+		public static async void GameStart()
+		{
+			Player.Initialize();
+			Player.transform.position = new Vector2(0, -6);
+			Player.gun.localScale = new Vector2(0, 0);
+
+#if UNITY_EDITOR
+			void Walk(float position)
+			{
+				Player.transform.position = new Vector2(0, position);
+				Player.Wiggle(6);
+			}
+
+			Game.Camera.VignetteTransition.Modify(0.2f, 1f, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
+			new Transition(() => Player.transform.position.y, Walk).Modify(-6, 0, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
+			await Awaitable.WaitForSecondsAsync(1.6f);
+
+			// Show Text "Everyone Only Gets ONE SHOT"
+			await Awaitable.WaitForSecondsAsync(2f);
+
+			Game.Camera.VirtualCamera.enabled = true;
+			Game.Camera.VignetteTransition.Modify(1f, 0.2f, 1f, EaseFunction.Circular, EaseDirection.InOut).Run();
+			Player.gun.TransitionLocalScaleX().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
+			Player.gun.TransitionLocalScaleY().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
+			await Awaitable.WaitForSecondsAsync(0.6f);
+#endif
+
+			Instance.enabled = true;
+			Paused = false;
+		}
+		private static async void GameEnd()
+		{
+			Instance.enabled = false;
+
+			Game.Camera.VignetteTransition.Modify(0.2f, 1f, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
+			await Awaitable.WaitForSecondsAsync(1.6f);
+
+			// Show Something
+			await Awaitable.WaitForSecondsAsync(2f);
+
+			// Fade Out
+
+			Game.Camera.VirtualCamera.enabled = false;
+			Camera.transform.position = Vector3.zero;
+			Player.transform.position = new Vector2(0, -6);
+
+			Enemies.CleanUp();
+			BulletActive.CleanUp();
+			BulletInactive.CleanUp();
+
+			// Fade In
+			
+			// Show Menu
 		}
 	}
 }

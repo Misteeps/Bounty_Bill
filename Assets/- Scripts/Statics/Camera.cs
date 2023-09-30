@@ -15,6 +15,13 @@ namespace Game
 		public static CinemachineVirtualCamera VirtualCamera { get; } = Monolith.Camera.GetComponent<CinemachineVirtualCamera>();
 		public static CinemachineOrbitalTransposer Transposer { get; } = VirtualCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
 
-		public static float FOV { get => VirtualCamera.m_Lens.FieldOfView; set => VirtualCamera.m_Lens.FieldOfView = value; }
+		public static Bloom Bloom { get; } = Monolith.Refs.volumeProfile.components.Find(component => component is Bloom) as Bloom;
+		public static Vignette Vignette { get; } = Monolith.Refs.volumeProfile.components.Find(component => component is Vignette) as Vignette;
+		public static FilmGrain FilmGrain { get; } = Monolith.Refs.volumeProfile.components.Find(component => component is FilmGrain) as FilmGrain;
+		public static LensDistortion LensDistortion  { get; } = Monolith.Refs.volumeProfile.components.Find(component => component is LensDistortion) as LensDistortion;
+
+		public static Transition VignetteTransition { get; } = new Transition(new DelegateValue<float>(() => Vignette.intensity.value, value => { Vignette.intensity.value = value; Vignette.smoothness.value = value; }));
+
+		public static float Size { get => VirtualCamera.m_Lens.OrthographicSize; set => VirtualCamera.m_Lens.OrthographicSize = value; }
 	}
 }

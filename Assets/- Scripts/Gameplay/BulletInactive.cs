@@ -48,11 +48,11 @@ namespace Game
 			transform.TransitionPositionX().Modify(position.x, 1, EaseFunction.Quadratic, EaseDirection.Out).Run();
 			transform.TransitionPositionY().Modify(position.y, 1, EaseFunction.Quadratic, EaseDirection.Out).Run();
 
-			transform.TransitionLocalScaleX().Modify(1, 1.4f, 0.4f, EaseFunction.Back, EaseDirection.Out).Run();
-			await transform.TransitionLocalScaleY().Modify(1, 1.4f, 0.4f, EaseFunction.Back, EaseDirection.Out).Await();
+			transform.TransitionLocalScaleX().Modify(1, 1.4f, 0.3f, EaseFunction.Back, EaseDirection.Out).Run();
+			await transform.TransitionLocalScaleY().Modify(1, 1.4f, 0.3f, EaseFunction.Back, EaseDirection.Out).Await();
 
-			transform.TransitionLocalScaleX().Modify(1.5f, 1, 0.4f, EaseFunction.Bounce, EaseDirection.Out).Run();
-			await transform.TransitionLocalScaleY().Modify(1.5f, 1, 0.4f, EaseFunction.Bounce, EaseDirection.Out).Await();
+			transform.TransitionLocalScaleX().Modify(1.4f, 1, 0.5f, EaseFunction.Bounce, EaseDirection.Out).Run();
+			await transform.TransitionLocalScaleY().Modify(1.4f, 1, 0.5f, EaseFunction.Bounce, EaseDirection.Out).Await();
 
 			hitbox.enabled = true;
 		}
@@ -77,6 +77,15 @@ namespace Game
 			catch (Exception exception) { exception.Error($"Inactive bullet triggered unexpectedly by {collision.gameObject}"); }
 
 			Dispose();
+		}
+
+		public static void CleanUp()
+		{
+			pool.Clear();
+
+			for (int i = Monolith.Refs.bulletInactiveRoot.childCount - 1; i >= 0; i--)
+				try { Destroy(Monolith.Refs.bulletInactiveRoot.GetChild(i).gameObject); }
+				catch (Exception exception) { exception.Error($"Failed cleaning inactive bullets"); }
 		}
 	}
 }

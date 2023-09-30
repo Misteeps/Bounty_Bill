@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114b9338befe4724390bc364d436ade1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 6834219275079567758}
   hitbox: {fileID: 68444674658371951}
   movebox: {fileID: 465749375024385054}
   rigidbody: {fileID: 592651887955893293}
