@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 465749375024385054}
   - component: {fileID: 592651887955893293}
   - component: {fileID: 6505303936121154313}
-  - component: {fileID: 3803244724076481782}
   - component: {fileID: -365439399822014099}
   m_Layer: 8
   m_Name: Cowboy
@@ -253,21 +252,6 @@ MonoBehaviour:
   bullet: 1
   shooting: 0
   speed: 1
---- !u!114 &3803244724076481782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3217814989333713969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 801617665983f0544be35a0fc9a008d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inactiveBulletLayer:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!195 &-365439399822014099
 NavMeshAgent:
   m_ObjectHideFlags: 0

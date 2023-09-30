@@ -1,5 +1,9 @@
+using System;
+
 using UnityEngine;
 using UnityEngine.Pool;
+
+using Simplex;
 
 
 namespace Game
@@ -12,10 +16,8 @@ namespace Game
 		[SerializeField] public Vector2 direction;
 		[SerializeField] public float speed;
 		[SerializeField] public float timer;
-		[SerializeField] private LayerMask cowboyLayer;
-		[SerializeField] private LayerMask obsticleLayer;
 		private GameObject origin;
-		private bool hit;
+		private bool triggered;
 
 
 		public static void OnGet(GameObject obj) => obj.SetActive(true);
@@ -31,14 +33,17 @@ namespace Game
 			bullet.direction = new Vector2(Mathf.Cos(obj.transform.eulerAngles.z * Mathf.Deg2Rad), Mathf.Sin(obj.transform.eulerAngles.z * Mathf.Deg2Rad));
 			bullet.timer = 0;
 			bullet.origin = origin;
-			bullet.hit = false;
+			bullet.triggered = false;
 
 			return bullet;
 		}
 		public void Dispose()
 		{
 			pool.Release(gameObject);
-			BulletInactive.Spawn(transform.position, rigidbody.velocity);
+
+			float radians = transform.eulerAngles.z * Mathf.Deg2Rad;
+			Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians));
+			BulletInactive.Spawn(transform.position, -direction);
 		}
 
 		private void Update()
@@ -53,11 +58,15 @@ namespace Game
 
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
-			if (collision.gameObject == origin || hit) return;
-			hit = true;
+			if (collision.gameObject == origin || triggered) return;
+			triggered = true;
 
-			if ((cowboyLayer.value & (1 << collision.gameObject.layer)) > 0)
-				collision.GetComponent<Cowboy>().Die();
+			try
+			{
+				if (collision.TryGetComponent<Cowboy>(out Cowboy cowboy))
+					cowboy.Die();
+			}
+			catch (Exception exception) { exception.Error($"Active bullet triggered unexpectedly by {collision.gameObject}"); }
 
 			Dispose();
 		}
