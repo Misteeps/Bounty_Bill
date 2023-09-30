@@ -69,6 +69,7 @@ namespace Game
 				try
 				{
 					if (cowboy.shooting) continue;
+					cowboy.Wiggle(cowboy.agent.velocity.magnitude * 2);
 
 					if (Vector2.Distance(cowboy.agent.destination, PlayerPosition) > 6)
 					{
@@ -89,6 +90,7 @@ namespace Game
 				try
 				{
 					if (cowboy.shooting) continue;
+					cowboy.Wiggle(cowboy.agent.velocity.magnitude * 2);
 
 					if (bullet != null)
 					{

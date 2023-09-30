@@ -107,6 +107,9 @@ namespace Game
 				else UI.Settings.Hide();
 			}
 
+			if (Paused)
+				return;
+
 			PlayerLook();
 			PlayerShoot();
 			Enemies.Update();
@@ -126,7 +129,11 @@ namespace Game
 			if (Inputs.MoveRight.Held) x += 1;
 			if (Inputs.MoveLeft.Held) x -= 1;
 
+			if (x == 0 && y == 0)
+				return;
+
 			Player.Move(Vector2.ClampMagnitude(new Vector2(x, y), 0.1f));
+			Player.Wiggle(10);
 		}
 		private void PlayerLook()
 		{

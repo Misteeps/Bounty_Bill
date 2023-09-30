@@ -18,6 +18,9 @@ namespace Game
 		[SerializeField] public bool shooting = false;
 		[SerializeField] public float speed = 1f;
 
+		private float wiggle = 0;
+		private bool wiggleDirection = false;
+
 		public event Action Died;
 
 
@@ -61,6 +64,30 @@ namespace Game
 			{
 				// No bitches?
 			}
+		}
+
+		public void Wiggle(float amount)
+		{
+			if (wiggleDirection)
+			{
+				wiggle += Time.deltaTime * amount;
+				if (wiggle > 1)
+				{
+					wiggle = 1;
+					wiggleDirection = false;
+				}
+			}
+			else
+			{
+				wiggle -= Time.deltaTime * amount;
+				if (wiggle < -1)
+				{
+					wiggle = -1;
+					wiggleDirection = true;
+				}
+			}
+
+			transform.rotation = Quaternion.Euler(new Vector3(0, 0, wiggle * 6));
 		}
 
 		public void Die() => Died?.Invoke();
