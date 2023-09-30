@@ -113,6 +113,19 @@ namespace Game
 				catch (Exception exception) { exception.Error($"Failed updating reloading enemy {cowboy?.gameObject}"); }
 		}
 
+		public static void ReloadEnemy(Cowboy cowboy)
+		{
+			if (cowboy.bullet) throw new Exception("Cowboy already has bullet");
+			cowboy.bullet = true;
+
+			if (Reloading.ContainsKey(cowboy))
+			{
+				Reloading.Remove(cowboy);
+				Hunting.Add(cowboy);
+
+				MoveEnemy(cowboy, RandomPosition(6));
+			}
+		}
 		private static void MoveEnemy(Cowboy cowboy, Vector2 position)
 		{
 			cowboy.agent.destination = position;

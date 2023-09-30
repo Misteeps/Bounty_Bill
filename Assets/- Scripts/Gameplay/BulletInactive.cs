@@ -67,18 +67,11 @@ namespace Game
 				if (!collision.TryGetComponent<Cowboy>(out Cowboy cowboy))
 					throw new Exception("Collision is not a cowboy");
 
-				if (cowboy.bullet)
+				if (!cowboy.bullet) Enemies.ReloadEnemy(cowboy);
+				else
 				{
 					triggered = false;
 					return;
-				}
-
-				cowboy.bullet = true;
-
-				if (Enemies.Reloading.ContainsKey(cowboy))
-				{
-					Enemies.Reloading.Remove(cowboy);
-					Enemies.Hunting.Add(cowboy);
 				}
 			}
 			catch (Exception exception) { exception.Error($"Inactive bullet triggered unexpectedly by {collision.gameObject}"); }
