@@ -220,8 +220,14 @@ namespace Game
 			UI.Hud.Hide();
 			await Awaitable.WaitForSecondsAsync(1.6f);
 
-			// Show Something
-			await Awaitable.WaitForSecondsAsync(2f);
+			UI.Overlay.Instance.ShowResults();
+			while (true)
+			{
+				await Awaitable.NextFrameAsync();
+				if (Inputs.Shoot.Down)
+					break;
+			}
+			UI.Overlay.Instance.HideResults();
 
 			UI.Overlay.Faded = true;
 			await Awaitable.WaitForSecondsAsync(1.2f);
