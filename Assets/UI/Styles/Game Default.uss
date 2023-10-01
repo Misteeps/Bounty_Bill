@@ -189,6 +189,7 @@
 /* Hud */
 
 .layer#Hud > #stars {
+	overflow: visible;
 	position: absolute;
 	top: 16px;
 	left: 24px;
@@ -196,6 +197,7 @@
 }
 
 .layer#Hud > #stars > .star {
+	overflow: visible;
 	opacity: 0;
 	width: 60px;
 	height: 60px;
