@@ -24,7 +24,11 @@ namespace Game
 				if (frame >= sprites.Length)
 				{
 					if (loop) frame = 0;
-					else return;
+					else
+					{
+						this.enabled = false;
+						return;
+					}
 				}
 
 				spriteRenderer.sprite = sprites[frame];
@@ -36,6 +40,8 @@ namespace Game
 			spriteRenderer.sprite = sprites[0];
 			frame = 0;
 			timer = 0;
+
+			this.enabled = true;
 		}
 	}
 }

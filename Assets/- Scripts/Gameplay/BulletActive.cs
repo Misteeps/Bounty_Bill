@@ -68,6 +68,7 @@ namespace Game
 					cowboy.Die();
 					if (origin == Monolith.PlayerObject)
 					{
+						cowboy.ShowCoin();
 						Monolith.bounty += 100;
 						Monolith.fortune += UnityEngine.Random.Range(0, 100);
 						UI.Hud.Instance.UpdateWanted();
