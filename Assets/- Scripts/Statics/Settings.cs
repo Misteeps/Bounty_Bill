@@ -175,7 +175,7 @@ namespace Game
 
 		[Header("Keybinds")]
 		public static Keybind shoot = new Keybind("Shoot", KeyCode.Mouse0, KeyCode.None, true);
-		public static Keybind dodge = new Keybind("Dodge", KeyCode.Space, KeyCode.LeftShift);
+		public static Keybind special = new Keybind("Special", KeyCode.Mouse1, KeyCode.Space);
 		public static Keybind moveUp = new Keybind("Move Up", KeyCode.W, KeyCode.UpArrow);
 		public static Keybind moveDown = new Keybind("Move Down", KeyCode.S, KeyCode.DownArrow);
 		public static Keybind moveLeft = new Keybind("Move Left", KeyCode.A, KeyCode.LeftArrow);
