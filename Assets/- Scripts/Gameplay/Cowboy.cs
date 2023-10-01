@@ -1,5 +1,5 @@
 using System;
-
+using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -26,6 +26,7 @@ namespace Game
 		public NavMeshAgent Agent;
 		public Transform Gun;
 		public Transform GunTip;
+		public LineRenderer LineRenderer;
 		public bool HasBullet = true;
 		public bool IsShooting = false;
 		public float MoveSpeed = 1f;
@@ -76,8 +77,13 @@ namespace Game
 				if (delay != 0)
 				{
 					// Draw laser
+					if (LineRenderer)
+						DrawIndicator();
+
 					await Awaitable.WaitForSecondsAsync(delay);
 					// Erase laser
+					if (LineRenderer)
+						LineRenderer.enabled = false;
 
 					if (!Gun.gameObject.activeSelf) return;
 				}
@@ -93,6 +99,23 @@ namespace Game
 				// No bitches?
 			}
 		}
+
+		private void DrawIndicator()
+		{
+			LineRenderer.enabled = true;
+
+			Vector3 startPosition = GunTip.position;
+			//adjustments to correct for localScale changes in LookAt
+            float adjustedRotation = (transform.localScale.x < 0) ? Gun.rotation.eulerAngles.z : 180f + Gun.rotation.eulerAngles.z;
+            float radians = Mathf.Deg2Rad * adjustedRotation;
+            float indicatorRange = 5f; //DUMMY VALUE FOR TESTING
+
+            float endX = startPosition.x + indicatorRange * Mathf.Cos(radians);
+            float endY = startPosition.y + indicatorRange * Mathf.Sin(radians);
+
+            LineRenderer.SetPosition(0, startPosition);
+            LineRenderer.SetPosition(1, new Vector2(endX, endY));
+        }
 
 		public void Wiggle(float amount)
 		{
