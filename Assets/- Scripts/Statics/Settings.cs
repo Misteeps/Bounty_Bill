@@ -153,6 +153,8 @@ namespace Game
 
 
 		[Header("General")]
+		public static Setting<bool> customCursor = new Setting<bool>("Custom Cursor", false);
+		public static Setting<Color> cursorColor = new Setting<Color>("Cursor Color", Color.red, UI.Overlay.Instance.ColorCrosshair);
 		public static Setting<bool> cameraEffects = new Setting<bool>("Camera Effects", true);
 		public static Setting<bool> bulletWarnings = new Setting<bool>("Bullet Warnings", true);
 
@@ -173,7 +175,7 @@ namespace Game
 
 		[Header("Keybinds")]
 		public static Keybind shoot = new Keybind("Shoot", KeyCode.Mouse0, KeyCode.None, true);
-		public static Keybind dodge = new Keybind("Dodge", KeyCode.Space, KeyCode.LeftShift);
+		public static Keybind special = new Keybind("Special", KeyCode.Mouse1, KeyCode.Space);
 		public static Keybind moveUp = new Keybind("Move Up", KeyCode.W, KeyCode.UpArrow);
 		public static Keybind moveDown = new Keybind("Move Down", KeyCode.S, KeyCode.DownArrow);
 		public static Keybind moveLeft = new Keybind("Move Left", KeyCode.A, KeyCode.LeftArrow);

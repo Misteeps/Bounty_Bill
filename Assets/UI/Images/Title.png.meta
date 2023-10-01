@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 258f1e0f114f68c41b1f2a67e598e821
+guid: 3673b4f18043c0642800db2cf1c64b4a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7984625516063854486
-    second: bullet_spin-Sheet_0
+      213: 7420640100034923312
+    second: aaa_0
   - first:
-      213: 6671023569516711189
-    second: bullet_spin-Sheet_1
+      213: -2697574445156055643
+    second: aaa_1
   - first:
-      213: 7458982879263680472
-    second: bullet_spin-Sheet_2
+      213: -4157164317620906626
+    second: aaa_2
   - first:
-      213: 1412459944397797293
-    second: bullet_spin-Sheet_3
+      213: 452074802207166922
+    second: aaa_3
   - first:
-      213: 2273492538762460690
-    second: bullet_spin-Sheet_4
+      213: -7376592324281015333
+    second: aaa_4
   - first:
-      213: -249645167665564556
-    second: bullet_spin-Sheet_5
+      213: 9101421325962705487
+    second: aaa_5
   - first:
-      213: -2425750346170927985
-    second: bullet_spin-Sheet_6
-  - first:
-      213: 1082760308989436619
-    second: bullet_spin-Sheet_7
+      213: 8973244686220277228
+    second: aaa_6
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -131,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bullet_spin-Sheet_0
+      name: aaa_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 13
-        height: 9
+        x: 32
+        y: 119
+        width: 30
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a607e72c569e03190800000000000000
-      internalID: -7984625516063854486
+      spriteID: 03bc990dad86bf660800000000000000
+      internalID: 7420640100034923312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_spin-Sheet_1
+      name: aaa_1
       rect:
         serializedVersion: 2
-        x: 25
-        y: 3
-        width: 11
-        height: 9
+        x: 76
+        y: 51
+        width: 42
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51d4d45879c349c50800000000000000
-      internalID: 6671023569516711189
+      spriteID: 5a54d41a55a409ad0800000000000000
+      internalID: -2697574445156055643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_spin-Sheet_2
+      name: aaa_2
       rect:
         serializedVersion: 2
-        x: 47
-        y: 3
-        width: 10
-        height: 9
+        x: 117
+        y: 51
+        width: 31
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d76b38c861a38760800000000000000
-      internalID: 7458982879263680472
+      spriteID: e75d6472419ce46c0800000000000000
+      internalID: -4157164317620906626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_spin-Sheet_3
+      name: aaa_3
       rect:
         serializedVersion: 2
-        x: 69
-        y: 3
-        width: 11
-        height: 9
+        x: 159
+        y: 51
+        width: 35
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da77c4df5d01a9310800000000000000
-      internalID: 1412459944397797293
+      spriteID: ac1967d23a7164600800000000000000
+      internalID: 452074802207166922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_spin-Sheet_4
+      name: aaa_4
       rect:
         serializedVersion: 2
-        x: 89
-        y: 3
-        width: 13
-        height: 9
+        x: 199
+        y: 51
+        width: 27
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21eff642b611d8f10800000000000000
-      internalID: 2273492538762460690
+      spriteID: bd36b5a2d5411a990800000000000000
+      internalID: -7376592324281015333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_spin-Sheet_5
+      name: aaa_5
       rect:
         serializedVersion: 2
-        x: 111
-        y: 3
-        width: 11
-        height: 9
+        x: 207
+        y: 119
+        width: 31
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 474b66dea05198cf0800000000000000
-      internalID: -249645167665564556
+      spriteID: f4afb2d797ebe4e70800000000000000
+      internalID: 9101421325962705487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_spin-Sheet_6
+      name: aaa_6
       rect:
         serializedVersion: 2
-        x: 132
-        y: 3
-        width: 10
-        height: 9
+        x: 251
+        y: 119
+        width: 31
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,29 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8473be89e0065ed0800000000000000
-      internalID: -2425750346170927985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bullet_spin-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 151
-        y: 3
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc2253aa3ccb60f00800000000000000
-      internalID: 1082760308989436619
+      spriteID: ce532d4ff7e578c70800000000000000
+      internalID: 8973244686220277228
       vertices: []
       indices: 
       edges: []

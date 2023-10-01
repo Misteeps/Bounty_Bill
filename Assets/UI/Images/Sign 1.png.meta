@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: def5ca33d29929d42ac5645533909690
+guid: da5f32c666b45b1448fe230972fc1388
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6187151284931567477
-    second: bullet_fire-Sheet_0
+      213: -9145565186150444776
+    second: money_UI_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -110,64 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bullet_fire-Sheet_0
+      name: money_UI_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 0
-        width: 12
-        height: 3
+        x: 9
+        y: 5
+        width: 72
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5e42a7cc7c9f1c744b8099be12de02f6
-      internalID: 1310998387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bullet_fire-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 12
-        height: 3
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34021b44e64c6484f817a5389c5bd020
-      internalID: -575147909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bullet_fire-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 12
-        height: 3
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc671b063ebe40d41864ef2cae9f3023
-      internalID: 311575264
+      spriteID: 811d2512bec641180800000000000000
+      internalID: -9145565186150444776
       vertices: []
       indices: 
       edges: []
@@ -183,9 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bullet_fire-Sheet_0: 1310998387
-      bullet_fire-Sheet_1: -575147909
-      bullet_fire-Sheet_2: 311575264
+      cowboy01_0: 6748216094295715067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

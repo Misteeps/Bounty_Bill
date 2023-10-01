@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: a27d0f2898cee684f949566db694bc46
+guid: c06c042a04543f144940a8bf4917799c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8874406020669461238
-    second: bullet01_0
+      213: -6406439507581812450
+    second: instinct bill_0
+  - first:
+      213: -18047689336365646
+    second: instinct bill_1
+  - first:
+      213: -2991064484536028720
+    second: instinct bill_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bullet01_0
+      name: instinct bill_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4
-        height: 3
+        x: 25
+        y: 22
+        width: 385
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +130,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0da8692eb6c7d480800000000000000
-      internalID: -8874406020669461238
+      spriteID: e11ce8be531c717a0800000000000000
+      internalID: -6406439507581812450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instinct bill_1
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 105
+        width: 53
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bdd610e8b1efbff0800000000000000
+      internalID: -18047689336365646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instinct bill_2
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 140
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d171fad2ba9d76d0800000000000000
+      internalID: -2991064484536028720
       vertices: []
       indices: 
       edges: []

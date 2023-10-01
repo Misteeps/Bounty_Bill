@@ -5,7 +5,6 @@ using UnityEngine.Audio;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UIElements;
-using UnityEngine.SceneManagement;
 
 using Simplex;
 
@@ -33,6 +32,9 @@ namespace Game
 			public Cowboy.Sprites cowboy2;
 			public Cowboy.Sprites cowboy3;
 			public Cowboy.Sprites cowboy4;
+			public Sprite muzzleFlash1;
+			public Sprite muzzleFlash2;
+			public Sprite muzzleFlash3;
 		}
 		#endregion References
 
@@ -111,6 +113,8 @@ namespace Game
 
 		private void Update()
 		{
+			UI.Overlay.Instance.UpdateCrosshair();
+
 			if (Inputs.Escape.Down)
 			{
 				Paused = !Paused;
@@ -155,15 +159,19 @@ namespace Game
 		}
 		private void PlayerShoot()
 		{
-			if (Inputs.Shoot.Down)
+			if (Inputs.Shoot.Down && !Player.IsShooting)
 				Player.Shoot(0);
 		}
 
 		public static async void GameStart()
 		{
 			time = 0;
-			bounty = 100;
+			bounty = 1000;
 			fortune = 0;
+
+			UI.Hud.Instance.UpdateWanted();
+			UI.Hud.Instance.UpdateFortune();
+			UI.Hud.Instance.UpdateTime();
 
 			Enemies.difficulty = Enemies.Difficulties[0];
 
@@ -172,7 +180,7 @@ namespace Game
 			Player.Gun.localScale = new Vector2(0, 0);
 			Player.Died += GameEnd;
 
-#if !UNITY_EDITOR
+#if UNITY_EDITOR
 			void Walk(float position)
 			{
 				Player.transform.position = new Vector2(0, position);
@@ -193,14 +201,18 @@ namespace Game
 			Player.Gun.TransitionLocalScaleY().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
 			await Awaitable.WaitForSecondsAsync(0.6f);
 
+			UI.Hud.Show();
+
 			Instance.enabled = true;
 			Paused = false;
 		}
 		private static async void GameEnd()
 		{
+			UI.Overlay.Instance.UpdateCrosshair(false);
 			Instance.enabled = false;
 
 			Game.Camera.VignetteTransition.Modify(0.2f, 1f, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
+			UI.Hud.Hide();
 			await Awaitable.WaitForSecondsAsync(1.6f);
 
 			// Show Something
@@ -218,10 +230,8 @@ namespace Game
 			BulletActive.CleanUp();
 			BulletInactive.CleanUp();
 
+			UI.Menu.Instance.Show(0);
 			UI.Overlay.Faded = false;
-			await Awaitable.WaitForSecondsAsync(0.6f);
-
-			UI.Menu.Show();
 		}
 	}
 }

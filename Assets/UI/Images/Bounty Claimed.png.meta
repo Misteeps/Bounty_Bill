@@ -1,0 +1,3437 @@
+fileFormatVersion: 2
+guid: 5a47fcbf895140c48ac3551c4fb3f1a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3800200998158304122
+    second: bounty_claimed_UI-Sheet_0
+  - first:
+      213: -1196627022949107233
+    second: bounty_claimed_UI-Sheet_1
+  - first:
+      213: -7174405789148765325
+    second: bounty_claimed_UI-Sheet_2
+  - first:
+      213: -6697287519172100595
+    second: bounty_claimed_UI-Sheet_3
+  - first:
+      213: 3766914885295337584
+    second: bounty_claimed_UI-Sheet_4
+  - first:
+      213: -21813794622738135
+    second: bounty_claimed_UI-Sheet_5
+  - first:
+      213: 4179893987560962160
+    second: bounty_claimed_UI-Sheet_6
+  - first:
+      213: 4238920200775446484
+    second: bounty_claimed_UI-Sheet_7
+  - first:
+      213: -4467694239603649920
+    second: bounty_claimed_UI-Sheet_8
+  - first:
+      213: 2735713553836654348
+    second: bounty_claimed_UI-Sheet_9
+  - first:
+      213: -9077168581494943484
+    second: bounty_claimed_UI-Sheet_10
+  - first:
+      213: -2401356238657447447
+    second: bounty_claimed_UI-Sheet_11
+  - first:
+      213: -8305486137770416223
+    second: bounty_claimed_UI-Sheet_12
+  - first:
+      213: -3325789350094967515
+    second: bounty_claimed_UI-Sheet_13
+  - first:
+      213: 4114134635461026028
+    second: bounty_claimed_UI-Sheet_14
+  - first:
+      213: 3012417793925092696
+    second: bounty_claimed_UI-Sheet_15
+  - first:
+      213: 6054801138385612822
+    second: bounty_claimed_UI-Sheet_16
+  - first:
+      213: 8639929571458909481
+    second: bounty_claimed_UI-Sheet_17
+  - first:
+      213: 8324606146410758339
+    second: bounty_claimed_UI-Sheet_18
+  - first:
+      213: -1144646922303326889
+    second: bounty_claimed_UI-Sheet_19
+  - first:
+      213: 6122951944519488314
+    second: bounty_claimed_UI-Sheet_20
+  - first:
+      213: -8861864808905666283
+    second: bounty_claimed_UI-Sheet_21
+  - first:
+      213: 3067834862470083515
+    second: bounty_claimed_UI-Sheet_22
+  - first:
+      213: -7825601084973742676
+    second: bounty_claimed_UI-Sheet_23
+  - first:
+      213: -269183050634830869
+    second: bounty_claimed_UI-Sheet_24
+  - first:
+      213: -2263503936873197067
+    second: bounty_claimed_UI-Sheet_25
+  - first:
+      213: -8309381422328516397
+    second: bounty_claimed_UI-Sheet_26
+  - first:
+      213: -5725902172760112030
+    second: bounty_claimed_UI-Sheet_27
+  - first:
+      213: -693003242940749483
+    second: bounty_claimed_UI-Sheet_28
+  - first:
+      213: 2986424307067101799
+    second: bounty_claimed_UI-Sheet_29
+  - first:
+      213: 2661454386925591325
+    second: bounty_claimed_UI-Sheet_30
+  - first:
+      213: 8992751035140424480
+    second: bounty_claimed_UI-Sheet_31
+  - first:
+      213: 6053416159513282263
+    second: bounty_claimed_UI-Sheet_32
+  - first:
+      213: -5151686250692039966
+    second: bounty_claimed_UI-Sheet_33
+  - first:
+      213: -8321948032937495841
+    second: bounty_claimed_UI-Sheet_34
+  - first:
+      213: 3569265822954551497
+    second: bounty_claimed_UI-Sheet_35
+  - first:
+      213: 6497794489220932234
+    second: bounty_claimed_UI-Sheet_36
+  - first:
+      213: -8496234915479209935
+    second: bounty_claimed_UI-Sheet_37
+  - first:
+      213: 1600924142274781284
+    second: bounty_claimed_UI-Sheet_38
+  - first:
+      213: 744894799158671721
+    second: bounty_claimed_UI-Sheet_39
+  - first:
+      213: 3812535889197700329
+    second: bounty_claimed_UI-Sheet_40
+  - first:
+      213: -6234740045228535979
+    second: bounty_claimed_UI-Sheet_41
+  - first:
+      213: 897787738100519748
+    second: bounty_claimed_UI-Sheet_42
+  - first:
+      213: -1428677003521511944
+    second: bounty_claimed_UI-Sheet_43
+  - first:
+      213: -677944426980933367
+    second: bounty_claimed_UI-Sheet_44
+  - first:
+      213: 1688265500381191550
+    second: bounty_claimed_UI-Sheet_45
+  - first:
+      213: 2972482742774495645
+    second: bounty_claimed_UI-Sheet_46
+  - first:
+      213: 5172064235314342721
+    second: bounty_claimed_UI-Sheet_47
+  - first:
+      213: -7373258176040024176
+    second: bounty_claimed_UI-Sheet_48
+  - first:
+      213: 284296684977884889
+    second: bounty_claimed_UI-Sheet_49
+  - first:
+      213: -284544954426964552
+    second: bounty_claimed_UI-Sheet_50
+  - first:
+      213: 2877565528090823127
+    second: bounty_claimed_UI-Sheet_51
+  - first:
+      213: -1659495403723550446
+    second: bounty_claimed_UI-Sheet_52
+  - first:
+      213: 1560254985618393830
+    second: bounty_claimed_UI-Sheet_53
+  - first:
+      213: 1269259256413953463
+    second: bounty_claimed_UI-Sheet_54
+  - first:
+      213: 7066238356573420422
+    second: bounty_claimed_UI-Sheet_55
+  - first:
+      213: -80445237630403630
+    second: bounty_claimed_UI-Sheet_56
+  - first:
+      213: -4011954428080586042
+    second: bounty_claimed_UI-Sheet_57
+  - first:
+      213: -503544763594845698
+    second: bounty_claimed_UI-Sheet_58
+  - first:
+      213: -4375788000754977751
+    second: bounty_claimed_UI-Sheet_59
+  - first:
+      213: 585832566967956327
+    second: bounty_claimed_UI-Sheet_60
+  - first:
+      213: 3842783362200256586
+    second: bounty_claimed_UI-Sheet_61
+  - first:
+      213: 8206478103412229448
+    second: bounty_claimed_UI-Sheet_62
+  - first:
+      213: 7051293709878670840
+    second: bounty_claimed_UI-Sheet_63
+  - first:
+      213: 1767017479886573573
+    second: bounty_claimed_UI-Sheet_64
+  - first:
+      213: -4306760018148412038
+    second: bounty_claimed_UI-Sheet_65
+  - first:
+      213: -8618450446206897915
+    second: bounty_claimed_UI-Sheet_66
+  - first:
+      213: 4228117472596696820
+    second: bounty_claimed_UI-Sheet_67
+  - first:
+      213: 8813730132744796776
+    second: bounty_claimed_UI-Sheet_68
+  - first:
+      213: -6868004020891887002
+    second: bounty_claimed_UI-Sheet_69
+  - first:
+      213: -4559812614730786985
+    second: bounty_claimed_UI-Sheet_70
+  - first:
+      213: -6162560518782928600
+    second: bounty_claimed_UI-Sheet_71
+  - first:
+      213: -8072448643380190572
+    second: bounty_claimed_UI-Sheet_72
+  - first:
+      213: 6369365876853811416
+    second: bounty_claimed_UI-Sheet_73
+  - first:
+      213: 933886867493415105
+    second: bounty_claimed_UI-Sheet_74
+  - first:
+      213: 9079931461987884913
+    second: bounty_claimed_UI-Sheet_75
+  - first:
+      213: -6562815338406210848
+    second: bounty_claimed_UI-Sheet_76
+  - first:
+      213: -3805459558665542596
+    second: bounty_claimed_UI-Sheet_77
+  - first:
+      213: -2046077112777038052
+    second: bounty_claimed_UI-Sheet_78
+  - first:
+      213: -2323457347211183298
+    second: bounty_claimed_UI-Sheet_79
+  - first:
+      213: -5974233071601871957
+    second: bounty_claimed_UI-Sheet_80
+  - first:
+      213: 791648986267189806
+    second: bounty_claimed_UI-Sheet_81
+  - first:
+      213: 668783718461715561
+    second: bounty_claimed_UI-Sheet_82
+  - first:
+      213: -6763342129102143258
+    second: bounty_claimed_UI-Sheet_83
+  - first:
+      213: 8145705492141944303
+    second: bounty_claimed_UI-Sheet_84
+  - first:
+      213: -2034351592227136382
+    second: bounty_claimed_UI-Sheet_85
+  - first:
+      213: -3678776704506170110
+    second: bounty_claimed_UI-Sheet_86
+  - first:
+      213: -7506330419022551471
+    second: bounty_claimed_UI-Sheet_87
+  - first:
+      213: -1802512396486055912
+    second: bounty_claimed_UI-Sheet_88
+  - first:
+      213: 2762740244469419595
+    second: bounty_claimed_UI-Sheet_89
+  - first:
+      213: 4929632399698264508
+    second: bounty_claimed_UI-Sheet_90
+  - first:
+      213: -8473099090192934689
+    second: bounty_claimed_UI-Sheet_91
+  - first:
+      213: -124132638218938931
+    second: bounty_claimed_UI-Sheet_92
+  - first:
+      213: 6584823199826218222
+    second: bounty_claimed_UI-Sheet_93
+  - first:
+      213: 8702548621666623911
+    second: bounty_claimed_UI-Sheet_94
+  - first:
+      213: 9175370912515352334
+    second: bounty_claimed_UI-Sheet_95
+  - first:
+      213: -6297323497386432464
+    second: bounty_claimed_UI-Sheet_96
+  - first:
+      213: -4476610697755101387
+    second: bounty_claimed_UI-Sheet_97
+  - first:
+      213: 4575976982270752420
+    second: bounty_claimed_UI-Sheet_98
+  - first:
+      213: -2587910780460333959
+    second: bounty_claimed_UI-Sheet_99
+  - first:
+      213: 4083178963847767143
+    second: bounty_claimed_UI-Sheet_100
+  - first:
+      213: -8309860137278360884
+    second: bounty_claimed_UI-Sheet_101
+  - first:
+      213: 5791270512448417270
+    second: bounty_claimed_UI-Sheet_102
+  - first:
+      213: 6102727203015574015
+    second: bounty_claimed_UI-Sheet_103
+  - first:
+      213: -7376421243939828041
+    second: bounty_claimed_UI-Sheet_104
+  - first:
+      213: -6617250106967945458
+    second: bounty_claimed_UI-Sheet_105
+  - first:
+      213: 3639202073079445886
+    second: bounty_claimed_UI-Sheet_106
+  - first:
+      213: 7412347416623345831
+    second: bounty_claimed_UI-Sheet_107
+  - first:
+      213: -5703077935284969972
+    second: bounty_claimed_UI-Sheet_108
+  - first:
+      213: 3157080104596771109
+    second: bounty_claimed_UI-Sheet_109
+  - first:
+      213: -1121666756373350648
+    second: bounty_claimed_UI-Sheet_110
+  - first:
+      213: -87105794751209246
+    second: bounty_claimed_UI-Sheet_111
+  - first:
+      213: 2310580238753286577
+    second: bounty_claimed_UI-Sheet_112
+  - first:
+      213: 8053068311812325776
+    second: bounty_claimed_UI-Sheet_113
+  - first:
+      213: 1838180342505839570
+    second: bounty_claimed_UI-Sheet_114
+  - first:
+      213: -3032107321452863924
+    second: bounty_claimed_UI-Sheet_115
+  - first:
+      213: -5813610936492849517
+    second: bounty_claimed_UI-Sheet_116
+  - first:
+      213: -3015597418978235372
+    second: bounty_claimed_UI-Sheet_117
+  - first:
+      213: -2139419068433099231
+    second: bounty_claimed_UI-Sheet_118
+  - first:
+      213: -5412503915451237305
+    second: bounty_claimed_UI-Sheet_119
+  - first:
+      213: -8735243244592746586
+    second: bounty_claimed_UI-Sheet_120
+  - first:
+      213: 4006705178804911372
+    second: bounty_claimed_UI-Sheet_121
+  - first:
+      213: 468393719600364226
+    second: bounty_claimed_UI-Sheet_122
+  - first:
+      213: 1715411437900080633
+    second: bounty_claimed_UI-Sheet_123
+  - first:
+      213: -4271234742009691234
+    second: bounty_claimed_UI-Sheet_124
+  - first:
+      213: -5461830089786380500
+    second: bounty_claimed_UI-Sheet_125
+  - first:
+      213: 5224140841892711299
+    second: bounty_claimed_UI-Sheet_126
+  - first:
+      213: 2551164003320728532
+    second: bounty_claimed_UI-Sheet_127
+  - first:
+      213: -6853610139152211425
+    second: bounty_claimed_UI-Sheet_128
+  - first:
+      213: -2383106302694882370
+    second: bounty_claimed_UI-Sheet_129
+  - first:
+      213: 394756377635517971
+    second: bounty_claimed_UI-Sheet_130
+  - first:
+      213: 3213596513695278024
+    second: bounty_claimed_UI-Sheet_131
+  - first:
+      213: 5187661119187125116
+    second: bounty_claimed_UI-Sheet_132
+  - first:
+      213: 2364134572479682209
+    second: bounty_claimed_UI-Sheet_133
+  - first:
+      213: 3694136306811855298
+    second: bounty_claimed_UI-Sheet_134
+  - first:
+      213: -5682187528764401224
+    second: bounty_claimed_UI-Sheet_135
+  - first:
+      213: 10019796315701182
+    second: bounty_claimed_UI-Sheet_136
+  - first:
+      213: 3967249577539164757
+    second: bounty_claimed_UI-Sheet_137
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 33
+        width: 59
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a738f4a6ca60db430800000000000000
+      internalID: 3800200998158304122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 19
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd93c78001ab46fe0800000000000000
+      internalID: -1196627022949107233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 20
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373284742f36f6c90800000000000000
+      internalID: -7174405789148765325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 20
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ef61d2c747e03a0800000000000000
+      internalID: -6697287519172100595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 21
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070f8255125c64430800000000000000
+      internalID: 3766914885295337584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 36
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921fe48287082bff0800000000000000
+      internalID: -21813794622738135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 22
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078bc578f67f10a30800000000000000
+      internalID: 4179893987560962160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 33
+        width: 59
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfa27eb67ba3da30800000000000000
+      internalID: 4238920200775446484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 19
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0829d5b82cf8ff1c0800000000000000
+      internalID: -4467694239603649920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 20
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0fb7a79bf437f520800000000000000
+      internalID: 2735713553836654348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 20
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40158ad944b670280800000000000000
+      internalID: -9077168581494943484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 21
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e997af493bacaed0800000000000000
+      internalID: -2401356238657447447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 36
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7634fac5cfcbc80800000000000000
+      internalID: -8305486137770416223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 22
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52defc5f43c68d1d0800000000000000
+      internalID: -3325789350094967515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 33
+        width: 59
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce029c047a7581930800000000000000
+      internalID: 4114134635461026028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 19
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85598f9e5024ec920800000000000000
+      internalID: 3012417793925092696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 38
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610fa1f3e89f60450800000000000000
+      internalID: 6054801138385612822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 20
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925833f3b2237e770800000000000000
+      internalID: 8639929571458909481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 20
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0c8db3f21f68370800000000000000
+      internalID: 8324606146410758339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 21
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755bdd250b56d10f0800000000000000
+      internalID: -1144646922303326889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 36
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a331fdd4a5819f450800000000000000
+      internalID: 6122951944519488314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 22
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51194a198e4540580800000000000000
+      internalID: -8861864808905666283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 33
+        width: 59
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3b617ad83239a20800000000000000
+      internalID: 3067834862470083515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 19
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca58a386641e56390800000000000000
+      internalID: -7825601084973742676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 20
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bebda5f017ba34cf0800000000000000
+      internalID: -269183050634830869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 20
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f199f6792b6690e0800000000000000
+      internalID: -2263503936873197067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 21
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d0f0e21f952fac80800000000000000
+      internalID: -8309381422328516397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 36
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2640ffd9f428980b0800000000000000
+      internalID: -5725902172760112030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 22
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559a254e835f166f0800000000000000
+      internalID: -693003242940749483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 33
+        width: 59
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762a353a519e17920800000000000000
+      internalID: 2986424307067101799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 19
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1bda96f9a26fe420800000000000000
+      internalID: 2661454386925591325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 20
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023421bbb6baccc70800000000000000
+      internalID: 8992751035140424480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 20
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d60669bced020450800000000000000
+      internalID: 6053416159513282263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 21
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eaac3956a88188b0800000000000000
+      internalID: -5151686250692039966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 36
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2ff790b50828c80800000000000000
+      internalID: -8321948032937495841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 22
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8f52eea54988130800000000000000
+      internalID: 3569265822954551497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 33
+        width: 59
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a82218149adcc2a50800000000000000
+      internalID: 6497794489220932234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 19
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138379efb5f471a80800000000000000
+      internalID: -8496234915479209935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 20
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460a2ac7600a73610800000000000000
+      internalID: 1600924142274781284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 20
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96973ea8fd5665a00800000000000000
+      internalID: 744894799158671721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 21
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e49e090139d8e430800000000000000
+      internalID: 3812535889197700329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 36
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f004146f0c979a0800000000000000
+      internalID: -6234740045228535979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 22
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443de2de035957c00800000000000000
+      internalID: 897787738100519748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 33
+        width: 59
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fda452b5d15c2ce0800000000000000
+      internalID: -1428677003521511944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 19
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9018854b2257796f0800000000000000
+      internalID: -677944426980933367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 20
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d94cc178ced6710800000000000000
+      internalID: 1688265500381191550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 20
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d997d004e41604920800000000000000
+      internalID: 2972482742774495645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 21
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14be96de40dd6c740800000000000000
+      internalID: 5172064235314342721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 36
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097c3eb01cceca990800000000000000
+      internalID: -7373258176040024176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 22
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de8de6245602f300800000000000000
+      internalID: 284296684977884889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 13
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b540cc1fd71d0cf0800000000000000
+      internalID: -284544954426964552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 14
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d943cf0a9a2fe720800000000000000
+      internalID: 2877565528090823127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 15
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2111aa209b948f8e0800000000000000
+      internalID: -1659495403723550446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 15
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea01d094a327a510800000000000000
+      internalID: 1560254985618393830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 16
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd1e62a1905d9110800000000000000
+      internalID: 1269259256413953463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 17
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b7cc5c852501260800000000000000
+      internalID: 7066238356573420422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dbfa2b8b7332eef0800000000000000
+      internalID: -80445237630403630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 19
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c2833334bca258c0800000000000000
+      internalID: -4011954428080586042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 12
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1db6594bc0309f0800000000000000
+      internalID: -503544763594845698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 14
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924359a4ff31643c0800000000000000
+      internalID: -4375788000754977751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 15
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763faf3ad9b412800800000000000000
+      internalID: 585832566967956327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 15
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a404ab4ab1f445530800000000000000
+      internalID: 3842783362200256586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 16
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84548e2fa5443e170800000000000000
+      internalID: 8206478103412229448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 17
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f5b340154a3bd160800000000000000
+      internalID: 7051293709878670840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5009b803905b58810800000000000000
+      internalID: 1767017479886573573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75b869e4905b34c0800000000000000
+      internalID: -4306760018148412038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 12
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501f78f4bfc156880800000000000000
+      internalID: -8618450446206897915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 14
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe9fb6907a4daa30800000000000000
+      internalID: 4228117472596696820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 15
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86af86ccbd8a05a70800000000000000
+      internalID: 8813730132744796776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 15
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ad8c23bb2ffa0a0800000000000000
+      internalID: -6868004020891887002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 16
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75750a8f59a48b0c0800000000000000
+      internalID: -4559812614730786985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 17
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829b81bdbdf2a7aa0800000000000000
+      internalID: -6162560518782928600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4926dbf7ab6e8ff80800000000000000
+      internalID: -8072448643380190572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8ad56c488846850800000000000000
+      internalID: 6369365876853811416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 12
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c8e8557825d5fc00800000000000000
+      internalID: 933886867493415105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 31
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f5ea0ae85620e70800000000000000
+      internalID: 9079931461987884913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 14
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e210d398323ce4a0800000000000000
+      internalID: -6562815338406210848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 15
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3420ae81ba403bc0800000000000000
+      internalID: -3805459558665542596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 15
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c172eddd4bfda93e0800000000000000
+      internalID: -2046077112777038052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 16
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3bb4b85adb61cfd0800000000000000
+      internalID: -2323457347211183298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 17
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba397c99ca2471da0800000000000000
+      internalID: -5974233071601871957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2201450f808cfa00800000000000000
+      internalID: 791648986267189806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964b972af3ff74900800000000000000
+      internalID: 668783718461715561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 12
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0ce64da28c322a0800000000000000
+      internalID: -6763342129102143258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 30
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feda110ccfb5b0170800000000000000
+      internalID: 8145705492141944303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 14
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c1d0d510884c3e0800000000000000
+      internalID: -2034351592227136382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 15
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2057de7041c52fcc0800000000000000
+      internalID: -3678776704506170110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 15
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156a37f014824d790800000000000000
+      internalID: -7506330419022551471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 16
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818e53886803cf6e0800000000000000
+      internalID: -1802512396486055912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 16
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e864e5d99375620800000000000000
+      internalID: 2762740244469419595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb185499c82996440800000000000000
+      internalID: 4929632399698264508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd85d561541896a80800000000000000
+      internalID: -8473099090192934689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 12
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc59de1f50ef64ef0800000000000000
+      internalID: -124132638218938931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 30
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec8466ffcdf16b50800000000000000
+      internalID: 6584823199826218222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 14
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a121030dd9a5c870800000000000000
+      internalID: 8702548621666623911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 15
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07ede25b37755f70800000000000000
+      internalID: 9175370912515352334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 15
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 038af8ec4a96b98a0800000000000000
+      internalID: -6297323497386432464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 16
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537f79ad942efd1c0800000000000000
+      internalID: -4476610697755101387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 15
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6bc9022d2218f30800000000000000
+      internalID: 4575976982270752420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97402444bd4e51cd0800000000000000
+      internalID: -2587910780460333959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7646e7e42ad5aa830800000000000000
+      internalID: 4083178963847767143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 12
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc238509b327dac80800000000000000
+      internalID: -8309860137278360884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 30
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdaeacf8d9be5050800000000000000
+      internalID: 5791270512448417270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 14
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff14bd8be0e31b450800000000000000
+      internalID: 6102727203015574015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 15
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be4259e5ffa1a990800000000000000
+      internalID: -7376421243939828041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 15
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f8240661eca24a0800000000000000
+      internalID: -6617250106967945458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 16
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79f3cf010b018230800000000000000
+      internalID: 3639202073079445886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 14
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a07e9ff3b2fdd660800000000000000
+      internalID: 7412347416623345831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e98f485d89ad0b0800000000000000
+      internalID: -5703077935284969972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52191f1d0a330db20800000000000000
+      internalID: 3157080104596771109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 14
+        width: 51
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8077006270a0f60f0800000000000000
+      internalID: -1121666756373350648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 17
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0e9fdbdb98acef0800000000000000
+      internalID: -87105794751209246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_112
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 14
+        width: 51
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b94de33c74d01020800000000000000
+      internalID: 2310580238753286577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 17
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091478d66fe32cf60800000000000000
+      internalID: 8053068311812325776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 14
+        width: 51
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db9a2c4847828910800000000000000
+      internalID: 1838180342505839570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 16
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ed0f7b47acbe5d0800000000000000
+      internalID: -3032107321452863924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_116
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 12
+        width: 51
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3968404b7a7e15fa0800000000000000
+      internalID: -5813610936492849517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 13
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ca730ff127626d0800000000000000
+      internalID: -3015597418978235372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_118
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 10
+        width: 51
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126195041b14f42e0800000000000000
+      internalID: -2139419068433099231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 12
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c3e169d5ce2e4b0800000000000000
+      internalID: -5412503915451237305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_120
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 10
+        width: 51
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af2b63ec8e26c680800000000000000
+      internalID: -8735243244592746586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_121
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 12
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d7266b12daa9730800000000000000
+      internalID: 4006705178804911372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_122
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 10
+        width: 51
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cabdc73b91108600800000000000000
+      internalID: 468393719600364226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_123
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 12
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f52da73d9d5ec710800000000000000
+      internalID: 1715411437900080633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_124
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 9
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e938432d1a689b4c0800000000000000
+      internalID: -4271234742009691234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_125
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 10
+        width: 35
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f2ebaa87ea334b0800000000000000
+      internalID: -5461830089786380500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_126
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 9
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b00a1ca60ef7840800000000000000
+      internalID: 5224140841892711299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_127
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 10
+        width: 35
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db02b5f42e876320800000000000000
+      internalID: 2551164003320728532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_128
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 9
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1221d2f3e513e0a0800000000000000
+      internalID: -6853610139152211425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_129
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 8
+        width: 35
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb380e5a1718deed0800000000000000
+      internalID: -2383106302694882370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_130
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 9
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316f8cd75d47a7500800000000000000
+      internalID: 394756377635517971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_131
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 5
+        width: 35
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3ad3ab00df89c20800000000000000
+      internalID: 3213596513695278024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_132
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 9
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7301407d464ef740800000000000000
+      internalID: 5187661119187125116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_133
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 3
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a61fd13ed71fc020800000000000000
+      internalID: 2364134572479682209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_134
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 9
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1e46f0665344330800000000000000
+      internalID: 3694136306811855298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_135
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 3
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9d7d05c80d421b0800000000000000
+      internalID: -5682187528764401224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_136
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 9
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf7e10a3f8932000800000000000000
+      internalID: 10019796315701182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounty_claimed_UI-Sheet_137
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 3
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a5a8ca8708e0730800000000000000
+      internalID: 3967249577539164757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cowboy01_0: 6748216094295715067
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

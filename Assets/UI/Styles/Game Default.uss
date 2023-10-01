@@ -39,18 +39,46 @@
 	transition-duration: 1200ms;
 }
 
-.layer#Overlay > .label#fps {
+.layer#Overlay > #fps {
 	position: absolute;
 	top: 8px;
 	left: 8px;
+	height: 20px;
+}
+
+.layer#Overlay > #crosshair {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-image: url('project://database/Assets/UI/Images/Hud Crosshair.png?fileID=2800000&guid=13a29958573b5ad43a009d00743f6bfd&type=3#Hud Crosshair');
+	background-size: contain;
 }
 
 /* Menu */
 
+.layer#Menu {
+	background-image: url('project://database/Assets/UI/Images/Title BG.png?fileID=2800000&guid=eaff5f242dcf0114ea92e3350b25cc83&type=3#Title BG');
+	background-position: top;
+	background-size: cover;
+	-unity-background-image-tint-color:	rgb(204, 204, 204);
+}
+
 .layer#Menu > #title {
-	margin: 80px auto auto auto;
-	width: 800px;
-	height: 280px;
+	margin: 0 auto auto auto;
+	width: 945px;
+	height: 750px;
+	background-image: url('project://database/Assets/UI/Images/Title.png?fileID=2800000&guid=3673b4f18043c0642800db2cf1c64b4a&type=3#Title');
+	background-size: contain;
+}
+
+.layer#Menu > #bill {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 945px;
+	height: 750px;
+	background-image: url('project://database/Assets/UI/Images/Bill Normal.png?fileID=2800000&guid=82330e9eb48d1544e801d9961d612eb1&type=3#Bill Normal');
+	background-size: contain;
 }
 
 .layer#Menu > #main {
@@ -81,31 +109,31 @@
 }
 
 .layer#Menu > #main > .button#play:hover {
+	background-image: url('project://database/Assets/UI/Images/Menu Button Play Clicked.png?fileID=2800000&guid=f3019275197e0f84ba74c0eaa3a3bbec&type=3#Menu Button Play Clicked');
 	rotate: -2deg;
 }
 
 .layer#Menu > #main > .button#settings:hover {
+	background-image: url('project://database/Assets/UI/Images/Menu Button Settings Clicked.png?fileID=2800000&guid=02eb05a99a3bec941a982205ab75a24d&type=3#Menu Button Settings Clicked');
 	rotate: 2.5deg;
 }
 
 .layer#Menu > #main > .button#quit:hover {
+	background-image: url('project://database/Assets/UI/Images/Menu Button Quit Clicked.png?fileID=2800000&guid=fb9da8c62a1c038478ab91586400fe94&type=3#Menu Button Quit Clicked');
 	rotate: -1.5deg;
 }
 
 .layer#Menu > #main > .button#play:focus {
-	background-image: url('project://database/Assets/UI/Images/Menu Button Play Clicked.png?fileID=2800000&guid=f3019275197e0f84ba74c0eaa3a3bbec&type=3#Menu Button Play Clicked');
 	rotate: 4deg;
 	scale: 1.2;
 }
 
 .layer#Menu > #main > .button#settings:focus {
-	background-image: url('project://database/Assets/UI/Images/Menu Button Settings Clicked.png?fileID=2800000&guid=02eb05a99a3bec941a982205ab75a24d&type=3#Menu Button Settings Clicked');
 	rotate: -4.5deg;
 	scale: 1.2;
 }
 
 .layer#Menu > #main > .button#quit:focus {
-	background-image: url('project://database/Assets/UI/Images/Menu Button Quit Clicked.png?fileID=2800000&guid=fb9da8c62a1c038478ab91586400fe94&type=3#Menu Button Quit Clicked');
 	rotate: 3.5deg;
 	scale: 1.2;
 }
@@ -159,3 +187,44 @@
 }
 
 /* Hud */
+
+.layer#Hud > .sign {
+	position: absolute;
+	text-overflow: clip;
+	background-size: contain;
+	transition-property: font-size;
+	transition-duration: 600ms;
+	transition-timing-function: ease-out-circ;
+}
+
+.layer#Hud > .sign#wanted {
+	top: -12px;
+	left: 20px;
+	padding: 210px 28px 17px 28px;
+	width: 164px;
+	height: 258px;
+	background-image: url('project://database/Assets/UI/Images/Sign Wanted.png?fileID=2800000&guid=8a8a028110407744e8dae1ce8d363dc7&type=3#Sign Wanted');
+}
+
+.layer#Hud > .sign#fortune {
+	top: -20px;
+	right: 240px;
+	padding: 54px 32px 36px 32px;
+	width: 240px;
+	height: 120px;
+	background-image: url('project://database/Assets/UI/Images/Sign 3.png?fileID=2800000&guid=57a7181a5afb60141aee0b8ce9a2db81&type=3#Sign 3');
+}
+
+.layer#Hud > .sign#time {
+	top: -20px;
+	right: 20px;
+	padding: 54px 60px 36px 60px;
+	width: 230px;
+	height: 146px;
+	background-image: url('project://database/Assets/UI/Images/Sign 2.png?fileID=2800000&guid=6789ea4ba027af840baa740863e87483&type=3#Sign 2');
+}
+
+.layer#Hud > .sign.pop {
+	font-size: 14px;
+	transition-duration: 0ms;
+}

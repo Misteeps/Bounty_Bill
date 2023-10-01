@@ -28,6 +28,7 @@ namespace Game
 		public NavMeshAgent Agent;
 		public Transform Gun;
 		public Transform GunTip;
+		public SpriteRenderer GunTipRenderer;
 		public LineRenderer LineRenderer;
 		public bool HasBullet = true;
 		public bool IsShooting = false;
@@ -88,6 +89,7 @@ namespace Game
 
 				Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
 				BulletActive.Spawn(GunTip.position, rotation, gameObject);
+				MuzzleFlash();
 
 				await Awaitable.WaitForSecondsAsync(0.2f);
 				HasBullet = false;
@@ -129,6 +131,17 @@ namespace Game
 			LineRenderer.SetPosition(0, new Vector3(0.2f, 0, 0));
 			LineRenderer.SetPosition(1, new Vector3(0.2f, 0, 0));
 			LineRenderer.enabled = false;
+		}
+		private async void MuzzleFlash()
+		{
+			GunTipRenderer.enabled = true;
+			GunTipRenderer.sprite = Monolith.Refs.muzzleFlash1;
+			await Awaitable.WaitForSecondsAsync(0.08f);
+			GunTipRenderer.sprite = Monolith.Refs.muzzleFlash2;
+			await Awaitable.WaitForSecondsAsync(0.08f);
+			GunTipRenderer.sprite = Monolith.Refs.muzzleFlash3;
+			await Awaitable.WaitForSecondsAsync(0.08f);
+			GunTipRenderer.enabled = false;
 		}
 
 		public void Wiggle(float amount)
