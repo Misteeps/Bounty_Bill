@@ -21,10 +21,10 @@ namespace Game
 			public readonly int wavesThreshold;
 			public readonly (int min, int max) waveDensity;
 			public readonly (float min, float max) speed;
-			public readonly (float min, float max) shootDelay;
+			public readonly float shootDelay;
 			public readonly float shootDistance;
 
-			public Difficulty(int stars, float wavesDelay, int wavesThreshold, (int min, int max) waveDensity, (float min, float max) speed, (float min, float max) shootDelay, float shootDistance)
+			public Difficulty(int stars, float wavesDelay, int wavesThreshold, (int min, int max) waveDensity, (float min, float max) speed, float shootDelay, float shootDistance)
 			{
 				this.stars = stars;
 				this.wavesDelay = wavesDelay;
@@ -47,12 +47,12 @@ namespace Game
 		public static int Count => Hunting.Count + Reloading.Count;
 		public static Difficulty[] Difficulties { get; } = new Difficulty[]
 		{
-			new Difficulty(stars: 0, wavesDelay: 10, wavesThreshold: 0, waveDensity: (1, 2), speed: (1, 3), shootDelay: (0.8f, 1.5f), shootDistance: 5),
-			new Difficulty(stars: 1, wavesDelay: 10, wavesThreshold: 1, waveDensity: (2, 3), speed: (1, 4), shootDelay: (0.7f, 1.2f), shootDistance: 5),
-			new Difficulty(stars: 2, wavesDelay: 15, wavesThreshold: 1, waveDensity: (3, 4), speed: (1.5f, 5), shootDelay: (0.6f, 1f), shootDistance: 6),
-			new Difficulty(stars: 3, wavesDelay: 20, wavesThreshold: 2, waveDensity: (4, 6), speed: (2, 6), shootDelay: (0.5f, 0.9f), shootDistance: 6),
-			new Difficulty(stars: 4, wavesDelay: 25, wavesThreshold: 2, waveDensity: (6, 8), speed: (2.5f, 6), shootDelay: (0.4f, 0.8f), shootDistance: 7),
-			new Difficulty(stars: 5, wavesDelay: 30, wavesThreshold: 3, waveDensity: (8, 12), speed: (3, 7), shootDelay: (0.3f, 0.6f), shootDistance: 8),
+			new Difficulty(stars: 0, wavesDelay: 10, wavesThreshold: 0, waveDensity: (1, 2), speed: (1, 3), shootDelay: 1.1f, shootDistance: 5),
+			new Difficulty(stars: 1, wavesDelay: 10, wavesThreshold: 1, waveDensity: (2, 3), speed: (1, 4), shootDelay: 9f, shootDistance: 5),
+			new Difficulty(stars: 2, wavesDelay: 15, wavesThreshold: 1, waveDensity: (3, 4), speed: (1.5f, 5), shootDelay: 0.7f, shootDistance: 6),
+			new Difficulty(stars: 3, wavesDelay: 20, wavesThreshold: 2, waveDensity: (4, 6), speed: (2, 6), shootDelay: 0.6f, shootDistance: 6),
+			new Difficulty(stars: 4, wavesDelay: 25, wavesThreshold: 2, waveDensity: (6, 8), speed: (2.5f, 6), shootDelay: 0.5f, shootDistance: 7),
+			new Difficulty(stars: 5, wavesDelay: 30, wavesThreshold: 3, waveDensity: (8, 12), speed: (3, 7), shootDelay: 0.4f, shootDistance: 8),
 		};
 
 		public static Difficulty difficulty;
@@ -143,7 +143,7 @@ namespace Game
 					else if (cowboy.Agent.remainingDistance < 0.4f && Vector2.Distance(cowboy.transform.position, PlayerPosition) < difficulty.shootDistance)
 					{
 						cowboy.LookAt(PlayerPosition);
-						cowboy.Shoot(RandomFloat(difficulty.shootDelay.min, difficulty.shootDelay.max));
+						cowboy.Shoot(difficulty.shootDelay);
 					}
 				}
 				catch (Exception exception) { exception.Error($"Failed updating hunting enemy {cowboy?.gameObject}"); }
