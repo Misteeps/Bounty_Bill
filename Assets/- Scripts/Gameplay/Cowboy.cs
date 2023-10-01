@@ -29,6 +29,8 @@ namespace Game
 		public Transform Gun;
 		public Transform GunTip;
 		public SpriteRenderer GunTipRenderer;
+		public SpriteRenderer CoinRenderer;
+		public SpriteAnimation CoinAnimater;
 		public LineRenderer LineRenderer;
 		public bool HasBullet = true;
 		public bool IsShooting = false;
@@ -49,6 +51,7 @@ namespace Game
 			MoveCollider.enabled = true;
 			if (Agent) Agent.enabled = true;
 			Gun.gameObject.SetActive(true);
+			CoinRenderer.gameObject.SetActive(false);
 			HasBullet = true;
 			IsShooting = false;
 		}
@@ -171,6 +174,18 @@ namespace Game
 		{
 			this.sprites = sprites;
 			SpriteRenderer.sprite = sprites.normal;
+		}
+		public async void ShowCoin()
+		{
+			CoinRenderer.gameObject.SetActive(true);
+			CoinRenderer.transform.localPosition = new Vector2(0, 0.8f);
+			CoinRenderer.color = Color.white;
+
+			CoinAnimater.Restart();
+			CoinRenderer.transform.TransitionLocalPositionY().Modify(0.8f, 1.2f, 0.5f, EaseFunction.Back, EaseDirection.Out).Run();
+			await CoinRenderer.TransitionColorA().Modify(1, 0, 1.2f, EaseFunction.Linear, EaseDirection.InOut).Await();
+
+			CoinRenderer.gameObject.SetActive(false);
 		}
 
 		public async void Die()

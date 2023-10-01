@@ -127,7 +127,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -196,17 +196,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 12
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4dc6f27471cc6a7c0800000000000000
-      internalID: -4060333613677318956
+      spriteID: 03ce40afc0746914db084d93f6f85ecf
+      internalID: 871158226
       vertices: []
       indices: 
       edges: []
@@ -224,10 +224,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5fd9d47d0f0ece3f0800000000000000
-      internalID: -870073302980387339
+      spriteID: 6418cd5e39dc9a645904b970176a5023
+      internalID: -1158819571
       vertices: []
       indices: 
       edges: []
@@ -236,19 +236,19 @@ TextureImporter:
       name: coin_spin-Sheet_2
       rect:
         serializedVersion: 2
-        x: 23
+        x: 22
         y: 0
-        width: 9
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6d651dd087473d030800000000000000
-      internalID: 3518283792883209942
+      spriteID: bf6877c274c56b148b7c2b04972189fb
+      internalID: 1429338201
       vertices: []
       indices: 
       edges: []
@@ -257,19 +257,19 @@ TextureImporter:
       name: coin_spin-Sheet_3
       rect:
         serializedVersion: 2
-        x: 35
+        x: 33
         y: 0
-        width: 17
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aa66d20c14efe5c60800000000000000
-      internalID: 7808958362257548970
+      spriteID: 51f2e5d1fc17e5e48b4683f163099fe9
+      internalID: -1986402736
       vertices: []
       indices: 
       edges: []
@@ -278,19 +278,19 @@ TextureImporter:
       name: coin_spin-Sheet_4
       rect:
         serializedVersion: 2
-        x: 57
+        x: 44
         y: 0
-        width: 7
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 84d9513e593a044e0800000000000000
-      internalID: -1999418370397201080
+      spriteID: 28d78f081f0f424449ffdbf3b8844b27
+      internalID: -1250466252
       vertices: []
       indices: 
       edges: []
@@ -299,25 +299,46 @@ TextureImporter:
       name: coin_spin-Sheet_5
       rect:
         serializedVersion: 2
-        x: 67
+        x: 55
         y: 0
-        width: 9
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2c85dbe1bfb08e140800000000000000
-      internalID: 4749058980242610370
+      spriteID: fac4e99410f5fc14da6d6f30fb60edc5
+      internalID: -1946187436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: coin_spin-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94dc9b61059c854b9a8c30e0919128d
+      internalID: 373582125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_7
       rect:
         serializedVersion: 2
         x: 77
@@ -329,37 +350,37 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 48fc188fb5a3cb2b0800000000000000
-      internalID: -5567510872651083900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_spin-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 0
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fe1ab327245cb2d00800000000000000
-      internalID: 949069035666645487
+      spriteID: 5cfe1366595d5254082302dd00130972
+      internalID: 2075124660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: coin_spin-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2bd885fec1e694b87bc438d6498804
+      internalID: 1710392714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_9
       rect:
         serializedVersion: 2
         x: 99
@@ -371,31 +392,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8fa6c4141e1531b50800000000000000
-      internalID: 6562679109913963256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_spin-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 0
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82ab6cde3cae829c0800000000000000
-      internalID: -3951650545788863960
+      spriteID: d902cc7f0f500e045a89f4bc2096dabd
+      internalID: 1869696402
       vertices: []
       indices: 
       edges: []
@@ -404,19 +404,19 @@ TextureImporter:
       name: coin_spin-Sheet_10
       rect:
         serializedVersion: 2
-        x: 123
+        x: 110
         y: 0
-        width: 17
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 28b33e132a56bc9a0800000000000000
-      internalID: -6211759513731384446
+      spriteID: 32d9f4ef7b95e334ebeb3a84b0a0293d
+      internalID: -2044349891
       vertices: []
       indices: 
       edges: []
@@ -425,19 +425,19 @@ TextureImporter:
       name: coin_spin-Sheet_11
       rect:
         serializedVersion: 2
-        x: 145
+        x: 121
         y: 0
-        width: 7
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c11393b1f77631ad0800000000000000
-      internalID: -2732726753268518628
+      spriteID: 5a57933a9c2511a4f9e916e570e45b4d
+      internalID: -440445396
       vertices: []
       indices: 
       edges: []
@@ -446,25 +446,67 @@ TextureImporter:
       name: coin_spin-Sheet_12
       rect:
         serializedVersion: 2
-        x: 155
+        x: 132
         y: 0
-        width: 9
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 01902c3ca0094cc70800000000000000
-      internalID: 8990469132046698768
+      spriteID: 543e0c011f464a246a855a40704512f3
+      internalID: 1545961113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: coin_spin-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ea689190ff8e74b862fb5555e3ba9b
+      internalID: -404633762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c86c057910d4446b615937f0efa8fe
+      internalID: -2054940042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_15
       rect:
         serializedVersion: 2
         x: 165
@@ -476,37 +518,37 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d352c647b58e97790800000000000000
-      internalID: -7531733422307531459
+      spriteID: ffe0506df7ec12748b64ba923bb99f5d
+      internalID: 1593881959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin_spin-Sheet_14
+      name: coin_spin-Sheet_16
       rect:
         serializedVersion: 2
-        x: 175
+        x: 176
         y: 0
-        width: 13
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: addc080bbf4cb1020800000000000000
-      internalID: 2313659418861948378
+      spriteID: 4a3485372f51a814192b3993c084dac8
+      internalID: 1491991167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin_spin-Sheet_15
+      name: coin_spin-Sheet_17
       rect:
         serializedVersion: 2
         x: 187
@@ -518,52 +560,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f920f62324b40a860800000000000000
-      internalID: 7539108523904271007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_spin-Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 0
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 03b8f2c215bca7810800000000000000
-      internalID: 1763945753563073328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_spin-Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 0
-        width: 17
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e82beb5794001430800000000000000
-      internalID: 3751503537728334056
+      spriteID: aef4785302e430346b2ae3b37d8837df
+      internalID: 140364971
       vertices: []
       indices: 
       edges: []
@@ -572,19 +572,19 @@ TextureImporter:
       name: coin_spin-Sheet_18
       rect:
         serializedVersion: 2
-        x: 233
+        x: 198
         y: 0
-        width: 7
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 75025b03245961910800000000000000
-      internalID: 1807796411953389655
+      spriteID: ec6cafba0e9d3ce4e883a34238252b96
+      internalID: -454488493
       vertices: []
       indices: 
       edges: []
@@ -593,25 +593,88 @@ TextureImporter:
       name: coin_spin-Sheet_19
       rect:
         serializedVersion: 2
-        x: 243
+        x: 209
         y: 0
-        width: 9
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0b19e0fd527566ef0800000000000000
-      internalID: -115308920283688528
+      spriteID: c5264cd7c616cd04b9694fce5e36b95b
+      internalID: 369440506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: coin_spin-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdcbe4ee2162af44b45fc25813a8227
+      internalID: 2013293430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107e6cbbc0dd0da4fa881e05cf40007b
+      internalID: 1466929350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fe55d0ae813cd449cdeb9e186cf179
+      internalID: 1255680261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_23
       rect:
         serializedVersion: 2
         x: 253
@@ -623,37 +686,37 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c4da905e173a4cae0800000000000000
-      internalID: -1529918263829877428
+      spriteID: 6e350586da366b04b92f64909bd42d9d
+      internalID: -2125775179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin_spin-Sheet_21
+      name: coin_spin-Sheet_24
       rect:
         serializedVersion: 2
-        x: 263
+        x: 264
         y: 0
-        width: 13
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e975819394c488890800000000000000
-      internalID: -7455625305737635938
+      spriteID: dacce66a99e7f3a4e8dac36131c3f1fa
+      internalID: -509989995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin_spin-Sheet_22
+      name: coin_spin-Sheet_25
       rect:
         serializedVersion: 2
         x: 275
@@ -665,73 +728,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 73f57e3a8f8ff8220800000000000000
-      internalID: 2490482865744600887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_spin-Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 287
-        y: 0
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 39f3cd9299d2589e0800000000000000
-      internalID: -1619838355114279021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_spin-Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 0
-        width: 17
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c1957b639967c660800000000000000
-      internalID: 7406004194118046152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_spin-Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 0
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 301ff29c31cd0bae0800000000000000
-      internalID: -1535485495395487485
+      spriteID: 40b084a9803085e4fb940740974d3f95
+      internalID: 1085426670
       vertices: []
       indices: 
       edges: []
@@ -740,25 +740,109 @@ TextureImporter:
       name: coin_spin-Sheet_26
       rect:
         serializedVersion: 2
-        x: 331
+        x: 286
         y: 0
-        width: 9
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a449e883f03bec940800000000000000
-      internalID: 5318385087925883978
+      spriteID: 7d3cd7c4412c81348b5ccf3b8db64ad9
+      internalID: -1586617193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: coin_spin-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af3f3c50ba91634c8ecea39846be293
+      internalID: 918478613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762d9f9864b36db41aecd46cd4638e2f
+      internalID: -265725227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898bcd5bee5c3b04c80a560e674a8ba6
+      internalID: -747456292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894c448f1ab101742b4e151289dd3509
+      internalID: 1897415443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_spin-Sheet_31
       rect:
         serializedVersion: 2
         x: 341
@@ -770,10 +854,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4674e62659c897930800000000000000
-      internalID: 4141495905573291876
+      spriteID: 3b9c46179299fbb43948733088b13e59
+      internalID: -1722921799
       vertices: []
       indices: 
       edges: []
@@ -789,7 +873,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cowboy01_0: 6748216094295715067
+      coin_spin-Sheet_0: 871158226
+      coin_spin-Sheet_1: -1158819571
+      coin_spin-Sheet_10: -2044349891
+      coin_spin-Sheet_11: -440445396
+      coin_spin-Sheet_12: 1545961113
+      coin_spin-Sheet_13: -404633762
+      coin_spin-Sheet_14: -2054940042
+      coin_spin-Sheet_15: 1593881959
+      coin_spin-Sheet_16: 1491991167
+      coin_spin-Sheet_17: 140364971
+      coin_spin-Sheet_18: -454488493
+      coin_spin-Sheet_19: 369440506
+      coin_spin-Sheet_2: 1429338201
+      coin_spin-Sheet_20: 2013293430
+      coin_spin-Sheet_21: 1466929350
+      coin_spin-Sheet_22: 1255680261
+      coin_spin-Sheet_23: -2125775179
+      coin_spin-Sheet_24: -509989995
+      coin_spin-Sheet_25: 1085426670
+      coin_spin-Sheet_26: -1586617193
+      coin_spin-Sheet_27: 918478613
+      coin_spin-Sheet_28: -265725227
+      coin_spin-Sheet_29: -747456292
+      coin_spin-Sheet_3: -1986402736
+      coin_spin-Sheet_30: 1897415443
+      coin_spin-Sheet_31: -1722921799
+      coin_spin-Sheet_4: -1250466252
+      coin_spin-Sheet_5: -1946187436
+      coin_spin-Sheet_6: 373582125
+      coin_spin-Sheet_7: 2075124660
+      coin_spin-Sheet_8: 1710392714
+      coin_spin-Sheet_9: 1869696402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
