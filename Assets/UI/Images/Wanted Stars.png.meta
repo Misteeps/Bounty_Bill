@@ -64,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wanted_star-Sheet_0
+      name: Wanted Stars_0
       rect:
         serializedVersion: 2
         x: 0
@@ -140,136 +140,136 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1b97dc4f88ebad8c0800000000000000
-      internalID: -3973654225769104975
+      spriteID: ac4099fe12a4a2d45af0cc611afb0777
+      internalID: -1487557605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wanted_star-Sheet_1
+      name: Wanted Stars_1
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 0
-        width: 25
+        width: 24
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c87669148566bb500800000000000000
-      internalID: 413036320078063500
+      spriteID: 0040e1acf0b6dca489fb193c3d28ead8
+      internalID: 1990600268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wanted_star-Sheet_2
+      name: Wanted Stars_2
       rect:
         serializedVersion: 2
-        x: 47
+        x: 48
         y: 0
-        width: 25
+        width: 24
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e35f1e8565e9cf730800000000000000
-      internalID: 4034273459912701246
+      spriteID: 27e8175d848b8924c90f431ce02743da
+      internalID: 851938880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wanted_star-Sheet_3
+      name: Wanted Stars_3
       rect:
         serializedVersion: 2
-        x: 71
+        x: 72
         y: 0
-        width: 25
+        width: 24
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb502a9781bb5cff0800000000000000
-      internalID: -16401309831658049
+      spriteID: e12048a5244c1d3459a8acdf28afccd2
+      internalID: -490137105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wanted_star-Sheet_4
+      name: Wanted Stars_4
       rect:
         serializedVersion: 2
-        x: 95
+        x: 96
         y: 0
-        width: 25
+        width: 24
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 45d674f3e62f1b1f0800000000000000
-      internalID: -1030776284369162924
+      spriteID: 0d5b22e9a3195bb43a34e75faba2e159
+      internalID: -1957334729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wanted_star-Sheet_5
+      name: Wanted Stars_5
       rect:
         serializedVersion: 2
-        x: 119
+        x: 120
         y: 0
-        width: 25
+        width: 24
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2c16e19e3d7ac25f0800000000000000
-      internalID: -780064106850917950
+      spriteID: ab63e50dea34aa04c9d8bcab6b47ebcb
+      internalID: 2062910278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wanted_star-Sheet_6
+      name: Wanted Stars_6
       rect:
         serializedVersion: 2
-        x: 143
+        x: 144
         y: 0
-        width: 25
+        width: 24
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cdfed18cf401fda00800000000000000
-      internalID: 783362795031621596
+      spriteID: e1c8fc83a80cbf24983770f68a41a50e
+      internalID: 2091372345
       vertices: []
       indices: 
       edges: []
@@ -285,7 +285,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cowboy01_0: 6748216094295715067
+      Wanted Stars_0: -1487557605
+      Wanted Stars_1: 1990600268
+      Wanted Stars_2: 851938880
+      Wanted Stars_3: -490137105
+      Wanted Stars_4: -1957334729
+      Wanted Stars_5: 2062910278
+      Wanted Stars_6: 2091372345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

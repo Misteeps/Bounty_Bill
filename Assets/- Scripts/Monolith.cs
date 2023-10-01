@@ -37,6 +37,8 @@ namespace Game
 			public Sprite muzzleFlash1;
 			public Sprite muzzleFlash2;
 			public Sprite muzzleFlash3;
+			public Sprite[] bountyStars;
+			public Sprite[] bountySparks;
 		}
 		#endregion References
 
@@ -175,14 +177,14 @@ namespace Game
 			UI.Hud.Instance.UpdateFortune();
 			UI.Hud.Instance.UpdateTime();
 
-			Enemies.difficulty = Enemies.Difficulties[0];
+			Enemies.SetDifficulty(0);
 
 			Player.Initialize();
 			Player.transform.position = new Vector2(0, -6);
 			Player.Gun.localScale = new Vector2(0, 0);
 			Player.Died += GameEnd;
 
-#if UNITY_EDITOR
+#if !UNITY_EDITOR
 			void Walk(float position)
 			{
 				Player.transform.position = new Vector2(0, position);

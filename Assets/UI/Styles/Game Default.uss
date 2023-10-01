@@ -188,6 +188,42 @@
 
 /* Hud */
 
+.layer#Hud > #stars {
+	overflow: visible;
+	position: absolute;
+	top: 16px;
+	left: 24px;
+	flex-direction: column;
+}
+
+.layer#Hud > #stars > .star {
+	overflow: visible;
+	opacity: 0;
+	width: 60px;
+	height: 60px;
+	transition: opacity 400ms ease-out-circ;
+}
+
+.layer#Hud > #stars > .star.active {
+	opacity: 1;
+}
+
+.layer#Hud > #stars > .star > #star {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.layer#Hud > #stars > .star > #spark {
+	position: absolute;
+	top: 0;
+	left: 60px;
+	bottom: 0;
+	width: 60px;
+}
+
 .layer#Hud > .sign {
 	position: absolute;
 	text-overflow: clip;
@@ -199,7 +235,7 @@
 
 .layer#Hud > .sign#wanted {
 	top: -12px;
-	left: 20px;
+	left: 80px;
 	padding: 210px 28px 17px 28px;
 	width: 164px;
 	height: 258px;
