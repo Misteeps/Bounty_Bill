@@ -813,6 +813,14 @@ MonoBehaviour:
     muzzleFlash1: {fileID: 1310998387, guid: def5ca33d29929d42ac5645533909690, type: 3}
     muzzleFlash2: {fileID: -575147909, guid: def5ca33d29929d42ac5645533909690, type: 3}
     muzzleFlash3: {fileID: 311575264, guid: def5ca33d29929d42ac5645533909690, type: 3}
+    bountyStars:
+    - {fileID: -1487557605, guid: 56919ebd277bb3d419e8adb574e1fb65, type: 3}
+    - {fileID: 1990600268, guid: 56919ebd277bb3d419e8adb574e1fb65, type: 3}
+    - {fileID: 851938880, guid: 56919ebd277bb3d419e8adb574e1fb65, type: 3}
+    - {fileID: -490137105, guid: 56919ebd277bb3d419e8adb574e1fb65, type: 3}
+    - {fileID: -1957334729, guid: 56919ebd277bb3d419e8adb574e1fb65, type: 3}
+    - {fileID: 2062910278, guid: 56919ebd277bb3d419e8adb574e1fb65, type: 3}
+    - {fileID: 2091372345, guid: 56919ebd277bb3d419e8adb574e1fb65, type: 3}
 --- !u!114 &619394805
 MonoBehaviour:
   m_ObjectHideFlags: 0

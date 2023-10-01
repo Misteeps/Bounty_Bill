@@ -37,6 +37,7 @@ namespace Game
 			public Sprite muzzleFlash1;
 			public Sprite muzzleFlash2;
 			public Sprite muzzleFlash3;
+			public Sprite[] bountyStars;
 		}
 		#endregion References
 
