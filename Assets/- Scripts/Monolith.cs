@@ -5,7 +5,6 @@ using UnityEngine.Audio;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UIElements;
-using UnityEngine.SceneManagement;
 
 using Simplex;
 
@@ -114,6 +113,8 @@ namespace Game
 
 		private void Update()
 		{
+			UI.Overlay.Instance.UpdateCrosshair();
+
 			if (Inputs.Escape.Down)
 			{
 				Paused = !Paused;
@@ -201,6 +202,7 @@ namespace Game
 		}
 		private static async void GameEnd()
 		{
+			UI.Overlay.Instance.UpdateCrosshair(false);
 			Instance.enabled = false;
 
 			Game.Camera.VignetteTransition.Modify(0.2f, 1f, 2f, EaseFunction.Circular, EaseDirection.Out).Run();

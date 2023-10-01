@@ -14,6 +14,7 @@ namespace Game.UI
 		protected override bool DefaultPickable => false;
 
 		public readonly Label fps;
+		public readonly Div crosshair;
 
 		public static bool Faded { get => Instance.ClassListContains("fade"); set => Instance.EnableInClassList("fade", value); }
 
@@ -22,6 +23,8 @@ namespace Game.UI
 		{
 			fps = this.Attach(new Label() { Name = "fps", Size = Size.Small });
 			fps.schedule.Execute(UpdateFPS).Every(1000);
+
+			crosshair = this.Attach(new Div() { Name = "crosshair" });
 		}
 
 		public void ShowFPS(bool show) => fps.Display(show);
@@ -29,6 +32,24 @@ namespace Game.UI
 		{
 			int fpsCount = (int)(1f / Time.unscaledDeltaTime);
 			fps.Text = $"FPS: {fpsCount}";
+		}
+
+		public void UpdateCrosshair(bool? showHardware = null)
+		{
+			bool visible = (showHardware != null) ? (bool)showHardware : Game.Settings.customCursor && !Monolith.Paused;
+			UnityEngine.Cursor.visible = !visible;
+
+			if (visible)
+			{
+				Inputs.UpdateScreenCursor(Screen.width, Screen.height);
+				crosshair.style.top = Inputs.screenCursor.y;
+				crosshair.style.left = Inputs.screenCursor.x;
+			}
+			else
+			{
+				crosshair.style.top = -100;
+				crosshair.style.left = -100;
+			}
 		}
 	}
 }

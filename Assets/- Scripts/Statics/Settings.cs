@@ -153,6 +153,7 @@ namespace Game
 
 
 		[Header("General")]
+		public static Setting<bool> customCursor = new Setting<bool>("Custom Cursor", true);
 		public static Setting<bool> cameraEffects = new Setting<bool>("Camera Effects", true);
 		public static Setting<bool> bulletWarnings = new Setting<bool>("Bullet Warnings", true);
 

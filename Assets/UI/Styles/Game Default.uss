@@ -39,10 +39,18 @@
 	transition-duration: 1200ms;
 }
 
-.layer#Overlay > .label#fps {
+.layer#Overlay > #fps {
 	position: absolute;
 	top: 8px;
 	left: 8px;
+	height: 20px;
+}
+
+.layer#Overlay > #crosshair {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-image: url('project://database/Assets/UI/Images/crosshair.png?fileID=2800000&guid=13a29958573b5ad43a009d00743f6bfd&type=3#crosshair');
 }
 
 /* Menu */

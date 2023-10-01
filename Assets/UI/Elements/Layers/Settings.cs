@@ -24,6 +24,7 @@ namespace Game.UI
 			header.Attach(new Button() { Name = "close", Text = "X" }).Bind(_ => Hide());
 
 			Div general = top.Attach(new Div() { Name = "general", Classes = "section", Flexible = true });
+			general.AttachField(Game.Settings.customCursor, new ToggleSlide());
 			general.AttachField(Game.Settings.cameraEffects, new ToggleSlide());
 			general.AttachField(Game.Settings.bulletWarnings, new ToggleSlide());
 			top.Attach(new HorizontalSpace(Size.Huge));
