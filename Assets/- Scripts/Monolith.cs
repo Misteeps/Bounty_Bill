@@ -28,6 +28,8 @@ namespace Game
 			public GameObject bulletActivePrefab;
 			public Transform bulletInactiveRoot;
 			public GameObject bulletInactivePrefab;
+			public Transform coinBagRoot;
+			public GameObject coinBagPrefab;
 			public Cowboy.Sprites cowboy1;
 			public Cowboy.Sprites cowboy2;
 			public Cowboy.Sprites cowboy3;
@@ -229,6 +231,7 @@ namespace Game
 			Enemies.CleanUp();
 			BulletActive.CleanUp();
 			BulletInactive.CleanUp();
+			CoinBag.CleanUp();
 
 			UI.Menu.Instance.Show(0);
 			UI.Overlay.Faded = false;

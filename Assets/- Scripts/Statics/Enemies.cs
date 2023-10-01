@@ -94,7 +94,11 @@ namespace Game
 			cowboy.SpriteRenderer.color = Color.HSVToRGB(0, 0, RandomFloat(0.8f, 1f));
 
 			cowboy.Died += () => Remove(cowboy);
-			cowboy.Disposed += () => pool.Release(cowboy.gameObject);
+			cowboy.Disposed += () =>
+			{
+				if (RandomInt(0, 100) < 10) CoinBag.Spawn(cowboy.transform.position);
+				pool.Release(cowboy.gameObject);
+			};
 
 			MoveEnemy(cowboy, RandomPosition(difficulty.shootDistance));
 			return cowboy;
