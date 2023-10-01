@@ -183,7 +183,7 @@ namespace Game
 			Player.Gun.localScale = new Vector2(0, 0);
 			Player.Died += GameEnd;
 
-#if UNITY_EDITOR
+#if !UNITY_EDITOR
 			void Walk(float position)
 			{
 				Player.transform.position = new Vector2(0, position);

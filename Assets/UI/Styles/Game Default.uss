@@ -196,8 +196,14 @@
 }
 
 .layer#Hud > #stars > .star {
+	opacity: 0;
 	width: 60px;
 	height: 60px;
+	transition: opacity 400ms ease-out-circ;
+}
+
+.layer#Hud > #stars > .star.active {
+	opacity: 1;
 }
 
 .layer#Hud > #stars > .star > #star {

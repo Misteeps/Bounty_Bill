@@ -18,6 +18,8 @@ namespace Game.UI
 			public readonly Div star;
 			public readonly Div spark;
 
+			public bool Active { get => ClassListContains("active"); set => EnableInClassList("active", value); }
+
 
 			public Star()
 			{
@@ -27,6 +29,9 @@ namespace Game.UI
 				star.style.backgroundImage = new UnityEngine.UIElements.StyleBackground(Monolith.Refs.bountyStars[0]);
 			}
 
+			public async void Slam()
+			{
+			}
 			public async void Shine()
 			{
 				star.style.backgroundImage = new UnityEngine.UIElements.StyleBackground(Monolith.Refs.bountyStars[1]);
@@ -84,6 +89,21 @@ namespace Game.UI
 			stars[3].Shine();
 			await Awaitable.WaitForSecondsAsync(0.35f);
 			stars[4].Shine();
+		}
+		public async void SetStars(int count)
+		{
+			for (int i = count; i < 5; i++)
+				stars[i].Active = false;
+
+			for (int i = 0; i < count; i++)
+			{
+				Star star = stars[i];
+				if (star.Active) continue;
+
+				star.Active = true;
+				star.Slam();
+				await Awaitable.WaitForSecondsAsync(0.4f);
+			}
 		}
 		public void UpdateWanted()
 		{
