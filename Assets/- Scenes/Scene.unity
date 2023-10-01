@@ -433,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 44.599987, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1782,6 +1782,7 @@ MonoBehaviour:
   Agent: {fileID: 0}
   Gun: {fileID: 0}
   GunTip: {fileID: 0}
+  LineRenderer: {fileID: 0}
   HasBullet: 1
   IsShooting: 0
   MoveSpeed: 1
@@ -1887,7 +1888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2743287639374427298, guid: 7ca5da94feb85c34a9e48d16f790cd13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2743287639374427298, guid: 7ca5da94feb85c34a9e48d16f790cd13, type: 3}
       propertyPath: m_LocalPosition.z
