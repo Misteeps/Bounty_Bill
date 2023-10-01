@@ -165,6 +165,8 @@ namespace Game
 			bounty = 100;
 			fortune = 0;
 
+			Enemies.difficulty = Enemies.Difficulties[0];
+
 			Player.Initialize();
 			Player.transform.position = new Vector2(0, -6);
 			Player.Gun.localScale = new Vector2(0, 0);
