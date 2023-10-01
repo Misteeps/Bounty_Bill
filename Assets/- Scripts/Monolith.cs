@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Audio;
@@ -157,9 +156,8 @@ namespace Game
 		public static async void GameStart()
 		{
 			Player.Initialize();
-			//Player.transform.position = new Vector2(0, -6);
-            Player.transform.position = new Vector2(0, 45f);
-            Player.Gun.localScale = new Vector2(0, 0);
+			Player.transform.position = new Vector2(0, -6);
+			Player.Gun.localScale = new Vector2(0, 0);
 			Player.Died += GameEnd;
 
 #if !UNITY_EDITOR

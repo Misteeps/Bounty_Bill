@@ -87,9 +87,8 @@ namespace Game
 					else if (cowboy.Agent.remainingDistance < 0.4f)
 					{
 						cowboy.LookAt(PlayerPosition);
-                        //cowboy.Shoot(RandomFloat(0.4f, 0.8f));
-                        cowboy.Shoot(2f); //LONG DELAY FOR TESTING
-                        Hunting.Remove(cowboy);
+						cowboy.Shoot(RandomFloat(0.4f, 0.8f));
+						Hunting.Remove(cowboy);
 						Reloading.Add(cowboy, null);
 					}
 				}

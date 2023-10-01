@@ -1,7 +1,9 @@
 using System;
-using System.Threading;
+
 using UnityEngine;
 using UnityEngine.AI;
+
+using Simplex;
 
 
 namespace Game
@@ -22,7 +24,7 @@ namespace Game
 		public SpriteRenderer SpriteRenderer;
 		public BoxCollider2D HitTrigger;
 		public CapsuleCollider2D MoveCollider;
-		public new Rigidbody2D RigidBody;
+		public Rigidbody2D RigidBody;
 		public NavMeshAgent Agent;
 		public Transform Gun;
 		public Transform GunTip;
@@ -44,7 +46,7 @@ namespace Game
 			SpriteRenderer.sprite = sprites.normal;
 			HitTrigger.enabled = true;
 			MoveCollider.enabled = true;
-			if (Agent != null) Agent.enabled = true;
+			if (Agent) Agent.enabled = true;
 			Gun.gameObject.SetActive(true);
 			HasBullet = true;
 			IsShooting = false;
@@ -76,16 +78,12 @@ namespace Game
 
 				if (delay != 0)
 				{
-					// Draw laser
-					if (LineRenderer)
-						DrawIndicator();
-
+					DrawLaser(delay);
 					await Awaitable.WaitForSecondsAsync(delay);
-					// Erase laser
-					if (LineRenderer)
-						LineRenderer.enabled = false;
+					EraseLaser();
 
-					if (!Gun.gameObject.activeSelf) return;
+					if (!Gun.gameObject.activeSelf)
+						return;
 				}
 
 				Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
@@ -100,22 +98,30 @@ namespace Game
 			}
 		}
 
-		private void DrawIndicator()
+		private async void DrawLaser(float duration)
 		{
+			if (!LineRenderer) return;
+
+			Transition end = new Transition(() => LineRenderer.GetPosition(1).x, value => LineRenderer.SetPosition(1, new Vector3(value, 0, 0)), HashCode.Combine(LineRenderer, "end"));
+
+			LineRenderer.SetPosition(0, new Vector3(0.2f, 0, 0));
+			LineRenderer.SetPosition(1, new Vector3(0.2f, 0, 0));
 			LineRenderer.enabled = true;
 
-			Vector3 startPosition = GunTip.position;
-			//adjustments to correct for localScale changes in LookAt
-            float adjustedRotation = (transform.localScale.x < 0) ? Gun.rotation.eulerAngles.z : 180f + Gun.rotation.eulerAngles.z;
-            float radians = Mathf.Deg2Rad * adjustedRotation;
-            float indicatorRange = 5f; //DUMMY VALUE FOR TESTING
+			await end.Modify(0.2f, -8f, duration, EaseFunction.Quadratic, EaseDirection.InOut).Await();
+		}
+		private async void EraseLaser()
+		{
+			if (!LineRenderer) return;
 
-            float endX = startPosition.x + indicatorRange * Mathf.Cos(radians);
-            float endY = startPosition.y + indicatorRange * Mathf.Sin(radians);
+			Transition start = new Transition(() => LineRenderer.GetPosition(0).x, value => LineRenderer.SetPosition(0, new Vector3(value, 0, 0)), HashCode.Combine(LineRenderer, "start"));
 
-            LineRenderer.SetPosition(0, startPosition);
-            LineRenderer.SetPosition(1, new Vector2(endX, endY));
-        }
+			await start.Modify(0.2f, -8f, 0.1f, EaseFunction.Linear, EaseDirection.InOut).Await();
+
+			LineRenderer.SetPosition(0, new Vector3(0.2f, 0, 0));
+			LineRenderer.SetPosition(1, new Vector3(0.2f, 0, 0));
+			LineRenderer.enabled = false;
+		}
 
 		public void Wiggle(float amount)
 		{
@@ -152,13 +158,20 @@ namespace Game
 
 			HitTrigger.enabled = false;
 			MoveCollider.enabled = false;
-			if (Agent != null) Agent.enabled = false;
+			if (Agent) Agent.enabled = false;
 			Gun.gameObject.SetActive(false);
 
 			SpriteRenderer.sprite = sprites.hit;
 			await Awaitable.WaitForSecondsAsync(0.2f);
 			SpriteRenderer.sprite = sprites.dead;
-			await Awaitable.WaitForSecondsAsync(2f);
+
+			for (int i = 0; i < 4; i++)
+			{
+				await Awaitable.WaitForSecondsAsync(0.8f);
+				SpriteRenderer.color = new Color(SpriteRenderer.color.r, SpriteRenderer.color.g, SpriteRenderer.color.b, 0.6f);
+				await Awaitable.WaitForSecondsAsync(0.4f);
+				SpriteRenderer.color = new Color(SpriteRenderer.color.r, SpriteRenderer.color.g, SpriteRenderer.color.b, 1);
+			}
 
 			Disposed?.Invoke();
 
