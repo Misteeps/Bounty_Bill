@@ -33,6 +33,9 @@ namespace Game
 			public Cowboy.Sprites cowboy2;
 			public Cowboy.Sprites cowboy3;
 			public Cowboy.Sprites cowboy4;
+			public Sprite muzzleFlash1;
+			public Sprite muzzleFlash2;
+			public Sprite muzzleFlash3;
 		}
 		#endregion References
 
@@ -155,7 +158,7 @@ namespace Game
 		}
 		private void PlayerShoot()
 		{
-			if (Inputs.Shoot.Down)
+			if (Inputs.Shoot.Down && !Player.IsShooting)
 				Player.Shoot(0);
 		}
 
