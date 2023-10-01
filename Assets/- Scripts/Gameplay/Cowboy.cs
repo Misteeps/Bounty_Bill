@@ -164,7 +164,14 @@ namespace Game
 			SpriteRenderer.sprite = sprites.hit;
 			await Awaitable.WaitForSecondsAsync(0.2f);
 			SpriteRenderer.sprite = sprites.dead;
-			await Awaitable.WaitForSecondsAsync(2f);
+
+			for (int i = 0; i < 4; i++)
+			{
+				await Awaitable.WaitForSecondsAsync(0.8f);
+				SpriteRenderer.color = new Color(SpriteRenderer.color.r, SpriteRenderer.color.g, SpriteRenderer.color.b, 0.6f);
+				await Awaitable.WaitForSecondsAsync(0.4f);
+				SpriteRenderer.color = new Color(SpriteRenderer.color.r, SpriteRenderer.color.g, SpriteRenderer.color.b, 1);
+			}
 
 			Disposed?.Invoke();
 
