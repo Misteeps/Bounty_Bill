@@ -84,6 +84,9 @@ namespace Game.UI
 		public readonly Label fortuneSign;
 		public readonly Label timeSign;
 		public readonly Star[] stars;
+		public readonly Div bullet;
+		public readonly Div[] specials;
+		public readonly Div noBulletWarning;
 
 
 		public Hud()
@@ -101,6 +104,19 @@ namespace Game.UI
 			stars[3] = sidebar.Attach(new Star());
 			stars[4] = sidebar.Attach(new Star());
 			sidebar.schedule.Execute(ShineStars).Every(5000);
+
+			Div bulletOutline = this.Attach(new Div() { Classes = "bullet" });
+			bullet = bulletOutline.Attach(new Div() { Classes = "charge" });
+
+			Div specialMeter = this.Attach(new Div() { Name = "special-meter" });
+			specials = new Div[7];
+			for (int i = 0; i < specials.Length; i++)
+			{
+				Div specialOutline = specialMeter.Attach(new Div() { Classes = "special" });
+				specials[i] = specialOutline.Attach(new Div() { Classes = "charge" });
+			}
+
+			noBulletWarning = this.Attach(new Div() { Name = "no-bullet-warning" });
 		}
 
 		public void UpdateWanted()
