@@ -32,8 +32,8 @@ namespace Game.UI
 
 			public async void Slam()
 			{
-				star.TransitionScaleX().Modify( 3, 0, EaseFunction.Circular, EaseDirection.Out).Run();
-				star.TransitionScaleY().Modify( 3, 0, EaseFunction.Circular, EaseDirection.Out).Run();
+				star.TransitionScaleX().Modify(3, 0, EaseFunction.Circular, EaseDirection.Out).Run();
+				star.TransitionScaleY().Modify(3, 0, EaseFunction.Circular, EaseDirection.Out).Run();
 
 				star.TransitionTranslateX().Modify(0, 60, 0.4f, EaseFunction.Circular, EaseDirection.Out).Run();
 				star.TransitionTranslateY().Modify(0, 10, 0.4f, EaseFunction.Circular, EaseDirection.Out).Run();
@@ -44,6 +44,18 @@ namespace Game.UI
 				star.TransitionTranslateY().Modify(0, 0.2f, EaseFunction.Exponential, EaseDirection.Out).Run();
 				star.TransitionScaleX().Modify(1, 0.2f, EaseFunction.Exponential, EaseDirection.Out).Run();
 				await star.TransitionScaleY().Modify(1, 0.2f, EaseFunction.Exponential, EaseDirection.Out).Await();
+
+				spark.style.backgroundImage = new StyleBackground(Monolith.Refs.bountySparks[0]);
+				await Awaitable.WaitForSecondsAsync(0.05f);
+				spark.style.backgroundImage = new StyleBackground(Monolith.Refs.bountySparks[1]);
+				await Awaitable.WaitForSecondsAsync(0.05f);
+				spark.style.backgroundImage = new StyleBackground(Monolith.Refs.bountySparks[2]);
+				await Awaitable.WaitForSecondsAsync(0.1f);
+				spark.style.backgroundImage = new StyleBackground(Monolith.Refs.bountySparks[3]);
+				await Awaitable.WaitForSecondsAsync(0.1f);
+				spark.style.backgroundImage = new StyleBackground(Monolith.Refs.bountySparks[4]);
+				await Awaitable.WaitForSecondsAsync(0.2f);
+				spark.style.backgroundImage = UnityEngine.UIElements.StyleKeyword.Null;
 			}
 			public async void Shine()
 			{
