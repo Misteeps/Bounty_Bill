@@ -176,7 +176,7 @@ namespace Game
 			Player.Gun.localScale = new Vector2(0, 0);
 			Player.Died += GameEnd;
 
-#if !UNITY_EDITOR
+#if UNITY_EDITOR
 			void Walk(float position)
 			{
 				Player.transform.position = new Vector2(0, position);
@@ -223,10 +223,8 @@ namespace Game
 			BulletActive.CleanUp();
 			BulletInactive.CleanUp();
 
+			UI.Menu.Instance.Show(0);
 			UI.Overlay.Faded = false;
-			await Awaitable.WaitForSecondsAsync(0.6f);
-
-			UI.Menu.Show();
 		}
 	}
 }

@@ -50,15 +50,35 @@
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	background-image: url('project://database/Assets/UI/Images/crosshair.png?fileID=2800000&guid=13a29958573b5ad43a009d00743f6bfd&type=3#crosshair');
+	background-image: url('project://database/Assets/UI/Images/Hud Crosshair.png?fileID=2800000&guid=13a29958573b5ad43a009d00743f6bfd&type=3#Hud Crosshair');
+	background-size: contain;
 }
 
 /* Menu */
 
+.layer#Menu {
+	background-image: url('project://database/Assets/UI/Images/Title BG.png?fileID=2800000&guid=eaff5f242dcf0114ea92e3350b25cc83&type=3#Title BG');
+	background-position: top;
+	background-size: cover;
+	-unity-background-image-tint-color:	rgb(204, 204, 204);
+}
+
 .layer#Menu > #title {
-	margin: 80px auto auto auto;
-	width: 800px;
-	height: 280px;
+	margin: 0 auto auto auto;
+	width: 945px;
+	height: 750px;
+	background-image: url('project://database/Assets/UI/Images/Title.png?fileID=2800000&guid=3673b4f18043c0642800db2cf1c64b4a&type=3#Title');
+	background-size: contain;
+}
+
+.layer#Menu > #bill {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 945px;
+	height: 750px;
+	background-image: url('project://database/Assets/UI/Images/Bill Normal.png?fileID=2800000&guid=82330e9eb48d1544e801d9961d612eb1&type=3#Bill Normal');
+	background-size: contain;
 }
 
 .layer#Menu > #main {

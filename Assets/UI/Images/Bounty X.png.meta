@@ -1,0 +1,677 @@
+fileFormatVersion: 2
+guid: 844b8f8809dec9f41b11d85d26f4e412
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7100799382083551225
+    second: wanted_UI_paintcross-Sheet_0
+  - first:
+      213: -3648472314591542165
+    second: wanted_UI_paintcross-Sheet_1
+  - first:
+      213: -2641482045436372727
+    second: wanted_UI_paintcross-Sheet_2
+  - first:
+      213: 6037557463018783169
+    second: wanted_UI_paintcross-Sheet_3
+  - first:
+      213: 7453233505965454288
+    second: wanted_UI_paintcross-Sheet_4
+  - first:
+      213: -2031895895154747162
+    second: wanted_UI_paintcross-Sheet_5
+  - first:
+      213: -1557427067096743419
+    second: wanted_UI_paintcross-Sheet_6
+  - first:
+      213: -8529856055294276800
+    second: wanted_UI_paintcross-Sheet_7
+  - first:
+      213: -4450456875715979778
+    second: wanted_UI_paintcross-Sheet_8
+  - first:
+      213: -4993769886562343557
+    second: wanted_UI_paintcross-Sheet_9
+  - first:
+      213: -7718066734742539794
+    second: wanted_UI_paintcross-Sheet_10
+  - first:
+      213: 7420884315294983970
+    second: wanted_UI_paintcross-Sheet_11
+  - first:
+      213: -2823359082750363085
+    second: wanted_UI_paintcross-Sheet_12
+  - first:
+      213: -8124713459495537919
+    second: wanted_UI_paintcross-Sheet_13
+  - first:
+      213: 8190711060244174339
+    second: wanted_UI_paintcross-Sheet_14
+  - first:
+      213: 9056606539541687721
+    second: wanted_UI_paintcross-Sheet_15
+  - first:
+      213: 1450193648878943187
+    second: wanted_UI_paintcross-Sheet_16
+  - first:
+      213: -5190867638752824910
+    second: wanted_UI_paintcross-Sheet_17
+  - first:
+      213: -7094773153666514991
+    second: wanted_UI_paintcross-Sheet_18
+  - first:
+      213: -7538732333558828270
+    second: wanted_UI_paintcross-Sheet_19
+  - first:
+      213: 686761409626243038
+    second: wanted_UI_paintcross-Sheet_20
+  - first:
+      213: 1082588502846722795
+    second: wanted_UI_paintcross-Sheet_21
+  - first:
+      213: -6158200388730805242
+    second: wanted_UI_paintcross-Sheet_22
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 109
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700c8996594e47d90800000000000000
+      internalID: -7100799382083551225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 91
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b648ce3a2c50e5dc0800000000000000
+      internalID: -3648472314591542165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 70
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90951392312975bd0800000000000000
+      internalID: -2641482045436372727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 57
+        width: 43
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c14e363686b9c350800000000000000
+      internalID: 6037557463018783169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 38
+        width: 53
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d33c1f72643f6760800000000000000
+      internalID: 7453233505965454288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 24
+        width: 60
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e81ab4e2714dc3e0800000000000000
+      internalID: -2031895895154747162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 11
+        width: 67
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502ce168558e26ae0800000000000000
+      internalID: -1557427067096743419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 5
+        width: 72
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b48fe5c1ddf9980800000000000000
+      internalID: -8529856055294276800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 109
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef511c21d0dcc32c0800000000000000
+      internalID: -4450456875715979778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 5
+        width: 72
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75a86d0fb092bab0800000000000000
+      internalID: -4993769886562343557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 93
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee179e2623be3e490800000000000000
+      internalID: -7718066734742539794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 5
+        width: 72
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227ec6c97f64cf660800000000000000
+      internalID: 7420884315294983970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 79
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33aba4f7fd961d8d0800000000000000
+      internalID: -2823359082750363085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 5
+        width: 72
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103fee8b7283f3f80800000000000000
+      internalID: -8124713459495537919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 5
+        width: 76
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30697b320504ba170800000000000000
+      internalID: 8190711060244174339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 5
+        width: 76
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9adacdbe9a78fad70800000000000000
+      internalID: 9056606539541687721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 5
+        width: 76
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbf4f0b07f102410800000000000000
+      internalID: 1450193648878943187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 5
+        width: 76
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1311c826556f7b0800000000000000
+      internalID: -5190867638752824910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 2
+        width: 76
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dfbabd086d4a8d90800000000000000
+      internalID: -7094773153666514991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 2
+        width: 76
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213797172ea016790800000000000000
+      internalID: -7538732333558828270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 2
+        width: 76
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edff73a0dddd78900800000000000000
+      internalID: 686761409626243038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 1
+        width: 76
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2d91ee180260f00800000000000000
+      internalID: 1082588502846722795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanted_UI_paintcross-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 0
+        width: 76
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604270ebf5da98aa0800000000000000
+      internalID: -6158200388730805242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cowboy01_0: 6748216094295715067
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

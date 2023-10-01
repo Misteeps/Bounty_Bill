@@ -11,6 +11,7 @@ namespace Game.UI
 	public class Menu : Layer<Menu>
 	{
 		public readonly Div title;
+		public readonly Div bill;
 		public readonly Button play;
 		public readonly Button settings;
 		public readonly Button quit;
@@ -19,6 +20,7 @@ namespace Game.UI
 		public Menu()
 		{
 			title = this.Attach(new Div() { Name = "title" });
+			bill = this.Attach(new Div() { Name = "bill" });
 
 			Div main = this.Attach(new Div() { Name = "main" });
 			play = main.Attach(new Button() { Name = "play", Size = Size.Huge }).Bind(_ => { Menu.Hide(); Monolith.GameStart(); });
