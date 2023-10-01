@@ -193,10 +193,11 @@ namespace Game
 
 			Game.Camera.VirtualCamera.enabled = true;
 			Game.Camera.VignetteTransition.Modify(1f, 0.2f, 1f, EaseFunction.Circular, EaseDirection.InOut).Run();
-			UI.Hud.Show();
 			Player.Gun.TransitionLocalScaleX().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
 			Player.Gun.TransitionLocalScaleY().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
 			await Awaitable.WaitForSecondsAsync(0.6f);
+
+			UI.Hud.Show();
 
 			Instance.enabled = true;
 			Paused = false;
