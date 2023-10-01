@@ -51,5 +51,6 @@ namespace Game.UI
 				crosshair.style.left = -100;
 			}
 		}
+		public void ColorCrosshair(Color color) => crosshair.style.unityBackgroundImageTintColor = color;
 	}
 }

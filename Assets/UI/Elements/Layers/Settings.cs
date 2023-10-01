@@ -25,6 +25,7 @@ namespace Game.UI
 
 			Div general = top.Attach(new Div() { Name = "general", Classes = "section", Flexible = true });
 			general.AttachField(Game.Settings.customCursor, new ToggleSlide());
+			general.AttachField(Game.Settings.cursorColor, new ColorInput());
 			general.AttachField(Game.Settings.cameraEffects, new ToggleSlide());
 			general.AttachField(Game.Settings.bulletWarnings, new ToggleSlide());
 			top.Attach(new HorizontalSpace(Size.Huge));
@@ -33,7 +34,7 @@ namespace Game.UI
 			graphics.AttachField(Game.Settings.windowMode, new Dropdown<FullScreenMode>().BindDirectory(Game.Settings.WindowModes));
 			graphics.AttachField(Game.Settings.resolution, new Dropdown<(int, int)>().BindDirectory(Game.Settings.Resolutions));
 			graphics.Attach(new VerticalSpace());
-			graphics.AttachField(Game.Settings.fpsLimit, new IntInputSlider() { SliderMin = 30, SliderMax = 301, InputOverrides = new Dictionary<int, string>() { { 301, "\u221E" } } });
+			graphics.AttachField(Game.Settings.fpsLimit, new IntInputSlider() { SliderMin = 30, SliderMax = 301, InputOverrides = new Dictionary<int, string>() { { 301, "}" } } });
 			graphics.AttachField(Game.Settings.fpsCounter, new ToggleSlide());
 			graphics.AttachField(Game.Settings.vSync, new ToggleSlide());
 
