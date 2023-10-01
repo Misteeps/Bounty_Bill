@@ -71,8 +71,10 @@ namespace Game
 						cowboy.ShowCoin();
 						Monolith.bounty += 100;
 						Monolith.fortune += UnityEngine.Random.Range(0, 100);
+						Monolith.special += 1;
 						UI.Hud.Instance.UpdateWanted();
 						UI.Hud.Instance.UpdateFortune();
+						UI.Hud.Instance.SetSpecial(Monolith.special);
 					}
 				}
 			}

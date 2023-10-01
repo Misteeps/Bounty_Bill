@@ -322,6 +322,7 @@
 }
 
 .layer#Hud > .bullet {
+	overflow: visible;
 	position: absolute;
 	bottom: 20px;
 	right: 350px;
@@ -344,6 +345,7 @@
 }
 
 .layer#Hud > #special-meter {
+	overflow: visible;
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
@@ -354,6 +356,7 @@
 }
 
 .layer#Hud > #special-meter > .special {
+	overflow: visible;
 	margin: 8px;
 	width: 28px;
 	height: 28px;
@@ -384,4 +387,15 @@
 
 .layer#Hud > #no-bullet-warning.flash {
 	background-image: url('project://database/Assets/UI/Images/Hud No Bullet Red.png?fileID=2800000&guid=f69e35fe8f74aed4b8521f0ea30762ad&type=3#Hud No Bullet Red');
+}
+
+.layer#Hud > #bill {
+	position: absolute;
+	top: 0;
+	bottom: 40%;
+	left: 20%;
+	right: 20%;
+	background-image: url('project://database/Assets/UI/Images/Bill Instinct.png?fileID=2800000&guid=c06c042a04543f144940a8bf4917799c&type=3#Bill Instinct');
+	background-size: contain;
+	transition: opacity 400ms ease-out-circ;
 }
