@@ -193,6 +193,7 @@ namespace Game
 
 			Game.Camera.VirtualCamera.enabled = true;
 			Game.Camera.VignetteTransition.Modify(1f, 0.2f, 1f, EaseFunction.Circular, EaseDirection.InOut).Run();
+			UI.Hud.Show();
 			Player.Gun.TransitionLocalScaleX().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
 			Player.Gun.TransitionLocalScaleY().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
 			await Awaitable.WaitForSecondsAsync(0.6f);
@@ -206,6 +207,7 @@ namespace Game
 			Instance.enabled = false;
 
 			Game.Camera.VignetteTransition.Modify(0.2f, 1f, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
+			UI.Hud.Hide();
 			await Awaitable.WaitForSecondsAsync(1.6f);
 
 			// Show Something
