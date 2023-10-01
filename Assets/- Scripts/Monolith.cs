@@ -166,8 +166,12 @@ namespace Game
 		public static async void GameStart()
 		{
 			time = 0;
-			bounty = 100;
+			bounty = 1000;
 			fortune = 0;
+
+			UI.Hud.Instance.UpdateWanted();
+			UI.Hud.Instance.UpdateFortune();
+			UI.Hud.Instance.UpdateTime();
 
 			Enemies.difficulty = Enemies.Difficulties[0];
 

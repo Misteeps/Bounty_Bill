@@ -64,7 +64,16 @@ namespace Game
 			try
 			{
 				if (collision.TryGetComponent<Cowboy>(out Cowboy cowboy))
+				{
 					cowboy.Die();
+					if (origin == Monolith.PlayerObject)
+					{
+						Monolith.bounty += 100;
+						Monolith.fortune += UnityEngine.Random.Range(0, 100);
+						UI.Hud.Instance.UpdateWanted();
+						UI.Hud.Instance.UpdateFortune();
+					}
+				}
 			}
 			catch (Exception exception) { exception.Error($"Active bullet triggered unexpectedly by {collision.gameObject}"); }
 
