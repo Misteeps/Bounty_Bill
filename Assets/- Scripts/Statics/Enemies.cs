@@ -58,6 +58,7 @@ namespace Game
 			cowboy.Died += () => Remove(cowboy);
 			cowboy.Disposed += () => pool.Release(cowboy.gameObject);
 
+			MoveEnemy(cowboy, RandomPosition(6));
 			return cowboy;
 		}
 		public static void Remove(Cowboy cowboy)
@@ -68,10 +69,8 @@ namespace Game
 
 		public static void Update()
 		{
-			if (Inputs.Dodge.Down)
-				Spawn(Vector2.zero);
-
-			// Spawn enemies in if amount is low or time has passed
+			if (RandomInt(0, 100) < 4)
+				Spawn(RandomSpawn(20, 20));
 
 			foreach (Cowboy cowboy in Hunting.ToArray())
 				try
@@ -79,17 +78,21 @@ namespace Game
 					if (cowboy.IsShooting) continue;
 					cowboy.Wiggle(cowboy.Agent.velocity.magnitude * 2);
 
-					if (Vector2.Distance(cowboy.Agent.destination, PlayerPosition) > 6)
+					if (!cowboy.HasBullet)
+					{
+						Hunting.Remove(cowboy);
+						Reloading.Add(cowboy, null);
+					}
+
+					else if (Vector2.Distance(cowboy.Agent.destination, PlayerPosition) > 6)
 					{
 						MoveEnemy(cowboy, RandomPosition(6));
 					}
 
-					else if (cowboy.Agent.remainingDistance < 0.4f)
+					else if (cowboy.Agent.remainingDistance < 0.4f && Vector2.Distance(cowboy.transform.position, PlayerPosition) < 6)
 					{
 						cowboy.LookAt(PlayerPosition);
 						cowboy.Shoot(RandomFloat(0.4f, 0.8f));
-						Hunting.Remove(cowboy);
-						Reloading.Add(cowboy, null);
 					}
 				}
 				catch (Exception exception) { exception.Error($"Failed updating hunting enemy {cowboy?.gameObject}"); }
@@ -145,6 +148,17 @@ namespace Game
 		private static int RandomInt(int min, int max) => UnityEngine.Random.Range(min, max);
 		private static float RandomFloat(float min, float max) => UnityEngine.Random.Range(min, max);
 		private static Vector2 RandomPosition(float radius) => PlayerPosition + (UnityEngine.Random.insideUnitCircle * radius);
+		private static Vector2 RandomSpawn(int sizeX, int sizeY)
+		{
+			for (int i = 0; i < 100; i++)
+			{
+				Vector2 position = new Vector2(RandomFloat(-sizeX, sizeX), RandomFloat(-sizeY, sizeY));
+				if (Vector2.Distance(position, PlayerPosition) > 16)
+					return position;
+			}
+
+			return Vector2.zero;
+		}
 
 		public static void CleanUp()
 		{
