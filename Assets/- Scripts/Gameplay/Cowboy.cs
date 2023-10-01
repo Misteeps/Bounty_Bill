@@ -19,16 +19,16 @@ namespace Game
 		#endregion Sprites
 
 
-		[SerializeField] public SpriteRenderer spriteRenderer;
-		[SerializeField] public BoxCollider2D hitbox;
-		[SerializeField] public CapsuleCollider2D movebox;
-		[SerializeField] public new Rigidbody2D rigidbody;
-		[SerializeField] public NavMeshAgent agent;
-		[SerializeField] public Transform gun;
-		[SerializeField] public Transform gunTip;
-		[SerializeField] public bool bullet = true;
-		[SerializeField] public bool shooting = false;
-		[SerializeField] public float speed = 1f;
+		public SpriteRenderer SpriteRenderer;
+		public BoxCollider2D HitTrigger;
+		public CapsuleCollider2D MoveCollider;
+		public new Rigidbody2D RigidBody;
+		public NavMeshAgent Agent;
+		public Transform Gun;
+		public Transform GunTip;
+		public bool HasBullet = true;
+		public bool IsShooting = false;
+		public float MoveSpeed = 1f;
 
 		private float wiggle = 0;
 		private bool wiggleDirection = false;
@@ -40,16 +40,16 @@ namespace Game
 
 		public void Initialize()
 		{
-			spriteRenderer.sprite = sprites.normal;
-			hitbox.enabled = true;
-			movebox.enabled = true;
-			if (agent != null) agent.enabled = true;
-			gun.gameObject.SetActive(true);
-			bullet = true;
-			shooting = false;
+			SpriteRenderer.sprite = sprites.normal;
+			HitTrigger.enabled = true;
+			MoveCollider.enabled = true;
+			if (Agent != null) Agent.enabled = true;
+			Gun.gameObject.SetActive(true);
+			HasBullet = true;
+			IsShooting = false;
 		}
 
-		public void Move(Vector2 movement) => rigidbody.MovePosition(rigidbody.position + movement * speed);
+		public void Move(Vector2 movement) => RigidBody.MovePosition(RigidBody.position + movement * MoveSpeed);
 		public void LookAt(Vector2 target)
 		{
 			Vector2 direction;
@@ -65,13 +65,13 @@ namespace Game
 			}
 
 			float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-			gun.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+			Gun.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 		}
 		public async void Shoot(float delay)
 		{
-			if (bullet)
+			if (HasBullet)
 			{
-				shooting = true;
+				IsShooting = true;
 
 				if (delay != 0)
 				{
@@ -79,14 +79,14 @@ namespace Game
 					await Awaitable.WaitForSecondsAsync(delay);
 					// Erase laser
 
-					if (!gun.gameObject.activeSelf) return;
+					if (!Gun.gameObject.activeSelf) return;
 				}
 
-				Quaternion rotation = (transform.localScale.x < 0) ? gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, gun.transform.eulerAngles.z + 180));
-				BulletActive.Spawn(gunTip.position, rotation, gameObject);
+				Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
+				BulletActive.Spawn(GunTip.position, rotation, gameObject);
 
-				bullet = false;
-				shooting = false;
+				HasBullet = false;
+				IsShooting = false;
 			}
 			else
 			{
@@ -120,21 +120,21 @@ namespace Game
 		public void SetSprites(Sprites sprites)
 		{
 			this.sprites = sprites;
-			spriteRenderer.sprite = sprites.normal;
+			SpriteRenderer.sprite = sprites.normal;
 		}
 
 		public async void Die()
 		{
 			Died?.Invoke();
 
-			hitbox.enabled = false;
-			movebox.enabled = false;
-			if (agent != null) agent.enabled = false;
-			gun.gameObject.SetActive(false);
+			HitTrigger.enabled = false;
+			MoveCollider.enabled = false;
+			if (Agent != null) Agent.enabled = false;
+			Gun.gameObject.SetActive(false);
 
-			spriteRenderer.sprite = sprites.hit;
+			SpriteRenderer.sprite = sprites.hit;
 			await Awaitable.WaitForSecondsAsync(0.2f);
-			spriteRenderer.sprite = sprites.dead;
+			SpriteRenderer.sprite = sprites.dead;
 			await Awaitable.WaitForSecondsAsync(2f);
 
 			Disposed?.Invoke();

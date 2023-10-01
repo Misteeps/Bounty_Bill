@@ -157,11 +157,12 @@ namespace Game
 		public static async void GameStart()
 		{
 			Player.Initialize();
-			Player.transform.position = new Vector2(0, -6);
-			Player.gun.localScale = new Vector2(0, 0);
+			//Player.transform.position = new Vector2(0, -6);
+            Player.transform.position = new Vector2(0, 45f);
+            Player.Gun.localScale = new Vector2(0, 0);
 			Player.Died += GameEnd;
 
-#if UNITY_EDITOR
+#if !UNITY_EDITOR
 			void Walk(float position)
 			{
 				Player.transform.position = new Vector2(0, position);
@@ -178,8 +179,8 @@ namespace Game
 
 			Game.Camera.VirtualCamera.enabled = true;
 			Game.Camera.VignetteTransition.Modify(1f, 0.2f, 1f, EaseFunction.Circular, EaseDirection.InOut).Run();
-			Player.gun.TransitionLocalScaleX().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
-			Player.gun.TransitionLocalScaleY().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
+			Player.Gun.TransitionLocalScaleX().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
+			Player.Gun.TransitionLocalScaleY().Modify(0, 1, 0.6f, EaseFunction.Back, EaseDirection.Out).Run();
 			await Awaitable.WaitForSecondsAsync(0.6f);
 
 			Instance.enabled = true;

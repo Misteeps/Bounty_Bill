@@ -67,7 +67,7 @@ namespace Game
 				if (!collision.TryGetComponent<Cowboy>(out Cowboy cowboy))
 					throw new Exception("Collision is not a cowboy");
 
-				if (!cowboy.bullet) Enemies.ReloadEnemy(cowboy);
+				if (!cowboy.HasBullet) Enemies.ReloadEnemy(cowboy);
 				else
 				{
 					triggered = false;

@@ -52,8 +52,8 @@ namespace Game
 				_ => throw new Exception("Invalid cowboy sprite")
 			});
 			cowboy.Initialize();
-			cowboy.speed = agent.speed;
-			cowboy.spriteRenderer.color = Color.HSVToRGB(0, 0, RandomFloat(0.8f, 1f));
+			cowboy.MoveSpeed = agent.speed;
+			cowboy.SpriteRenderer.color = Color.HSVToRGB(0, 0, RandomFloat(0.8f, 1f));
 
 			cowboy.Died += () => Remove(cowboy);
 			cowboy.Disposed += () => pool.Release(cowboy.gameObject);
@@ -76,15 +76,15 @@ namespace Game
 			foreach (Cowboy cowboy in Hunting.ToArray())
 				try
 				{
-					if (cowboy.shooting) continue;
-					cowboy.Wiggle(cowboy.agent.velocity.magnitude * 2);
+					if (cowboy.IsShooting) continue;
+					cowboy.Wiggle(cowboy.Agent.velocity.magnitude * 2);
 
-					if (Vector2.Distance(cowboy.agent.destination, PlayerPosition) > 6)
+					if (Vector2.Distance(cowboy.Agent.destination, PlayerPosition) > 6)
 					{
 						MoveEnemy(cowboy, RandomPosition(6));
 					}
 
-					else if (cowboy.agent.remainingDistance < 0.4f)
+					else if (cowboy.Agent.remainingDistance < 0.4f)
 					{
 						cowboy.LookAt(PlayerPosition);
 						cowboy.Shoot(RandomFloat(0.4f, 0.8f));
@@ -97,8 +97,8 @@ namespace Game
 			foreach ((Cowboy cowboy, BulletInactive bullet) in Reloading.ToArray())
 				try
 				{
-					if (cowboy.shooting) continue;
-					cowboy.Wiggle(cowboy.agent.velocity.magnitude * 2);
+					if (cowboy.IsShooting) continue;
+					cowboy.Wiggle(cowboy.Agent.velocity.magnitude * 2);
 
 					if (bullet != null)
 					{
@@ -115,7 +115,7 @@ namespace Game
 						inactiveBullets.RemoveAt(index);
 					}
 
-					else if (cowboy.agent.remainingDistance < 0.05f)
+					else if (cowboy.Agent.remainingDistance < 0.05f)
 					{
 						MoveEnemy(cowboy, RandomPosition(20));
 					}
@@ -125,8 +125,8 @@ namespace Game
 
 		public static void ReloadEnemy(Cowboy cowboy)
 		{
-			if (cowboy.bullet) throw new Exception("Cowboy already has bullet");
-			cowboy.bullet = true;
+			if (cowboy.HasBullet) throw new Exception("Cowboy already has bullet");
+			cowboy.HasBullet = true;
 
 			if (Reloading.ContainsKey(cowboy))
 			{
@@ -138,7 +138,7 @@ namespace Game
 		}
 		private static void MoveEnemy(Cowboy cowboy, Vector2 position)
 		{
-			cowboy.agent.destination = position;
+			cowboy.Agent.destination = position;
 			cowboy.LookAt(position);
 		}
 
