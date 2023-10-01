@@ -12,7 +12,9 @@ namespace Game
 	{
 		private static readonly ObjectPool<GameObject> pool = new ObjectPool<GameObject>(() => Instantiate(Monolith.Refs.bulletInactivePrefab), actionOnGet: OnGet, actionOnRelease: OnRelease);
 
+		[SerializeField] private SpriteRenderer spriteRenderer;
 		[SerializeField] private CircleCollider2D hitbox;
+		private float timer;
 		private bool triggered;
 
 
@@ -35,12 +37,24 @@ namespace Game
 
 			BulletInactive bullet = obj.GetComponent<BulletInactive>();
 			bullet.hitbox.enabled = false;
+			bullet.timer = 0;
 			bullet.triggered = false;
 			bullet.Bounce((Vector2)obj.transform.position + direction);
 
 			return bullet;
 		}
 		public void Dispose() => pool.Release(gameObject);
+
+		private void Update()
+		{
+			timer += Time.deltaTime;
+			if (timer < 10) return;
+			if (timer > 14) { Dispose(); return; }
+
+			float decimals = timer % 1f;
+			if (decimals < 0.5f) spriteRenderer.enabled = false;
+			else spriteRenderer.enabled = true;
+		}
 
 		public async void Bounce(Vector2 position)
 		{

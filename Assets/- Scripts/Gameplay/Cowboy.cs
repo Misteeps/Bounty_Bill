@@ -201,14 +201,15 @@ namespace Game
 			await Awaitable.WaitForSecondsAsync(0.2f);
 			SpriteRenderer.sprite = sprites.dead;
 
-			for (int i = 0; i < 4; i++)
+			for (int i = 0; i < 3; i++)
 			{
-				await Awaitable.WaitForSecondsAsync(0.8f);
-				SpriteRenderer.color = new Color(SpriteRenderer.color.r, SpriteRenderer.color.g, SpriteRenderer.color.b, 0.6f);
-				await Awaitable.WaitForSecondsAsync(0.4f);
-				SpriteRenderer.color = new Color(SpriteRenderer.color.r, SpriteRenderer.color.g, SpriteRenderer.color.b, 1);
+				await Awaitable.WaitForSecondsAsync(0.5f);
+				SpriteRenderer.enabled = false;
+				await Awaitable.WaitForSecondsAsync(0.5f);
+				SpriteRenderer.enabled = true;
 			}
 
+			await Awaitable.WaitForSecondsAsync(0.5f);
 			Disposed?.Invoke();
 
 			Died = null;

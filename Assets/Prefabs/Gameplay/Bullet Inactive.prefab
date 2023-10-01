@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c789b08c701d524a8553a18ec8a8833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 2687647628706468807}
   hitbox: {fileID: 7583805150931019357}
 --- !u!114 &3432665498520701597
 MonoBehaviour:
