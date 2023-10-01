@@ -869,7 +869,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.0039}
+  m_Offset: {x: 0, y: 0.039}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.36}
@@ -879,7 +879,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.093, y: 0.302}
+  m_Size: {x: 1.093, y: 0.37}
   m_EdgeRadius: 0
 --- !u!1 &897079850
 GameObject:
@@ -1083,7 +1083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1019315509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1522,7 +1522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1996474294672677733
 Transform:
   m_ObjectHideFlags: 0
@@ -1945,6 +1945,10 @@ PrefabInstance:
       propertyPath: Gun
       value: 
       objectReference: {fileID: 978379713}
+    - target: {fileID: 6505303936121154313, guid: 7ca5da94feb85c34a9e48d16f790cd13, type: 3}
+      propertyPath: Agent
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6505303936121154313, guid: 7ca5da94feb85c34a9e48d16f790cd13, type: 3}
       propertyPath: agent
       value: 
