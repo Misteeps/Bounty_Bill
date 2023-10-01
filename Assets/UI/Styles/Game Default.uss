@@ -6,6 +6,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+    -unity-font-definition: url('project://database/Assets/UI/Fonts/Pixel Western SDF.asset');
 }
 
 .layer {
