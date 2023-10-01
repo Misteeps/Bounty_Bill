@@ -51,6 +51,10 @@ namespace Game
 
 		public static bool Paused { get => Time.timeScale == 0; set => Time.timeScale = (value) ? 0 : 1; }
 
+		public static float time;
+		public static int bounty;
+		public static int fortune;
+
 
 		private void Awake()
 		{
@@ -117,6 +121,8 @@ namespace Game
 			if (Paused)
 				return;
 
+			time += Time.deltaTime;
+
 			PlayerLook();
 			PlayerShoot();
 			Enemies.Update();
@@ -155,6 +161,10 @@ namespace Game
 
 		public static async void GameStart()
 		{
+			time = 0;
+			bounty = 100;
+			fortune = 0;
+
 			Player.Initialize();
 			Player.transform.position = new Vector2(0, -6);
 			Player.Gun.localScale = new Vector2(0, 0);
