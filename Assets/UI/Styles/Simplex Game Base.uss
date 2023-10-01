@@ -176,23 +176,23 @@ Background
 }
 
 .text.mini {
-	font-size: 8px;
+	font-size: 4px;
 }
 
 .text.small {
-	font-size: 10px;
+	font-size: 6px;
 }
 
 .text.medium {
-	font-size: 12px;
+	font-size: 8px;
 }
 
 .text.large {
-	font-size: 16px;
+	font-size: 12px;
 }
 
 .text.huge {
-	font-size: 24px;
+	font-size: 18px;
 }
 
 /* icon */
