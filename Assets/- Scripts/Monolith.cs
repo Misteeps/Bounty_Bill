@@ -104,6 +104,7 @@ namespace Game
 			UI.Menu.Show();
 			UI.Settings.Hide();
 			UI.Overlay.Show();
+			UI.Overlay.Instance.UpdateCrosshair(false);
 
 			Settings.Defaults();
 
