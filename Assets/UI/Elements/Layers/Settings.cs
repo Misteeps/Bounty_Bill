@@ -25,6 +25,7 @@ namespace Game.UI
 
 			Div general = top.Attach(new Div() { Name = "general", Classes = "section", Flexible = true });
 			general.AttachField(Game.Settings.cameraEffects, new ToggleSlide());
+			general.AttachField(Game.Settings.bulletWarnings, new ToggleSlide());
 			top.Attach(new HorizontalSpace(Size.Huge));
 			top.Attach(new HorizontalSpace(Size.Huge));
 			Div graphics = top.Attach(new Div() { Name = "graphics", Classes = "section", Flexible = true });
