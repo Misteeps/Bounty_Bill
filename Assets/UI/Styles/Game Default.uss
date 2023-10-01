@@ -39,6 +39,22 @@
 	transition-duration: 1200ms;
 }
 
+.layer#Overlay > #intro {
+	position: absolute;
+	top: 10%;
+	left: 0;
+	right: 0;
+	height: 200px;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.layer#Overlay > #intro > .label {
+	margin: 12px;
+	font-size: 40px;
+	-unity-font-style: bold;
+}
+
 .layer#Overlay > #fps {
 	position: absolute;
 	top: 8px;
@@ -245,7 +261,7 @@
 .layer#Hud > .sign#fortune {
 	top: -20px;
 	right: 240px;
-	padding: 54px 32px 36px 32px;
+	padding: 62px 32px 36px 32px;
 	width: 240px;
 	height: 120px;
 	background-image: url('project://database/Assets/UI/Images/Sign 3.png?fileID=2800000&guid=57a7181a5afb60141aee0b8ce9a2db81&type=3#Sign 3');

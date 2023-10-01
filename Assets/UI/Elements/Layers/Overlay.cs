@@ -13,6 +13,7 @@ namespace Game.UI
 		protected override bool DefaultFocusable => false;
 		protected override bool DefaultPickable => false;
 
+		public readonly Label[] intro;
 		public readonly Label fps;
 		public readonly Div crosshair;
 
@@ -21,10 +22,35 @@ namespace Game.UI
 
 		public Overlay()
 		{
+			Div intros = this.Attach(new Div() { Name = "intro" });
+			intro = new Label[5];
+			intro[0] = intros.Attach(new Label() { Text = "Everyone" }.Visible(false));
+			intro[1] = intros.Attach(new Label() { Text = "Only" }.Visible(false));
+			intro[2] = intros.Attach(new Label() { Text = "Gets" }.Visible(false));
+			intro[3] = intros.Attach(new Label() { Text = "ONE" }.Visible(false));
+			intro[4] = intros.Attach(new Label() { Text = "SHOT" }.Visible(false));
+
 			fps = this.Attach(new Label() { Name = "fps", Size = Size.Small });
 			fps.schedule.Execute(UpdateFPS).Every(1000);
 
 			crosshair = this.Attach(new Div() { Name = "crosshair" });
+		}
+
+		public async void ShowIntro()
+		{
+			intro[0].Visible(true);
+			await Awaitable.WaitForSecondsAsync(0.4f);
+			intro[1].Visible(true);
+			await Awaitable.WaitForSecondsAsync(0.4f);
+			intro[2].Visible(true);
+			await Awaitable.WaitForSecondsAsync(0.8f);
+			intro[3].Visible(true);
+			await Awaitable.WaitForSecondsAsync(0.8f);
+			intro[4].Visible(true);
+			await Awaitable.WaitForSecondsAsync(1.6f);
+
+			for (int i = 0; i < intro.Length; i++)
+				intro[i].Visible(false);
 		}
 
 		public void ShowFPS(bool show) => fps.Display(show);

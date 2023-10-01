@@ -196,8 +196,8 @@ namespace Game
 			new Transition(() => Player.transform.position.y, Walk).Modify(-6, 0, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
 			await Awaitable.WaitForSecondsAsync(1.6f);
 
-			// Show Text "Everyone Only Gets ONE SHOT"
-			await Awaitable.WaitForSecondsAsync(2f);
+			UI.Overlay.Instance.ShowIntro();
+			await Awaitable.WaitForSecondsAsync(3.6f);
 #endif
 
 			Game.Camera.VirtualCamera.enabled = true;
