@@ -76,7 +76,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -143,19 +143,19 @@ TextureImporter:
       name: blood_splatter-Sheet_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 21
-        width: 53
-        height: 10
+        x: 0
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3ebf192b735d512b0800000000000000
-      internalID: -5614346925251626013
+      spriteID: 97203a5cda0dff440bb8aa459de7452e
+      internalID: 193176097
       vertices: []
       indices: 
       edges: []
@@ -164,19 +164,19 @@ TextureImporter:
       name: blood_splatter-Sheet_1
       rect:
         serializedVersion: 2
-        x: 109
-        y: 26
-        width: 20
-        height: 12
+        x: 50
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dcda8b560b1873420800000000000000
-      internalID: 2609697103705320909
+      spriteID: 40e112705b78cfe49a5022a47c8915ca
+      internalID: -1848823661
       vertices: []
       indices: 
       edges: []
@@ -185,19 +185,19 @@ TextureImporter:
       name: blood_splatter-Sheet_2
       rect:
         serializedVersion: 2
-        x: 120
-        y: 19
-        width: 25
-        height: 14
+        x: 100
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d900011bf1d706030800000000000000
-      internalID: 3485923686652838045
+      spriteID: ae04019ef22bc6349a1151f56cc0ac1b
+      internalID: 1071676294
       vertices: []
       indices: 
       edges: []
@@ -206,19 +206,19 @@ TextureImporter:
       name: blood_splatter-Sheet_3
       rect:
         serializedVersion: 2
-        x: 130
-        y: 29
-        width: 12
-        height: 9
+        x: 150
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9545904eaa25040e0800000000000000
-      internalID: -2287737716780477351
+      spriteID: bc1e38815147f244c856799d12ab6149
+      internalID: 1730792231
       vertices: []
       indices: 
       edges: []
@@ -227,19 +227,19 @@ TextureImporter:
       name: blood_splatter-Sheet_4
       rect:
         serializedVersion: 2
-        x: 149
-        y: 13
-        width: 31
-        height: 21
+        x: 200
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 14efa3a51a8e549e0800000000000000
-      internalID: -1637647109778112959
+      spriteID: 8b22368907050d54c9c76f87ae307399
+      internalID: 2119435630
       vertices: []
       indices: 
       edges: []
@@ -248,19 +248,19 @@ TextureImporter:
       name: blood_splatter-Sheet_5
       rect:
         serializedVersion: 2
-        x: 170
-        y: 30
-        width: 11
-        height: 7
+        x: 250
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5ed43e2df66ad7c20800000000000000
-      internalID: 3205901508967353829
+      spriteID: 4c06bfd8431a3da4895a88797047fa5c
+      internalID: 2080337535
       vertices: []
       indices: 
       edges: []
@@ -269,19 +269,19 @@ TextureImporter:
       name: blood_splatter-Sheet_6
       rect:
         serializedVersion: 2
-        x: 181
-        y: 25
-        width: 10
-        height: 9
+        x: 300
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 08265df75ead1a040800000000000000
-      internalID: 4657244168904860288
+      spriteID: 73d3d4cb6c00988488f7f7544a4461d4
+      internalID: 251900553
       vertices: []
       indices: 
       edges: []
@@ -290,19 +290,19 @@ TextureImporter:
       name: blood_splatter-Sheet_7
       rect:
         serializedVersion: 2
-        x: 185
-        y: 15
-        width: 9
-        height: 11
+        x: 350
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eca34220f1fddd000800000000000000
-      internalID: 62451294125963982
+      spriteID: 12beeeed422e6a64d97426352539c959
+      internalID: 2038280218
       vertices: []
       indices: 
       edges: []
@@ -311,61 +311,19 @@ TextureImporter:
       name: blood_splatter-Sheet_8
       rect:
         serializedVersion: 2
-        x: 200
-        y: 10
-        width: 27
-        height: 24
+        x: 400
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 389b5823face3f280800000000000000
-      internalID: -9010598192227174013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blood_splatter-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 24
-        width: 13
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7096542f7e17c4b0800000000000000
-      internalID: -5420330095097769862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blood_splatter-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 7
-        width: 208
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b84d90c5e83c1cd40800000000000000
-      internalID: 5602974427622528139
+      spriteID: ada532579424df047a57eb125b7d0fe0
+      internalID: -1430092563
       vertices: []
       indices: 
       edges: []
@@ -381,7 +339,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cowboy01_0: 6748216094295715067
+      blood_splatter-Sheet_0: 193176097
+      blood_splatter-Sheet_1: -1848823661
+      blood_splatter-Sheet_2: 1071676294
+      blood_splatter-Sheet_3: 1730792231
+      blood_splatter-Sheet_4: 2119435630
+      blood_splatter-Sheet_5: 2080337535
+      blood_splatter-Sheet_6: 251900553
+      blood_splatter-Sheet_7: 2038280218
+      blood_splatter-Sheet_8: -1430092563
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

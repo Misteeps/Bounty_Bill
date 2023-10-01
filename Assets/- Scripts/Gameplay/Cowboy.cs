@@ -30,7 +30,8 @@ namespace Game
 		public Transform GunTip;
 		public SpriteRenderer GunTipRenderer;
 		public SpriteRenderer CoinRenderer;
-		public SpriteAnimation CoinAnimater;
+		public SpriteAnimation CoinAnimator;
+		public SpriteAnimation BloodAnimator;
 		public LineRenderer LineRenderer;
 		public bool HasBullet = true;
 		public bool IsShooting = false;
@@ -181,7 +182,7 @@ namespace Game
 			CoinRenderer.transform.localPosition = new Vector2(0, 0.8f);
 			CoinRenderer.color = Color.white;
 
-			CoinAnimater.Restart();
+			CoinAnimator.Restart();
 			CoinRenderer.transform.TransitionLocalPositionY().Modify(0.8f, 1.2f, 0.5f, EaseFunction.Back, EaseDirection.Out).Run();
 			await CoinRenderer.TransitionColorA().Modify(1, 0, 1.2f, EaseFunction.Linear, EaseDirection.InOut).Await();
 
@@ -196,6 +197,7 @@ namespace Game
 			MoveCollider.enabled = false;
 			if (Agent) Agent.enabled = false;
 			Gun.gameObject.SetActive(false);
+			BloodAnimator.Restart();
 
 			SpriteRenderer.sprite = sprites.hit;
 			await Awaitable.WaitForSecondsAsync(0.2f);
