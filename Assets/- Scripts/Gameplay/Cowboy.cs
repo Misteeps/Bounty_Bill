@@ -89,6 +89,7 @@ namespace Game
 				Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
 				BulletActive.Spawn(GunTip.position, rotation, gameObject);
 
+				await Awaitable.WaitForSecondsAsync(0.2f);
 				HasBullet = false;
 				IsShooting = false;
 			}
@@ -102,20 +103,27 @@ namespace Game
 		{
 			if (!LineRenderer) return;
 
-			Transition end = new Transition(() => LineRenderer.GetPosition(1).x, value => LineRenderer.SetPosition(1, new Vector3(value, 0, 0)), HashCode.Combine(LineRenderer, "end"));
-
 			LineRenderer.SetPosition(0, new Vector3(0.2f, 0, 0));
 			LineRenderer.SetPosition(1, new Vector3(0.2f, 0, 0));
-			LineRenderer.enabled = true;
+			LineRenderer.enabled = Settings.bulletWarnings;
 
+			if (!Settings.bulletWarnings)
+				return;
+
+			Transition end = new Transition(() => LineRenderer.GetPosition(1).x, value => LineRenderer.SetPosition(1, new Vector3(value, 0, 0)), HashCode.Combine(LineRenderer, "end"));
 			await end.Modify(0.2f, -8f, duration, EaseFunction.Quadratic, EaseDirection.InOut).Await();
 		}
 		private async void EraseLaser()
 		{
 			if (!LineRenderer) return;
 
-			Transition start = new Transition(() => LineRenderer.GetPosition(0).x, value => LineRenderer.SetPosition(0, new Vector3(value, 0, 0)), HashCode.Combine(LineRenderer, "start"));
+			if (!Settings.bulletWarnings)
+			{
+				LineRenderer.enabled = false;
+				return;
+			}
 
+			Transition start = new Transition(() => LineRenderer.GetPosition(0).x, value => LineRenderer.SetPosition(0, new Vector3(value, 0, 0)), HashCode.Combine(LineRenderer, "start"));
 			await start.Modify(0.2f, -8f, 0.1f, EaseFunction.Linear, EaseDirection.InOut).Await();
 
 			LineRenderer.SetPosition(0, new Vector3(0.2f, 0, 0));
