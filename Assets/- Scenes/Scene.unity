@@ -240,6 +240,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4517815515273440414, guid: 6e064b857ace80f4986d2dda12703c45, type: 3}
   m_PrefabInstance: {fileID: 4471525328892670873}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &329997629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329997630}
+  m_Layer: 0
+  m_Name: Bullets Special
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &329997630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329997629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &347749526 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4178860848670690376, guid: 769b9a7ddad539846bdcb2bcdd0bfabe, type: 3}
@@ -790,6 +821,8 @@ MonoBehaviour:
     cowboyPrefab: {fileID: 3217814989333713969, guid: 7ca5da94feb85c34a9e48d16f790cd13, type: 3}
     bulletActiveRoot: {fileID: 897079851}
     bulletActivePrefab: {fileID: 8065134646563488689, guid: 2aefc9ca6a4acaf41bd7f464482f23bd, type: 3}
+    bulletSpecialRoot: {fileID: 329997630}
+    bulletSpecialPrefab: {fileID: 8065134646563488689, guid: 5f93bd76784ae3943ae31f8ad9936e23, type: 3}
     bulletInactiveRoot: {fileID: 560669296}
     bulletInactivePrefab: {fileID: 8065134646563488689, guid: 8f4ae25e9284601478bf27dc0e356f67, type: 3}
     coinBagRoot: {fileID: 655063515}
@@ -3244,5 +3277,6 @@ SceneRoots:
   - {fileID: 1592564810}
   - {fileID: 489402136}
   - {fileID: 897079851}
+  - {fileID: 329997630}
   - {fileID: 560669296}
   - {fileID: 655063515}

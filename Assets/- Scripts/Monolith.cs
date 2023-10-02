@@ -26,6 +26,8 @@ namespace Game
 			public GameObject cowboyPrefab;
 			public Transform bulletActiveRoot;
 			public GameObject bulletActivePrefab;
+			public Transform bulletSpecialRoot;
+			public GameObject bulletSpecialPrefab;
 			public Transform bulletInactiveRoot;
 			public GameObject bulletInactivePrefab;
 			public Transform coinBagRoot;

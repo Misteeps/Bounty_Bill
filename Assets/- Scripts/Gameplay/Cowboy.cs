@@ -121,7 +121,7 @@ namespace Game
 				await Awaitable.WaitForSecondsAsync(delay);
 
 			Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
-			BulletActive.Spawn(GunTip.position, rotation, gameObject);
+			BulletSpecial.Spawn(GunTip.position, rotation, gameObject);
 			MuzzleFlash();
 
 			GunRenderer.sprite = Monolith.Refs.revolver;
