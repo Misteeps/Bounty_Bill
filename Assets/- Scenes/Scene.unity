@@ -13873,6 +13873,7 @@ MonoBehaviour:
     - {fileID: -1378174580, guid: 45bd80d0acb792c4cbd02ed624802545, type: 3}
     menuMusic: {fileID: 8300000, guid: 7889cb3ffd3ef9d4ca2a3e3d1496be9f, type: 3}
     gameMusic: {fileID: 8300000, guid: 004d434571261184197c3258d3138812, type: 3}
+    ambiance: {fileID: 8300000, guid: f2b8864fe8eb7bf46b74baaaf1d77c68, type: 3}
     aimIndicator: {fileID: 8300000, guid: 3de1016851bd4ac47abe6785b993c460, type: 3}
     bulletObstacle: {fileID: 8300000, guid: 9052af0d23bb5bc41a74ce2d62d7ec6b, type: 3}
     death: {fileID: 8300000, guid: 2fddfed9c6bba694f939494dcb3dbb50, type: 3}

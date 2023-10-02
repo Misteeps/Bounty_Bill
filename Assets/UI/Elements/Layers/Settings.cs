@@ -26,7 +26,6 @@ namespace Game.UI
 			Div general = top.Attach(new Div() { Name = "general", Classes = "section", Flexible = true });
 			general.AttachField(Game.Settings.customCursor, new ToggleSlide());
 			general.AttachField(Game.Settings.cursorColor, new ColorInput());
-			general.AttachField(Game.Settings.cameraEffects, new ToggleSlide());
 			general.AttachField(Game.Settings.bulletWarnings, new ToggleSlide());
 			top.Attach(new HorizontalSpace(Size.Huge));
 			top.Attach(new HorizontalSpace(Size.Huge));
@@ -43,7 +42,6 @@ namespace Game.UI
 			audio.Attach(new VerticalSpace());
 			audio.AttachField(Game.Settings.uiVolume, new IntInputSlider() { Min = 0, Max = 100 });
 			audio.AttachField(Game.Settings.sfxVolume, new IntInputSlider() { Min = 0, Max = 100 });
-			audio.AttachField(Game.Settings.voiceVolume, new IntInputSlider() { Min = 0, Max = 100 });
 			audio.AttachField(Game.Settings.ambianceVolume, new IntInputSlider() { Min = 0, Max = 100 });
 			audio.AttachField(Game.Settings.musicVolume, new IntInputSlider() { Min = 0, Max = 100 });
 			bottom.Attach(new HorizontalSpace(Size.Huge));

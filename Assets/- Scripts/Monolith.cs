@@ -45,6 +45,7 @@ namespace Game
 			public Sprite[] bountySparks;
 			public AudioClip menuMusic;
 			public AudioClip gameMusic;
+			public AudioClip ambiance;
 			public AudioClip aimIndicator;
 			public AudioClip bulletObstacle;
 			public AudioClip death;
@@ -229,6 +230,8 @@ namespace Game
 
 			Enemies.SetDifficulty(0);
 			Audio.UI.global.PlayOneShot(Refs.gameStartButton);
+			Audio.Ambiance.global.clip = Refs.ambiance;
+			Audio.Ambiance.global.Play();
 
 			Player.Initialize();
 			Player.transform.position = new Vector2(0, 8);
@@ -268,6 +271,7 @@ namespace Game
 			Instance.enabled = false;
 
 			Game.Camera.VignetteTransition.Modify(0.2f, 1f, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
+			Audio.Ambiance.global.Stop();
 			UI.Hud.Hide();
 			await Awaitable.WaitForSecondsAsync(1.6f);
 
