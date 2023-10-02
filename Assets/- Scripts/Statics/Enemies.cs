@@ -124,12 +124,16 @@ namespace Game
 		}
 		public static void Update()
 		{
-			if (Input.GetKeyDown(KeyCode.BackQuote)) SetDifficulty(0);
-			else if (Input.GetKeyDown(KeyCode.Alpha1)) SetDifficulty(1);
-			else if (Input.GetKeyDown(KeyCode.Alpha2)) SetDifficulty(2);
-			else if (Input.GetKeyDown(KeyCode.Alpha3)) SetDifficulty(3);
-			else if (Input.GetKeyDown(KeyCode.Alpha4)) SetDifficulty(4);
-			else if (Input.GetKeyDown(KeyCode.Alpha5)) SetDifficulty(5);
+			if (Input.GetKey(KeyCode.M))
+			{
+				if (Input.GetKeyDown(KeyCode.Tab)) { Monolith.special = 7; UI.Hud.Instance.SetSpecial(7); }
+				else if (Input.GetKeyDown(KeyCode.BackQuote)) SetDifficulty(0);
+				else if (Input.GetKeyDown(KeyCode.Alpha1)) SetDifficulty(1);
+				else if (Input.GetKeyDown(KeyCode.Alpha2)) SetDifficulty(2);
+				else if (Input.GetKeyDown(KeyCode.Alpha3)) SetDifficulty(3);
+				else if (Input.GetKeyDown(KeyCode.Alpha4)) SetDifficulty(4);
+				else if (Input.GetKeyDown(KeyCode.Alpha5)) SetDifficulty(5);
+			}
 
 			timer += Time.deltaTime;
 			if (timer > difficulty.wavesDelay || Count <= difficulty.wavesThreshold)

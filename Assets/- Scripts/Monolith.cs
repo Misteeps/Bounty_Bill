@@ -123,12 +123,6 @@ namespace Game
 
 		private void Update()
 		{
-			if (Input.GetKeyDown(KeyCode.Tab))
-			{
-				special = 7;
-				UI.Hud.Instance.SetSpecial(7);
-			}
-
 			UI.Overlay.Instance.UpdateCrosshair();
 
 			if (Inputs.Escape.Down)
@@ -223,7 +217,7 @@ namespace Game
 			Player.GunRenderer.sprite = Refs.revolver;
 			Player.Died += GameEnd;
 
-#if UNITY_EDITOR
+#if !UNITY_EDITOR
 			void Walk(float position)
 			{
 				Player.transform.position = new Vector2(0, position);
