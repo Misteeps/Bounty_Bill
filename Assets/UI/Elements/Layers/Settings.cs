@@ -57,7 +57,8 @@ namespace Game.UI
 			keybinds.AttachField(Game.Settings.moveRight, new KeyBindGroup());
 			keybinds.AttachField(Game.Settings.escape, new KeyBindGroup() { LockPrimary = true });
 
-			Hidden += () => Monolith.Paused = false;
+			Shown += () => Audio.UI.global.PlayOneShot(Monolith.Refs.settingsOpen);
+			Hidden += () => { Audio.UI.global.PlayOneShot(Monolith.Refs.settingsClose); Monolith.Paused = false; };
 		}
 	}
 }

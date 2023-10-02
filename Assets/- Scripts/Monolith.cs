@@ -228,6 +228,7 @@ namespace Game
 			UI.Hud.Instance.SetSpecial(0);
 
 			Enemies.SetDifficulty(0);
+			Audio.UI.global.PlayOneShot(Refs.gameStartButton);
 
 			Player.Initialize();
 			Player.transform.position = new Vector2(0, 8);

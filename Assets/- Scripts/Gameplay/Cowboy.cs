@@ -111,7 +111,7 @@ namespace Game
 
 			GunRenderer.sprite = Monolith.Refs.shotgun;
 			UI.Hud.Instance.ShowBill();
-			Audio.SFX.global.PlayOneShot(Monolith.Refs.specialActivated, 0.6f);
+			Audio.SFX.global.PlayOneShot(Monolith.Refs.specialActivated);
 			await Awaitable.WaitForSecondsAsync(0.1f);
 
 			InSpecial = true;
@@ -126,7 +126,7 @@ namespace Game
 
 			Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
 			BulletSpecial.Spawn(GunTip.position, rotation, gameObject);
-			Audio.SFX.global.PlayOneShot(Monolith.Refs.specialShot, 0.8f);
+			Audio.SFX.global.PlayOneShot(Monolith.Refs.specialShot);
 			MuzzleFlash();
 
 			GunRenderer.sprite = Monolith.Refs.revolver;
@@ -235,21 +235,22 @@ namespace Game
 			if (Agent) Agent.enabled = false;
 			Gun.gameObject.SetActive(false);
 			BloodAnimator.Restart();
-			AudioSource.PlayOneShot(Monolith.Refs.death);
+			AudioSource.PlayOneShot(Monolith.Refs.death, 2);
 
 			SpriteRenderer.sprite = sprites.hit;
 			await Awaitable.WaitForSecondsAsync(0.2f);
 			SpriteRenderer.sprite = sprites.dead;
+			await Awaitable.WaitForSecondsAsync(1f);
 
 			for (int i = 0; i < 3; i++)
 			{
-				await Awaitable.WaitForSecondsAsync(0.5f);
+				await Awaitable.WaitForSecondsAsync(0.15f);
 				SpriteRenderer.enabled = false;
-				await Awaitable.WaitForSecondsAsync(0.5f);
+				await Awaitable.WaitForSecondsAsync(0.15f);
 				SpriteRenderer.enabled = true;
 			}
 
-			await Awaitable.WaitForSecondsAsync(0.5f);
+			await Awaitable.WaitForSecondsAsync(0.4f);
 			Disposed?.Invoke();
 
 			Died = null;
