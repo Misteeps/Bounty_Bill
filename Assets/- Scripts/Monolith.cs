@@ -106,7 +106,7 @@ namespace Game
 		private void Start()
 		{
 			UI.Hud.Hide();
-			UI.Menu.Show();
+			UI.Menu.Instance.Show(0);
 			UI.Settings.Hide();
 			UI.Overlay.Show();
 			UI.Overlay.Instance.UpdateCrosshair(false);
@@ -218,12 +218,12 @@ namespace Game
 			Enemies.SetDifficulty(0);
 
 			Player.Initialize();
-			Player.transform.position = new Vector2(0, -6);
+			Player.transform.position = new Vector2(0, 8);
 			Player.Gun.localScale = new Vector2(0, 0);
 			Player.GunRenderer.sprite = Refs.revolver;
 			Player.Died += GameEnd;
 
-#if !UNITY_EDITOR
+#if UNITY_EDITOR
 			void Walk(float position)
 			{
 				Player.transform.position = new Vector2(0, position);
@@ -231,7 +231,7 @@ namespace Game
 			}
 
 			Game.Camera.VignetteTransition.Modify(0.2f, 1f, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
-			new Transition(() => Player.transform.position.y, Walk).Modify(-6, 0, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
+			new Transition(() => Player.transform.position.y, Walk).Modify(14.6f, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
 			await Awaitable.WaitForSecondsAsync(1.6f);
 
 			UI.Overlay.Instance.ShowIntro();

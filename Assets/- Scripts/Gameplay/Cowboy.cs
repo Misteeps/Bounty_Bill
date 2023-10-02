@@ -127,12 +127,12 @@ namespace Game
 			GunRenderer.sprite = Monolith.Refs.revolver;
 			await Awaitable.WaitForSecondsAsync(0.2f);
 
-			HasBullet = false;
 			InSpecial = false;
 			IsShooting = false;
 
 			Monolith.special = 0;
 			UI.Hud.Instance.SetSpecial(0);
+			UI.Hud.Instance.SetBullet(true);
 		}
 
 		private async void DrawLaser(float duration)
