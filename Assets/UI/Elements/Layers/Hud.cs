@@ -40,10 +40,14 @@ namespace Game.UI
 				star.TransitionScaleX().Modify(1, 4, 0.4f, EaseFunction.Circular, EaseDirection.Out).Run();
 				await star.TransitionScaleY().Modify(1, 4, 0.4f, EaseFunction.Circular, EaseDirection.Out).Await();
 
+				Audio.UI.global.PlayOneShot(Monolith.Refs.bulletObstacle);
+
 				star.TransitionTranslateX().Modify(0, 0.2f, EaseFunction.Exponential, EaseDirection.Out).Run();
 				star.TransitionTranslateY().Modify(0, 0.2f, EaseFunction.Exponential, EaseDirection.Out).Run();
 				star.TransitionScaleX().Modify(1, 0.2f, EaseFunction.Exponential, EaseDirection.Out).Run();
 				await star.TransitionScaleY().Modify(1, 0.2f, EaseFunction.Exponential, EaseDirection.Out).Await();
+
+				Audio.UI.global.PlayOneShot(Monolith.Refs.star);
 
 				spark.style.backgroundImage = new StyleBackground(Monolith.Refs.bountySparks[0]);
 				await Awaitable.WaitForSecondsAsync(0.05f);

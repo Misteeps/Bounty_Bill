@@ -89,10 +89,14 @@ namespace Game
 				if (collision.gameObject == Monolith.PlayerObject)
 				{
 					cowboy.HasBullet = true;
+					cowboy.AudioSource.PlayOneShot(Monolith.Refs.reload, 0.6f);
 					UI.Hud.Instance.SetBullet(true);
 				}
 				else if (!cowboy.HasBullet)
+				{
+					cowboy.AudioSource.PlayOneShot(Monolith.Refs.reload, 0.6f);
 					Enemies.ReloadEnemy(cowboy);
+				}
 			}
 			catch (Exception exception) { exception.Error($"Inactive bullet triggered unexpectedly by {collision.gameObject}"); }
 

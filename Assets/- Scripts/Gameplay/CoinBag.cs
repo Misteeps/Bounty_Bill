@@ -39,6 +39,7 @@ namespace Game
 			{
 				Monolith.Player.ShowCoin();
 				Monolith.fortune += 1000;
+				Audio.SFX.global.PlayOneShot(Monolith.Refs.moneyBag);
 				UI.Hud.Instance.UpdateFortune();
 			}
 			catch (Exception exception) { exception.Error($"Coin Bag triggered unexpectedly by {collision.gameObject}"); }

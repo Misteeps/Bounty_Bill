@@ -34,6 +34,7 @@ namespace Game
 		public SpriteAnimation CoinAnimator;
 		public SpriteAnimation BloodAnimator;
 		public LineRenderer LineRenderer;
+		public AudioSource AudioSource;
 		public bool HasBullet = true;
 		public bool InSpecial = false;
 		public bool IsShooting = false;
@@ -84,6 +85,7 @@ namespace Game
 			if (delay != 0)
 			{
 				DrawLaser(delay);
+				AudioSource.PlayOneShot(Monolith.Refs.aimIndicator);
 				await Awaitable.WaitForSecondsAsync(delay);
 				EraseLaser();
 
@@ -93,6 +95,7 @@ namespace Game
 
 			Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
 			BulletActive.Spawn(GunTip.position, rotation, gameObject);
+			AudioSource.PlayOneShot(Monolith.Refs.shoot, 0.8f);
 			MuzzleFlash();
 
 			await Awaitable.WaitForSecondsAsync(0.2f);
@@ -108,6 +111,7 @@ namespace Game
 
 			GunRenderer.sprite = Monolith.Refs.shotgun;
 			UI.Hud.Instance.ShowBill();
+			Audio.SFX.global.PlayOneShot(Monolith.Refs.specialActivated);
 			await Awaitable.WaitForSecondsAsync(0.1f);
 
 			InSpecial = true;
@@ -122,6 +126,7 @@ namespace Game
 
 			Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
 			BulletSpecial.Spawn(GunTip.position, rotation, gameObject);
+			Audio.SFX.global.PlayOneShot(Monolith.Refs.specialShot);
 			MuzzleFlash();
 
 			GunRenderer.sprite = Monolith.Refs.revolver;
@@ -187,6 +192,7 @@ namespace Game
 				{
 					wiggle = 1;
 					wiggleDirection = false;
+					AudioSource.PlayOneShot(Monolith.Refs.walk);
 				}
 			}
 			else
@@ -196,6 +202,7 @@ namespace Game
 				{
 					wiggle = -1;
 					wiggleDirection = true;
+					AudioSource.PlayOneShot(Monolith.Refs.walk);
 				}
 			}
 
@@ -228,20 +235,22 @@ namespace Game
 			if (Agent) Agent.enabled = false;
 			Gun.gameObject.SetActive(false);
 			BloodAnimator.Restart();
+			AudioSource.PlayOneShot(Monolith.Refs.death, 2);
 
 			SpriteRenderer.sprite = sprites.hit;
 			await Awaitable.WaitForSecondsAsync(0.2f);
 			SpriteRenderer.sprite = sprites.dead;
+			await Awaitable.WaitForSecondsAsync(1f);
 
 			for (int i = 0; i < 3; i++)
 			{
-				await Awaitable.WaitForSecondsAsync(0.5f);
+				await Awaitable.WaitForSecondsAsync(0.15f);
 				SpriteRenderer.enabled = false;
-				await Awaitable.WaitForSecondsAsync(0.5f);
+				await Awaitable.WaitForSecondsAsync(0.15f);
 				SpriteRenderer.enabled = true;
 			}
 
-			await Awaitable.WaitForSecondsAsync(0.5f);
+			await Awaitable.WaitForSecondsAsync(0.4f);
 			Disposed?.Invoke();
 
 			Died = null;

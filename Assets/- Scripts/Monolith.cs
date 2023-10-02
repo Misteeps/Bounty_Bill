@@ -43,6 +43,24 @@ namespace Game
 			public Sprite muzzleFlash3;
 			public Sprite[] bountyStars;
 			public Sprite[] bountySparks;
+			public AudioClip menuMusic;
+			public AudioClip gameMusic;
+			public AudioClip ambiance;
+			public AudioClip aimIndicator;
+			public AudioClip bulletObstacle;
+			public AudioClip death;
+			public AudioClip moneyBag;
+			public AudioClip noAmmo;
+			public AudioClip reload;
+			public AudioClip shoot;
+			public AudioClip specialActivated;
+			public AudioClip specialShot;
+			public AudioClip walk;
+			public AudioClip buttonHover;
+			public AudioClip gameStartButton;
+			public AudioClip settingsClose;
+			public AudioClip settingsOpen;
+			public AudioClip star;
 		}
 		#endregion References
 
@@ -186,6 +204,7 @@ namespace Game
 				{
 					if (UI.Hud.warnTimer == -1) UI.Hud.Instance.WarnBullet();
 					UI.Hud.warnTimer = 3;
+					Audio.SFX.global.PlayOneShot(Refs.noAmmo);
 				}
 			}
 		}
@@ -210,6 +229,9 @@ namespace Game
 			UI.Hud.Instance.SetSpecial(0);
 
 			Enemies.SetDifficulty(0);
+			Audio.UI.global.PlayOneShot(Refs.gameStartButton);
+			Audio.Ambiance.global.clip = Refs.ambiance;
+			Audio.Ambiance.global.Play();
 
 			Player.Initialize();
 			Player.transform.position = new Vector2(0, 8);
@@ -249,6 +271,7 @@ namespace Game
 			Instance.enabled = false;
 
 			Game.Camera.VignetteTransition.Modify(0.2f, 1f, 2f, EaseFunction.Circular, EaseDirection.Out).Run();
+			Audio.Ambiance.global.Stop();
 			UI.Hud.Hide();
 			await Awaitable.WaitForSecondsAsync(1.6f);
 
