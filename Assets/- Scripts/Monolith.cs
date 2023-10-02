@@ -43,6 +43,14 @@ namespace Game
 			public Sprite muzzleFlash3;
 			public Sprite[] bountyStars;
 			public Sprite[] bountySparks;
+			public AudioClip menuMusic;
+			public AudioClip gameMusic;
+			public AudioClip aimIndicator;
+			public AudioClip death;
+			public AudioClip noAmmo;
+			public AudioClip reload;
+			public AudioClip shoot;
+			public AudioClip walk;
 		}
 		#endregion References
 
@@ -186,6 +194,7 @@ namespace Game
 				{
 					if (UI.Hud.warnTimer == -1) UI.Hud.Instance.WarnBullet();
 					UI.Hud.warnTimer = 3;
+					Audio.SFX.global.PlayOneShot(Refs.noAmmo);
 				}
 			}
 		}

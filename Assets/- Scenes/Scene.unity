@@ -13871,6 +13871,14 @@ MonoBehaviour:
     - {fileID: 1173331274, guid: 45bd80d0acb792c4cbd02ed624802545, type: 3}
     - {fileID: -104571722, guid: 45bd80d0acb792c4cbd02ed624802545, type: 3}
     - {fileID: -1378174580, guid: 45bd80d0acb792c4cbd02ed624802545, type: 3}
+    menuMusic: {fileID: 8300000, guid: 7889cb3ffd3ef9d4ca2a3e3d1496be9f, type: 3}
+    gameMusic: {fileID: 8300000, guid: 004d434571261184197c3258d3138812, type: 3}
+    aimIndicator: {fileID: 8300000, guid: 3de1016851bd4ac47abe6785b993c460, type: 3}
+    death: {fileID: 8300000, guid: 2fddfed9c6bba694f939494dcb3dbb50, type: 3}
+    noAmmo: {fileID: 8300000, guid: 7e855b5948da0214cb45b85334f912a1, type: 3}
+    reload: {fileID: 8300000, guid: b37722c05eccd4646a388796009abf88, type: 3}
+    shoot: {fileID: 8300000, guid: 8c36a7c6d0913a74f8775352df484f50, type: 3}
+    walk: {fileID: 8300000, guid: 751b1f2ef80cd4849b33e06011fa767f, type: 3}
 --- !u!114 &619394805
 MonoBehaviour:
   m_ObjectHideFlags: 0
