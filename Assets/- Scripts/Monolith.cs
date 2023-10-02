@@ -26,6 +26,8 @@ namespace Game
 			public GameObject cowboyPrefab;
 			public Transform bulletActiveRoot;
 			public GameObject bulletActivePrefab;
+			public Transform bulletSpecialRoot;
+			public GameObject bulletSpecialPrefab;
 			public Transform bulletInactiveRoot;
 			public GameObject bulletInactivePrefab;
 			public Transform coinBagRoot;
@@ -34,6 +36,8 @@ namespace Game
 			public Cowboy.Sprites cowboy2;
 			public Cowboy.Sprites cowboy3;
 			public Cowboy.Sprites cowboy4;
+			public Sprite revolver;
+			public Sprite shotgun;
 			public Sprite muzzleFlash1;
 			public Sprite muzzleFlash2;
 			public Sprite muzzleFlash3;
@@ -60,6 +64,7 @@ namespace Game
 		public static float time;
 		public static int bounty;
 		public static int fortune;
+		public static int special;
 
 
 		private void Awake()
@@ -118,6 +123,12 @@ namespace Game
 
 		private void Update()
 		{
+			if (Input.GetKeyDown(KeyCode.Tab))
+			{
+				special = 7;
+				UI.Hud.Instance.SetSpecial(7);
+			}
+
 			UI.Overlay.Instance.UpdateCrosshair();
 
 			if (Inputs.Escape.Down)
@@ -134,6 +145,7 @@ namespace Game
 
 			PlayerLook();
 			PlayerShoot();
+			PlayerSpecial();
 			Enemies.Update();
 		}
 		private void FixedUpdate()
@@ -165,24 +177,50 @@ namespace Game
 		private void PlayerShoot()
 		{
 			if (Inputs.Shoot.Down && !Player.IsShooting)
-				Player.Shoot(0);
+			{
+				if (Player.InSpecial)
+				{
+					Player.ShootSpecial(0);
+					UI.Hud.Instance.SetBullet(false);
+				}
+				else if (Player.HasBullet)
+				{
+					Player.Shoot(0);
+					UI.Hud.Instance.SetBullet(false);
+				}
+				else
+				{
+					if (UI.Hud.warnTimer == -1) UI.Hud.Instance.WarnBullet();
+					UI.Hud.warnTimer = 3;
+				}
+			}
+		}
+		private void PlayerSpecial()
+		{
+			if (Inputs.Special.Down && special >= 7 && !Player.InSpecial && !Player.IsShooting)
+				Player.ActivateSpecial();
 		}
 
 		public static async void GameStart()
 		{
 			time = 0;
-			bounty = 1000;
+			bounty = 10;
 			fortune = 0;
+			special = 0;
+			Enemies.killed = 0;
 
 			UI.Hud.Instance.UpdateWanted();
 			UI.Hud.Instance.UpdateFortune();
 			UI.Hud.Instance.UpdateTime();
+			UI.Hud.Instance.SetBullet(true);
+			UI.Hud.Instance.SetSpecial(0);
 
 			Enemies.SetDifficulty(0);
 
 			Player.Initialize();
 			Player.transform.position = new Vector2(0, -6);
 			Player.Gun.localScale = new Vector2(0, 0);
+			Player.GunRenderer.sprite = Refs.revolver;
 			Player.Died += GameEnd;
 
 #if !UNITY_EDITOR

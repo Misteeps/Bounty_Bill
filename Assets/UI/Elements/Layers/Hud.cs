@@ -84,6 +84,13 @@ namespace Game.UI
 		public readonly Label fortuneSign;
 		public readonly Label timeSign;
 		public readonly Star[] stars;
+		public readonly Div bullet;
+		public readonly Div[] specials;
+		public readonly Div noBulletWarning;
+		public readonly Label specialReady;
+		public readonly Div bill;
+
+		public static float warnTimer = -1;
 
 
 		public Hud()
@@ -101,6 +108,21 @@ namespace Game.UI
 			stars[3] = sidebar.Attach(new Star());
 			stars[4] = sidebar.Attach(new Star());
 			sidebar.schedule.Execute(ShineStars).Every(5000);
+
+			Div bulletOutline = this.Attach(new Div() { Classes = "bullet" });
+			bullet = bulletOutline.Attach(new Div() { Classes = "charge" });
+
+			Div specialMeter = this.Attach(new Div() { Name = "special-meter" });
+			specials = new Div[7];
+			for (int i = 0; i < specials.Length; i++)
+			{
+				Div specialOutline = specialMeter.Attach(new Div() { Classes = "special" });
+				specials[i] = specialOutline.Attach(new Div() { Classes = "charge" });
+			}
+
+			noBulletWarning = this.Attach(new Div() { Name = "no-bullet-warning" }.Visible(false));
+			specialReady = this.Attach(new Label() { Name = "special-ready", Text = "Special Ready<br>> Right Click <", Size = Size.Huge }.Visible(false));
+			bill = this.Attach(new Div() { Name = "bill" }.Visible(false));
 		}
 
 		public void UpdateWanted()
@@ -143,6 +165,77 @@ namespace Game.UI
 				star.Slam();
 				await Awaitable.WaitForSecondsAsync(0.4f);
 			}
+		}
+
+		public void SetBullet(bool show)
+		{
+			if (show)
+			{
+				bullet.style.opacity = 0;
+				bullet.TransitionTranslateX().Modify(100, 0, EaseFunction.Linear, EaseDirection.InOut).Run();
+
+				bullet.TransitionOpacity().Modify(1, 0.4f, EaseFunction.Circular, EaseDirection.Out).Run();
+				bullet.TransitionTranslateX().Modify(0, 0.4f, EaseFunction.Cubic, EaseDirection.Out).Run();
+			}
+			else
+			{
+				bullet.style.opacity = 1;
+				bullet.TransitionTranslateX().Modify(0, 0, EaseFunction.Linear, EaseDirection.InOut).Run();
+
+				bullet.TransitionOpacity().Modify(0, 0.2f, EaseFunction.Circular, EaseDirection.Out).Run();
+				bullet.TransitionTranslateX().Modify(-100, 0.4f, EaseFunction.Cubic, EaseDirection.Out).Run();
+			}
+		}
+		public void SetSpecial(int count)
+		{
+			count = Mathf.Clamp(count, 0, specials.Length);
+			specialReady.visible = count == 7;
+
+			for (int i = 0; i < count; i++)
+				specials[i].TransitionOpacity().Modify(0, 1, 0.4f, EaseFunction.Circular, EaseDirection.Out).Run();
+
+			for (int i = count; i < specials.Length; i++)
+				specials[i].TransitionOpacity().Modify(1, 0, 0.4f, EaseFunction.Circular, EaseDirection.Out).Run();
+		}
+		public async void WarnBullet()
+		{
+			noBulletWarning.visible = true;
+
+			while (true)
+			{
+				noBulletWarning.AddToClassList("flash");
+				await Awaitable.WaitForSecondsAsync(0.4f);
+				noBulletWarning.RemoveFromClassList("flash");
+				await Awaitable.WaitForSecondsAsync(0.4f);
+
+				warnTimer -= 0.8f;
+				if (warnTimer < 0)
+				{
+					warnTimer = -1;
+					break;
+				}
+			}
+
+			noBulletWarning.visible = false;
+		}
+
+		public async void ShowBill()
+		{
+			bill.visible = true;
+			bill.style.opacity = 0;
+			bill.TransitionTranslateX().Modify(-120, 0, EaseFunction.Linear, EaseDirection.InOut).Run();
+
+			Time.timeScale = 0.5f;
+
+			bill.TransitionOpacity().Modify(1, 0.5f, EaseFunction.Circular, EaseDirection.Out, realTime: true).Run();
+			await bill.TransitionTranslateX().Modify(0, 0.6f, EaseFunction.Exponential, EaseDirection.Out, realTime: true).Await();
+
+			bill.TransitionOpacity().Modify(0, 0.5f, EaseFunction.Circular, EaseDirection.In, realTime: true).Run();
+			await bill.TransitionTranslateX().Modify(120, 0.6f, EaseFunction.Exponential, EaseDirection.In, realTime: true).Await();
+
+			Time.timeScale = 1;
+
+			bill.visible = false;
 		}
 	}
 }

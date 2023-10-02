@@ -28,12 +28,14 @@ namespace Game
 		public NavMeshAgent Agent;
 		public Transform Gun;
 		public Transform GunTip;
+		public SpriteRenderer GunRenderer;
 		public SpriteRenderer GunTipRenderer;
 		public SpriteRenderer CoinRenderer;
 		public SpriteAnimation CoinAnimator;
 		public SpriteAnimation BloodAnimator;
 		public LineRenderer LineRenderer;
 		public bool HasBullet = true;
+		public bool InSpecial = false;
 		public bool IsShooting = false;
 		public float MoveSpeed = 1f;
 
@@ -77,32 +79,60 @@ namespace Game
 		}
 		public async void Shoot(float delay)
 		{
-			if (HasBullet)
+			IsShooting = true;
+
+			if (delay != 0)
 			{
-				IsShooting = true;
+				DrawLaser(delay);
+				await Awaitable.WaitForSecondsAsync(delay);
+				EraseLaser();
 
-				if (delay != 0)
-				{
-					DrawLaser(delay);
-					await Awaitable.WaitForSecondsAsync(delay);
-					EraseLaser();
-
-					if (!Gun.gameObject.activeSelf)
-						return;
-				}
-
-				Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
-				BulletActive.Spawn(GunTip.position, rotation, gameObject);
-				MuzzleFlash();
-
-				await Awaitable.WaitForSecondsAsync(0.2f);
-				HasBullet = false;
-				IsShooting = false;
+				if (!Gun.gameObject.activeSelf)
+					return;
 			}
-			else
-			{
-				// No bitches?
-			}
+
+			Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
+			BulletActive.Spawn(GunTip.position, rotation, gameObject);
+			MuzzleFlash();
+
+			await Awaitable.WaitForSecondsAsync(0.2f);
+			HasBullet = false;
+			IsShooting = false;
+		}
+
+		public async void ActivateSpecial()
+		{
+			IsShooting = true;
+			HasBullet = true;
+			UI.Hud.Instance.SetBullet(true);
+
+			GunRenderer.sprite = Monolith.Refs.shotgun;
+			UI.Hud.Instance.ShowBill();
+			await Awaitable.WaitForSecondsAsync(0.1f);
+
+			InSpecial = true;
+			IsShooting = false;
+		}
+		public async void ShootSpecial(float delay)
+		{
+			IsShooting = true;
+
+			if (delay != 0)
+				await Awaitable.WaitForSecondsAsync(delay);
+
+			Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
+			BulletSpecial.Spawn(GunTip.position, rotation, gameObject);
+			MuzzleFlash();
+
+			GunRenderer.sprite = Monolith.Refs.revolver;
+			await Awaitable.WaitForSecondsAsync(0.2f);
+
+			HasBullet = false;
+			InSpecial = false;
+			IsShooting = false;
+
+			Monolith.special = 0;
+			UI.Hud.Instance.SetSpecial(0);
 		}
 
 		private async void DrawLaser(float duration)

@@ -244,42 +244,6 @@
 
 /* Hud */
 
-.layer#Hud > #stars {
-	overflow: visible;
-	position: absolute;
-	top: 16px;
-	left: 24px;
-	flex-direction: column;
-}
-
-.layer#Hud > #stars > .star {
-	overflow: visible;
-	opacity: 0;
-	width: 60px;
-	height: 60px;
-	transition: opacity 400ms ease-out-circ;
-}
-
-.layer#Hud > #stars > .star.active {
-	opacity: 1;
-}
-
-.layer#Hud > #stars > .star > #star {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.layer#Hud > #stars > .star > #spark {
-	position: absolute;
-	top: 0;
-	left: 60px;
-	bottom: 0;
-	width: 60px;
-}
-
 .layer#Hud > .sign {
 	position: absolute;
 	text-overflow: clip;
@@ -319,4 +283,127 @@
 .layer#Hud > .sign.pop {
 	font-size: 14px;
 	transition-duration: 0ms;
+}
+
+.layer#Hud > #stars {
+	overflow: visible;
+	position: absolute;
+	top: 16px;
+	left: 24px;
+	flex-direction: column;
+}
+
+.layer#Hud > #stars > .star {
+	overflow: visible;
+	opacity: 0;
+	width: 60px;
+	height: 60px;
+	transition: opacity 400ms ease-out-circ;
+}
+
+.layer#Hud > #stars > .star.active {
+	opacity: 1;
+}
+
+.layer#Hud > #stars > .star > #star {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.layer#Hud > #stars > .star > #spark {
+	position: absolute;
+	top: 0;
+	left: 60px;
+	bottom: 0;
+	width: 60px;
+}
+
+.layer#Hud > .bullet {
+	overflow: visible;
+	position: absolute;
+	bottom: 20px;
+	right: 350px;
+	width: 60px;
+	height: 60px;
+	background-image: url('project://database/Assets/Sprites/Characters/Bullets/bullet04.png?fileID=2800000&guid=2fab401f8764bd84680a46af437d0b86&type=3#bullet04');
+	background-size: contain;
+	-unity-background-image-tint-color: rgba(51, 51, 51, 0.95);
+	rotate: 90deg;
+}
+
+.layer#Hud > .bullet > .charge {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url('project://database/Assets/Sprites/Characters/Bullets/bullet04.png?fileID=2800000&guid=2fab401f8764bd84680a46af437d0b86&type=3#bullet04');
+	background-size: contain;
+}
+
+.layer#Hud > #special-meter {
+	overflow: visible;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 0 4px;
+	flex-direction: row;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.layer#Hud > #special-meter > .special {
+	overflow: visible;
+	margin: 8px;
+	width: 28px;
+	height: 28px;
+	background-image: url('project://database/Assets/UI/Images/Hud Special Charge.png?fileID=2800000&guid=12b3dfb0d9f3f134a92efd0ffa6c5308&type=3#Hud Special Charge');
+	background-size: contain;
+	-unity-background-image-tint-color: rgba(51, 51, 51, 0.95);
+}
+
+.layer#Hud > #special-meter > .special > .charge {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url('project://database/Assets/UI/Images/Hud Special Charge.png?fileID=2800000&guid=12b3dfb0d9f3f134a92efd0ffa6c5308&type=3#Hud Special Charge');
+	background-size: contain;
+}
+
+.layer#Hud > #no-bullet-warning {
+	position: absolute;
+	bottom: 80px;
+	right: -20px;
+	width: 400px;
+	height: 60px;
+	background-image: url('project://database/Assets/UI/Images/Hud No Bullet.png?fileID=2800000&guid=c8eade7ac2c3d6146bffecc88242c346&type=3#Hud No Bullet');
+	background-size: contain;
+}
+
+.layer#Hud > #no-bullet-warning.flash {
+	background-image: url('project://database/Assets/UI/Images/Hud No Bullet Red.png?fileID=2800000&guid=f69e35fe8f74aed4b8521f0ea30762ad&type=3#Hud No Bullet Red');
+}
+
+.layer#Hud > #special-ready {
+	position: absolute;
+	bottom: 80px;
+	right: 20px;
+	width: 312px;
+	height: 80px;
+}
+
+.layer#Hud > #bill {
+	position: absolute;
+	top: 0;
+	bottom: 40%;
+	left: 20%;
+	right: 20%;
+	background-image: url('project://database/Assets/UI/Images/Bill Instinct.png?fileID=2800000&guid=c06c042a04543f144940a8bf4917799c&type=3#Bill Instinct');
+	background-size: contain;
+	transition: opacity 400ms ease-out-circ;
 }

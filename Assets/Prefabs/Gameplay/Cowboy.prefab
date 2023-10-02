@@ -551,12 +551,14 @@ MonoBehaviour:
   Agent: {fileID: -365439399822014099}
   Gun: {fileID: 4064959656157012561}
   GunTip: {fileID: 4127001627404367006}
+  GunRenderer: {fileID: 5161463744882209688}
   GunTipRenderer: {fileID: 2614622837151385567}
   CoinRenderer: {fileID: 6716814487791482900}
   CoinAnimator: {fileID: 2511028751515110619}
   BloodAnimator: {fileID: 1324782794933669236}
   LineRenderer: {fileID: 5942884692537534595}
   HasBullet: 1
+  InSpecial: 0
   IsShooting: 0
   MoveSpeed: 1
 --- !u!195 &-365439399822014099
