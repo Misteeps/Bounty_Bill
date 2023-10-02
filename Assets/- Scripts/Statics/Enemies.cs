@@ -57,6 +57,7 @@ namespace Game
 
 		public static Difficulty difficulty;
 		public static float timer;
+		public static int killed;
 
 
 		public static void OnGet(GameObject obj)
@@ -107,6 +108,13 @@ namespace Game
 		{
 			Hunting.Remove(cowboy);
 			Reloading.Remove(cowboy);
+
+			killed += 1;
+			if (killed > 6) SetDifficulty(1);
+			else if (killed > 10) SetDifficulty(2);
+			else if (killed > 16) SetDifficulty(3);
+			else if (killed > 24) SetDifficulty(4);
+			else if (killed > 36) SetDifficulty(5);
 		}
 
 		public static void SetDifficulty(int difficulty)

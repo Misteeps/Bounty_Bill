@@ -207,6 +207,7 @@ namespace Game
 			bounty = 10;
 			fortune = 0;
 			special = 0;
+			Enemies.killed = 0;
 
 			UI.Hud.Instance.UpdateWanted();
 			UI.Hud.Instance.UpdateFortune();
