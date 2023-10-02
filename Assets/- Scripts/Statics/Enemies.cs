@@ -110,11 +110,11 @@ namespace Game
 			Reloading.Remove(cowboy);
 
 			killed += 1;
-			if (killed > 6) SetDifficulty(1);
-			else if (killed > 10) SetDifficulty(2);
-			else if (killed > 16) SetDifficulty(3);
-			else if (killed > 24) SetDifficulty(4);
-			else if (killed > 36) SetDifficulty(5);
+			if (killed >= 6) SetDifficulty(1);
+			else if (killed >= 10) SetDifficulty(2);
+			else if (killed >= 16) SetDifficulty(3);
+			else if (killed >= 24) SetDifficulty(4);
+			else if (killed >= 36) SetDifficulty(5);
 		}
 
 		public static void SetDifficulty(int difficulty)
@@ -160,7 +160,7 @@ namespace Game
 					else if (cowboy.Agent.remainingDistance < 0.4f && Vector2.Distance(cowboy.transform.position, PlayerPosition) < difficulty.shootDistance)
 					{
 						cowboy.LookAt(PlayerPosition);
-						cowboy.Shoot(difficulty.shootDelay);
+						cowboy.Shoot(Mathf.Min(difficulty.shootDelay, 1.1f));
 					}
 				}
 				catch (Exception exception) { exception.Error($"Failed updating hunting enemy {cowboy?.gameObject}"); }

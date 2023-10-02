@@ -389,6 +389,14 @@
 	background-image: url('project://database/Assets/UI/Images/Hud No Bullet Red.png?fileID=2800000&guid=f69e35fe8f74aed4b8521f0ea30762ad&type=3#Hud No Bullet Red');
 }
 
+.layer#Hud > #special-ready {
+	position: absolute;
+	bottom: 80px;
+	right: 20px;
+	width: 312px;
+	height: 80px;
+}
+
 .layer#Hud > #bill {
 	position: absolute;
 	top: 0;

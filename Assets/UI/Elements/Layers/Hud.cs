@@ -87,6 +87,7 @@ namespace Game.UI
 		public readonly Div bullet;
 		public readonly Div[] specials;
 		public readonly Div noBulletWarning;
+		public readonly Label specialReady;
 		public readonly Div bill;
 
 		public static float warnTimer = -1;
@@ -120,6 +121,7 @@ namespace Game.UI
 			}
 
 			noBulletWarning = this.Attach(new Div() { Name = "no-bullet-warning" }.Visible(false));
+			specialReady = this.Attach(new Label() { Name = "special-ready", Text = "Special Ready<br>> Right Click <", Size = Size.Huge }.Visible(false));
 			bill = this.Attach(new Div() { Name = "bill" }.Visible(false));
 		}
 
@@ -187,6 +189,7 @@ namespace Game.UI
 		public void SetSpecial(int count)
 		{
 			count = Mathf.Clamp(count, 0, specials.Length);
+			specialReady.visible = count == 7;
 
 			for (int i = 0; i < count; i++)
 				specials[i].TransitionOpacity().Modify(0, 1, 0.4f, EaseFunction.Circular, EaseDirection.Out).Run();
@@ -222,7 +225,7 @@ namespace Game.UI
 			bill.style.opacity = 0;
 			bill.TransitionTranslateX().Modify(-120, 0, EaseFunction.Linear, EaseDirection.InOut).Run();
 
-			Time.timeScale = 0;
+			Time.timeScale = 0.5f;
 
 			bill.TransitionOpacity().Modify(1, 0.5f, EaseFunction.Circular, EaseDirection.Out, realTime: true).Run();
 			await bill.TransitionTranslateX().Modify(0, 0.6f, EaseFunction.Exponential, EaseDirection.Out, realTime: true).Await();
