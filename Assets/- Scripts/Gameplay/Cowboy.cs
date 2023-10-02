@@ -111,6 +111,7 @@ namespace Game
 
 			GunRenderer.sprite = Monolith.Refs.shotgun;
 			UI.Hud.Instance.ShowBill();
+			Audio.SFX.global.PlayOneShot(Monolith.Refs.specialActivated, 0.6f);
 			await Awaitable.WaitForSecondsAsync(0.1f);
 
 			InSpecial = true;
@@ -125,6 +126,7 @@ namespace Game
 
 			Quaternion rotation = (transform.localScale.x < 0) ? Gun.transform.rotation : Quaternion.Euler(new Vector3(0, 0, Gun.transform.eulerAngles.z + 180));
 			BulletSpecial.Spawn(GunTip.position, rotation, gameObject);
+			Audio.SFX.global.PlayOneShot(Monolith.Refs.specialShot, 0.8f);
 			MuzzleFlash();
 
 			GunRenderer.sprite = Monolith.Refs.revolver;

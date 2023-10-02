@@ -77,6 +77,8 @@ namespace Game
 						UI.Hud.Instance.SetSpecial(Monolith.special);
 					}
 				}
+				else
+					Audio.SFX.global.PlayOneShot(Monolith.Refs.bulletObstacle, 0.6f);
 			}
 			catch (Exception exception) { exception.Error($"Active bullet triggered unexpectedly by {collision.gameObject}"); }
 

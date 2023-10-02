@@ -13874,11 +13874,20 @@ MonoBehaviour:
     menuMusic: {fileID: 8300000, guid: 7889cb3ffd3ef9d4ca2a3e3d1496be9f, type: 3}
     gameMusic: {fileID: 8300000, guid: 004d434571261184197c3258d3138812, type: 3}
     aimIndicator: {fileID: 8300000, guid: 3de1016851bd4ac47abe6785b993c460, type: 3}
+    bulletObstacle: {fileID: 8300000, guid: 9052af0d23bb5bc41a74ce2d62d7ec6b, type: 3}
     death: {fileID: 8300000, guid: 2fddfed9c6bba694f939494dcb3dbb50, type: 3}
+    moneyBag: {fileID: 8300000, guid: 247726aefdc9be642a2614a003f64bf7, type: 3}
     noAmmo: {fileID: 8300000, guid: 7e855b5948da0214cb45b85334f912a1, type: 3}
     reload: {fileID: 8300000, guid: b37722c05eccd4646a388796009abf88, type: 3}
     shoot: {fileID: 8300000, guid: 8c36a7c6d0913a74f8775352df484f50, type: 3}
+    specialActivated: {fileID: 8300000, guid: b3bb8c96dff14a64095563a4da8aa6a4, type: 3}
+    specialShot: {fileID: 8300000, guid: 00c70e1685d32084c98b4918eb138981, type: 3}
     walk: {fileID: 8300000, guid: 751b1f2ef80cd4849b33e06011fa767f, type: 3}
+    buttonHover: {fileID: 8300000, guid: 9a4af4378e7ec5943bd7b1ea94eb5956, type: 3}
+    gameStartButton: {fileID: 8300000, guid: be1db1adc79a0d345a5ec4ec2897dffa, type: 3}
+    settingsClose: {fileID: 8300000, guid: e9d5b255730f55c4da8861074460b113, type: 3}
+    settingsOpen: {fileID: 8300000, guid: 24ac5ed3cc1b5594cb5b4a82191eec5c, type: 3}
+    star: {fileID: 8300000, guid: 7fcfca86ac166c44db30b5919862852b, type: 3}
 --- !u!114 &619394805
 MonoBehaviour:
   m_ObjectHideFlags: 0

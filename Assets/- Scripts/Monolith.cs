@@ -46,11 +46,20 @@ namespace Game
 			public AudioClip menuMusic;
 			public AudioClip gameMusic;
 			public AudioClip aimIndicator;
+			public AudioClip bulletObstacle;
 			public AudioClip death;
+			public AudioClip moneyBag;
 			public AudioClip noAmmo;
 			public AudioClip reload;
 			public AudioClip shoot;
+			public AudioClip specialActivated;
+			public AudioClip specialShot;
 			public AudioClip walk;
+			public AudioClip buttonHover;
+			public AudioClip gameStartButton;
+			public AudioClip settingsClose;
+			public AudioClip settingsOpen;
+			public AudioClip star;
 		}
 		#endregion References
 
