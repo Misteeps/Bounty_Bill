@@ -33,9 +33,10 @@ namespace Game
 		public SpriteRenderer CoinRenderer;
 		public SpriteAnimation CoinAnimator;
 		public SpriteAnimation BloodAnimator;
-		public SpriteAnimation BloodPoolAnimator;
-		public GameObject BloodPool;
-		public SpriteRenderer BloodPoolRenderer;
+		public SpriteAnimation BloodPoolEntryAnimator;
+        public SpriteAnimation BloodPoolExitAnimator;
+        public GameObject BloodPoolEntry;
+		public GameObject BloodPoolExit;
 		public SpriteRenderer ShadowRenderer;
 		public LineRenderer LineRenderer;
 		public AudioSource AudioSource;
@@ -239,8 +240,9 @@ namespace Game
 			if (Agent) Agent.enabled = false;
 			Gun.gameObject.SetActive(false);
 			BloodAnimator.Restart();
-			BloodPoolAnimator.Restart();
-			AudioSource.PlayOneShot(Monolith.Refs.death, 2);
+			BloodPoolEntryAnimator.Restart();
+            BloodPoolExitAnimator.Restart();
+            AudioSource.PlayOneShot(Monolith.Refs.death, 2);
 
             Vector2 impactDir = (transform.position - damageSource).normalized;
             RigidBody.AddForce(impactDir, ForceMode2D.Impulse);
@@ -250,7 +252,7 @@ namespace Game
             RigidBody.velocity = Vector2.zero;
             SpriteRenderer.sprite = sprites.dead;
 			await Awaitable.WaitForSecondsAsync(0.75f);
-			BloodPool.SetActive(true);
+			BloodPoolEntry.SetActive(true);
             await Awaitable.WaitForSecondsAsync(1.25f);
 
             for (int i = 0; i < 3; i++)
@@ -266,15 +268,10 @@ namespace Game
 			ShadowRenderer.enabled = false;
             await Awaitable.WaitForSecondsAsync(0.4f);
 
-            for (int i = 0; i < 3; i++)
-            {
-                await Awaitable.WaitForSecondsAsync(0.15f);
-                BloodPoolRenderer.enabled = false;
-                await Awaitable.WaitForSecondsAsync(0.15f);
-                BloodPoolRenderer.enabled = true;
-            }
+            BloodPoolEntry.SetActive(false);
+            BloodPoolExit.SetActive(true);
 
-            await Awaitable.WaitForSecondsAsync(0.15f);
+            await Awaitable.WaitForSecondsAsync(0.65f);
 
 
             Disposed?.Invoke();
@@ -283,7 +280,8 @@ namespace Game
 			Disposed = null;
             SpriteRenderer.enabled = true;
 			ShadowRenderer.enabled = true;
-            BloodPool.SetActive(false);
+            BloodPoolEntry.SetActive(false);
+			BloodPoolExit.SetActive(false);
 		}
 	}
 }
