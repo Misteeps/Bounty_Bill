@@ -95,7 +95,6 @@ namespace Game
 				}
 				else if (!cowboy.HasBullet)
 				{
-					cowboy.AudioSource.PlayOneShot(Monolith.Refs.reload, 0.6f);
 					Enemies.ReloadEnemy(cowboy);
 				}
 			}

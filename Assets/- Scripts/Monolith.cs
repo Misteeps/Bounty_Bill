@@ -141,8 +141,6 @@ namespace Game
 
 		private void Update()
 		{
-			UI.Overlay.Instance.UpdateCrosshair();
-
 			if (Inputs.Escape.Down)
 			{
 				Paused = !Paused;
@@ -165,7 +163,12 @@ namespace Game
 			PlayerMove();
 		}
 
-		private void PlayerMove()
+        private void LateUpdate()
+        {
+            UI.Overlay.Instance.UpdateCrosshair();
+        }
+
+        private void PlayerMove()
 		{
 			float x = 0;
 			float y = 0;
