@@ -58,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,19 +125,19 @@ TextureImporter:
       name: blood_pool-Sheet_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 17
-        width: 68
-        height: 9
+        x: 0
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ac374ba6961a5f150800000000000000
-      internalID: 5905803960500122570
+      spriteID: a7cd0b19e083fdd4da1569c869e5e141
+      internalID: 551417403
       vertices: []
       indices: 
       edges: []
@@ -146,19 +146,19 @@ TextureImporter:
       name: blood_pool-Sheet_1
       rect:
         serializedVersion: 2
-        x: 107
-        y: 16
-        width: 38
-        height: 11
+        x: 50
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 706ffbfb72148ffd0800000000000000
-      internalID: -2308023170050820601
+      spriteID: 15d0b9be64d828343b3f75424745608f
+      internalID: 1825723720
       vertices: []
       indices: 
       edges: []
@@ -167,19 +167,19 @@ TextureImporter:
       name: blood_pool-Sheet_2
       rect:
         serializedVersion: 2
-        x: 155
-        y: 16
-        width: 40
-        height: 11
+        x: 100
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fcb7b5cbca67ca1e0800000000000000
-      internalID: -2185241234914968625
+      spriteID: 9e15e9cc6125e104b92f7634fe9c6078
+      internalID: 22940835
       vertices: []
       indices: 
       edges: []
@@ -188,19 +188,19 @@ TextureImporter:
       name: blood_pool-Sheet_3
       rect:
         serializedVersion: 2
-        x: 205
-        y: 15
-        width: 40
-        height: 12
+        x: 150
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 34094ad449f248de0800000000000000
-      internalID: -1331887275790528445
+      spriteID: 27c826183b1777a44aabdd8fa142ef79
+      internalID: 117486487
       vertices: []
       indices: 
       edges: []
@@ -209,19 +209,40 @@ TextureImporter:
       name: blood_pool-Sheet_4
       rect:
         serializedVersion: 2
-        x: 255
-        y: 15
-        width: 40
-        height: 13
+        x: 200
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c5bded923f5c7ac20800000000000000
-      internalID: 3217758106949704540
+      spriteID: a358a35b67212d243a00f8bb912af6ab
+      internalID: -1966152270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_pool-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6baa19ad354f98b4d991b563794843d8
+      internalID: 1544489235
       vertices: []
       indices: 
       edges: []
@@ -237,7 +258,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cowboy01_0: 6748216094295715067
+      blood_pool-Sheet_0: 551417403
+      blood_pool-Sheet_1: 1825723720
+      blood_pool-Sheet_2: 22940835
+      blood_pool-Sheet_3: 117486487
+      blood_pool-Sheet_4: -1966152270
+      blood_pool-Sheet_5: 1544489235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -33,6 +33,10 @@ namespace Game
 		public SpriteRenderer CoinRenderer;
 		public SpriteAnimation CoinAnimator;
 		public SpriteAnimation BloodAnimator;
+		public SpriteAnimation BloodPoolAnimator;
+		public GameObject BloodPool;
+		public SpriteRenderer BloodPoolRenderer;
+		public SpriteRenderer ShadowRenderer;
 		public LineRenderer LineRenderer;
 		public AudioSource AudioSource;
 		public bool HasBullet = true;
@@ -226,7 +230,7 @@ namespace Game
 			CoinRenderer.gameObject.SetActive(false);
 		}
 
-		public async void Die()
+		public async void Die(Vector3 damageSource)
 		{
 			Died?.Invoke();
 
@@ -235,14 +239,21 @@ namespace Game
 			if (Agent) Agent.enabled = false;
 			Gun.gameObject.SetActive(false);
 			BloodAnimator.Restart();
+			BloodPoolAnimator.Restart();
 			AudioSource.PlayOneShot(Monolith.Refs.death, 2);
 
-			SpriteRenderer.sprite = sprites.hit;
-			await Awaitable.WaitForSecondsAsync(0.2f);
-			SpriteRenderer.sprite = sprites.dead;
-			await Awaitable.WaitForSecondsAsync(1f);
+            Vector2 impactDir = (transform.position - damageSource).normalized;
+            RigidBody.AddForce(impactDir, ForceMode2D.Impulse);
 
-			for (int i = 0; i < 3; i++)
+            SpriteRenderer.sprite = sprites.hit;
+			await Awaitable.WaitForSecondsAsync(0.2f);
+            RigidBody.velocity = Vector2.zero;
+            SpriteRenderer.sprite = sprites.dead;
+			await Awaitable.WaitForSecondsAsync(0.75f);
+			BloodPool.SetActive(true);
+            await Awaitable.WaitForSecondsAsync(1.25f);
+
+            for (int i = 0; i < 3; i++)
 			{
 				await Awaitable.WaitForSecondsAsync(0.15f);
 				SpriteRenderer.enabled = false;
@@ -250,11 +261,29 @@ namespace Game
 				SpriteRenderer.enabled = true;
 			}
 
-			await Awaitable.WaitForSecondsAsync(0.4f);
-			Disposed?.Invoke();
+			await Awaitable.WaitForSecondsAsync(0.3f);
+            SpriteRenderer.enabled = false;
+			ShadowRenderer.enabled = false;
+            await Awaitable.WaitForSecondsAsync(0.4f);
+
+            for (int i = 0; i < 3; i++)
+            {
+                await Awaitable.WaitForSecondsAsync(0.15f);
+                BloodPoolRenderer.enabled = false;
+                await Awaitable.WaitForSecondsAsync(0.15f);
+                BloodPoolRenderer.enabled = true;
+            }
+
+            await Awaitable.WaitForSecondsAsync(0.15f);
+
+
+            Disposed?.Invoke();
 
 			Died = null;
 			Disposed = null;
+            SpriteRenderer.enabled = true;
+			ShadowRenderer.enabled = true;
+            BloodPool.SetActive(false);
 		}
 	}
 }
