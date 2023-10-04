@@ -65,7 +65,7 @@ namespace Game
 			{
 				if (collision.TryGetComponent<Cowboy>(out Cowboy cowboy))
 				{
-					cowboy.Die();
+					cowboy.Die(transform.position);
 					if (origin == Monolith.PlayerObject)
 					{
 						cowboy.ShowCoin();

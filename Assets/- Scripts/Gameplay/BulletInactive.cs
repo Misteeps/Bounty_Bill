@@ -39,6 +39,7 @@ namespace Game
 			bullet.hitbox.enabled = false;
 			bullet.timer = 0;
 			bullet.triggered = false;
+			bullet.spriteRenderer.enabled = true;
 			bullet.Bounce((Vector2)obj.transform.position + direction);
 
 			return bullet;
@@ -94,7 +95,6 @@ namespace Game
 				}
 				else if (!cowboy.HasBullet)
 				{
-					cowboy.AudioSource.PlayOneShot(Monolith.Refs.reload, 0.6f);
 					Enemies.ReloadEnemy(cowboy);
 				}
 			}
